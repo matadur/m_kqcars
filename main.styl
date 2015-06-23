@@ -1,0 +1,38 @@
+/* SETUP */
+@import 'nib';
+@import 'axis';
+@import 'jeet';
+@import 'rupture';
+
+normalize-css();
+
+/*VARIABLES*/
+black 	= #444444;
+green 	= #49BE39;
+blue 	= #AEDBED;
+red  	= #EC471C;
+grey 	= #EEEEEE;
+
+shadow 	= 0px 1px 5px rgba(0, 0, 0, 0.25);
+border 	= 1px solid #E5E5E5;
+radius 	= 2px;
+padding = 15px;
+
+/*BREAKPOINTS*/
+xlarge  = 1100px;
+large 	= 800px;
+medium 	= 600px;
+small 	= 400px;
+
+scale = 0 small medium large xlarge;
+
+/*PARTIALS*/
+@import 'client/styles/layouts/layout_base.styl';
+
+@import 'client/styles/components/component_header.styl';
+@import 'client/styles/components/component_logo.styl';
+@import 'client/styles/components/component_mnav.styl';
+
+
+
+
