@@ -1,8 +1,17 @@
 <template name="component_mnav">
 	<nav class="mnav">
-		<a class="mnav__link" href="/">Autos</a>
-		<a class="mnav__link" href="pricing">Preise</a>
-		<a class="mnav__link" href="map">Karte</a>
-		<a class="mnav__link" href="sell">Verkaufen</a>
+		<a class="mnav__link" href="/">Angebote</a>
+		{{#if currentUser}}
+			<div class="mnav__link dropdown">
+				{{currentUser.profile.name}}
+				<div class="dropdown__content">
+					<a class="mnav__link" href="my_products_add">Neues Angebot<i class="ion-plus"></i></a>
+					<a class="mnav__link" href="my_products_view">Meine Angebote<i class="ion-android-car"></i></a>
+					<a class="mnav__link logout" href="">Logout</a>
+				</div>
+			</div>
+		{{else}}
+			<a class="mnav__link" href="account_login">Login</a>
+		{{/if}}
 	</nav>
 </template>

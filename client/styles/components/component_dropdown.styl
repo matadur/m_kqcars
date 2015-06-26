@@ -1,0 +1,37 @@
+.dropdown
+	position: relative;
+	color: green;
+	cursor: pointer;
+	
+	&.dropdown--active .dropdown__content
+		display: block;
+		
+	.dropdown__content
+		display: none;
+		border-top: 3px solid green;
+		width: 180px;
+		background: #FFF;
+		position: absolute;
+		right: 0;
+		margin: 18px 0 0 0;
+		padding: padding;
+		box-shadow: shadow2;
+		border-radius: radius;
+		
+		i 
+			color: green;
+			float right;
+			
+		a 
+			display: block;
+			color: black;
+			padding: padding 0;
+			border-bottom: border;
+			
+			&:first-child
+				padding-top: 0;
+				
+			&:last-child
+				padding-bottom: 0;
+				border-bottom: none;
+		
