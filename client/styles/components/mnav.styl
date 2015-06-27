@@ -1,20 +1,33 @@
-.dropdown
-	position: relative;
-	color: green;
-	cursor: pointer;
+.mnav
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	align-items: center;
 	
-	&.dropdown--active .dropdown__content
-		display: block;
+	.mnav__link
+		padding: 0 padding;
 		
-	.dropdown__content
+		&:last-child
+			padding-right: 0;
+	
+	// DROPDOWN
+	.mnav__dropdown
+		position: relative;
+		cursor: pointer;
+		color: green;
+	
+		&.mnav__dropdown--active .mnav__dropdown__content
+			display: block;
+			
+	.mnav__dropdown__content
 		display: none;
-		border-top: 3px solid green;
 		width: 180px;
 		background: #FFF;
 		position: absolute;
 		right: 0;
 		margin: 18px 0 0 0;
 		padding: padding;
+		border-top: 3px solid green;
 		box-shadow: shadow2;
 		border-radius: radius;
 		
@@ -34,4 +47,3 @@
 			&:last-child
 				padding-bottom: 0;
 				border-bottom: none;
-		

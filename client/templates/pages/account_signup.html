@@ -1,19 +1,25 @@
 <template name="account_signup">
-	<form class="account_signup">
-		<!-- EMAIL -->
-		<label>Email</label>
-		<input type="email" name="email" value="">
-		<!-- FIRST NAME -->
-		<label>First Name</label>
-		<input type="text" name="firstname" value="">
-		<!-- LAST NAME -->
-		<label>Last Name</label>
-		<input type="text" name="lastname" value="">
-		<!-- PASSWORD -->
-		<label>Password</label>
-		<input type="password" name="password" value="">
-		<!-- SUBMIT -->
-		<button type="submit">Signup</button>
-	</form>
-	<a href="account_login">Switch to: Login</a>
+	<section class="panel main">
+		<!-- TITLE -->
+		<header class="panel__title">
+			Account Signup
+		</header>
+		<!-- CONTENT -->
+		<div class="panel__content">
+			<!-- FORM -->
+			<form class="account_signup">
+				<label>Email</label>
+				<input type="email" name="email" value="">
+				<label>First Name</label>
+				<input type="text" name="firstname" value="">
+				<label>Last Name</label>
+				<input type="text" name="lastname" value="">
+				<label>Password</label>
+				<input type="password" name="password" value="">
+				<button type="submit">Signup</button>
+			</form>
+			<!-- CONTROLS -->
+			<a href="account_login">Switch to: Login</a>
+		</div>
+	</section>
 </template>

@@ -1,10 +1,3 @@
-// DROPDOWN
-Template.component_mnav.events({
-	'click .dropdown': function() {
-		$('.dropdown').toggleClass('dropdown--active');
-	}
-});
-
 // SIGNUP
 Template.account_signup.events({
 	'submit .account_signup': function (event) {
@@ -57,7 +50,7 @@ Template.account_login.events({
 });
 
 // LOGOUT
-Template.component_mnav.events({
+Template.mnav.events({
 	'click .logout': function () {
 		Meteor.logout(function(err){
 			if(!err) {
