@@ -7,25 +7,7 @@
 		<!-- CONTENT -->
 		<div class="panel__content">
 			Fotos, WOF, REGO, Text...
-			<form class="form">
-				<span class="form__headline">Details</span>
-				<label class="form__label">Model</label>
-				<input class="form__input" type="text" name="name" value="">
-				<label class="form__label">Kilometers</label>
-				<input class="form__input" type="number" name="kilometers" value="">
-				<label class="form__label">Built</label>
-				<input class="form__input" type="date" name="built" value="">
-				<label class="form__label">WOF</label>
-				<input class="form__input" type="date" name="wof" value="">
-				<label class="form__label">REG</label>
-				<input class="form__input" type="date" name="reg" value="">
-				<label class="form__label">Price</label>
-				<input class="form__input" type="text" name="price" value="">
-				<label class="form__label">Description</label>
-				<textarea class="form__input" name="description" value=""></textarea>
-			</form>
-			<a href="my_products_add_success">Create</a>
-			<a href="/">Cancel</a>
+			{{> form_products_add}}
 		</div>
 	</section>
 </template>

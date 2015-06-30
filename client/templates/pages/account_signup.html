@@ -6,20 +6,7 @@
 		</header>
 		<!-- CONTENT -->
 		<div class="panel__content">
-			<!-- FORM -->
-			<form class="form account_signup">
-				<label class="form__label">Email</label>
-				<input class="form__input" type="email" name="email" value="">
-				<label class="form__label">First Name</label>
-				<input class="form__input" type="text" name="firstname" value="">
-				<label class="form__label">Last Name</label>
-				<input class="form__input" type="text" name="lastname" value="">
-				<label class="form__label">Password</label>
-				<input class="form__input" type="password" name="password" value="">
-				<button type="submit">Signup</button>
-			</form>
-			<!-- CONTROLS -->
-			<a href="account_login">Switch to: Login</a>
+			{{> form_account_signup}}
 		</div>
 	</section>
 </template>

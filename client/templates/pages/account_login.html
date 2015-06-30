@@ -6,18 +6,7 @@
 		</header>
 		<!-- CONTENT -->
 		<div class="panel__content">
-			<!-- FACEBOOK -->
-			<button class="account_login_facebook">Login with Facebook</button>
-			<!-- FORM -->
-			<form class="form account_login">
-				<label class="form__label">Email</label>
-				<input class="form__input" type="email" name="email" value="">
-				<label class="form__label">Password</label>
-				<input class="form__input" type="password" name="password" value="">
-				<button type="submit">Login</button>                       
-			</form>
-			<!-- CONTROLS -->
-			<a href="account_signup">Switch to: Signup</a>
+			{{> form_account_login}}
 		</div>
 	</section>
 </template>
