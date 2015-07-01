@@ -6,22 +6,58 @@
 		font-weight bold;
 		color: black;
 		margin: padding 0;
-		
-	.form__label
-		color: grey2;
-		font-size: size-small;
-		margin-bottom: 3px;
-		
-	.form__input
-		padding: 8px;
+	
+	.form__row
+		display: flex;
+		flex: 1;
 		margin-bottom padding;
+		
+		&.form__row--half
+			flex-direction: row;
+			
+			.form__row
+				margin-bottom: 0;
+				
+				&:first-child
+					margin-right: 5px;
+				
+				&:last-child
+					margin-left: 5px;
+			
+			
+	.form__label
+		width: 100px;
+		background: grey;
+		font-size: size-small;
+		padding: 9px 0 0 8px;
 		border: border;
-		border-radius: radius;
+		border-right: none;
+		border-top-left-radius: radius;
+		border-bottom-left-radius: radius;
+		cursor: pointer;
+		
+		&:after
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-radius: 100px;
+			
+	.form__input
+		flex: 1;
+		padding: 8px;
+		outline: none;
+		border: border;
+		border-top-right-radius: radius;
+		border-bottom-right-radius: radius;
 		
 		&.form__input--area
 			min-height: 150px;
 			line-height 1.5;
-			
+		
+	.form__controls
+		display: flex;
+		justify-content: space-between;
+		
 	.form__button
 		align-self: flex-end;
 		background: green;
@@ -29,3 +65,4 @@
 		color: #FFF;
 		border: none;
 		border-radius: radius;
+		

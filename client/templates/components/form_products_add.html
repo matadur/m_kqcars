@@ -1,23 +1,39 @@
 <template name="form_products_add">
 	<form class="form form--products_add">
 		<span class="form__headline">Details</span>
-		<label class="form__label">Model</label>
-		<input class="form__input" type="text" name="model" value="">
-		<label class="form__label">Kilometers</label>
-		<input class="form__input" type="text" name="kilometers" value="">
-		<label class="form__label">Built</label>
-		<input class="form__input" type="text" name="built" value="">
-		<label class="form__label">WOF</label>
-		<input class="form__input" type="text" name="wof" value="">
-		<label class="form__label">REG</label>
-		<input class="form__input" type="text" name="reg" value="">
-		<label class="form__label">Price</label>
-		<input class="form__input" type="text" name="price" value="">
-		<label class="form__label">Description</label>
-		<textarea class="form__input form__input--area" name="description" value=""></textarea>
-		<button class="form__button" type="submit">Nächster Schritt</button>
-
-		<a href="my_products_add_success">Create</a>
-		<a href="/">Cancel</a>
+		<div class="form__row">
+			<label class="form__label" for="model">Model</label>
+			<input class="form__input" type="text" name="model" id="model" value="">
+		</div>
+		<div class="form__row">
+			<label class="form__label" for="kilometers">Kilometers</label>
+			<input class="form__input" type="text" name="kilometers" id="kilometers" value="">
+		</div>
+		<div class="form__row">
+			<label class="form__label" for="built">Built</label>
+			<input class="form__input" type="text" name="built" id="built" value="">
+		</div>
+		<div class="form__row form__row--half">
+			<div class="form__row">
+				<label class="form__label" for="wof">WOF</label>
+				<input class="form__input" type="text" name="wof" id="wof" value="">
+			</div>
+			<div class="form__row">
+				<label class="form__label" for="reg">REG</label>
+				<input class="form__input" type="text" name="reg" id="reg" value="">
+			</div>
+		</div>
+		<div class="form__row">
+			<label class="form__label" for="price">Price</label>
+			<input class="form__input" type="text" name="price" id="price" value="">
+		</div>
+		<div class="form__row">
+			<label class="form__label" for="description">Description</label>
+			<textarea class="form__input form__input--area" name="description" id="description" value=""></textarea>
+		</div>
+		<div class="form__controls">
+			<a class="form__button" href="#">Abbrechen</a>
+			<a class="form__button" href="#">Nächster Schritt</a>
+		</div>
 	</form>
 </template>
