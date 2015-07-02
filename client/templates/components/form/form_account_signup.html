@@ -1,0 +1,14 @@
+<template name="form_account_signup">
+	<!-- FORM -->
+	<form class="form form--account_signup">
+		{{> formfield_account_email}}
+		{{> formfield_account_firstname}}
+		{{> formfield_account_lastname}}
+		{{> formfield_account_password}}
+		<!-- CONTROLS -->
+		<div class="form__controls">
+			<a class="form__button form__button--silent" href="account_login">Switch to: Login</a>
+			<button class="form__button" type="submit">Signup</button>
+		</div>
+	</form>
+</template>

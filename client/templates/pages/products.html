@@ -7,7 +7,29 @@
 		<!-- CONTENT -->
 		<div class="panel__content">
 			{{#each products}}
-				{{> product_list}}
+				<article class="product">
+					<div class="product__content">
+						<div class="product__listimage">
+							{{> productfield_image_side}}
+						</div>
+						<div class="product__details">
+							<h1 class="product__title">{{model}}</h1>
+							<div class="grid grid--half">
+								{{ > productfield_built}}
+								{{ > productfield_kilometers}}
+							</div>
+							<div class="grid grid--half">
+								{{ > productfield_wof}}
+								{{ > productfield_reg}}
+							</div>
+							{{ > productfield_price}}
+						</div>
+					</div>
+					<div class="product__controls">
+						<a class="product__button product__button--silent product__button--remove">Löschen</a>
+						<a class="product__button" href="products_detail/{{this._id}}">Ansehen</a>
+					</div>
+				</article>
 			{{/each}}
 		</div>
 	</section>

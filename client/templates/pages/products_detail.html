@@ -2,12 +2,46 @@
 	<section class="panel main">
 		<!-- TITLE -->
 		<header class="panel__title">
-			Ein Angebot - Detailansicht
+			{{model}}
 		</header>
 		<!-- CONTENT -->
 		<div class="panel__content">
-			Detailansicht eines Angebotes + Kontakt
-			<a href="/">Zurück zur Liste</a>
+			<article class="product product--noframe">
+				<div class="product__details">
+					<!-- DETAILS -->
+					<span class="product__headline">Details</span>
+					<div class="grid grid--half">
+						{{ > productfield_built}}
+						{{ > productfield_kilometers}}
+					</div>
+					<div class="grid grid--half">
+						{{ > productfield_wof}}
+						{{ > productfield_reg}}
+					</div>
+					{{ > productfield_price}}
+					{{ > productfield_description}}
+						
+					<!-- CONTACT -->
+					<span class="product__headline">Kontakt</span>
+					<div class="grid grid--half">
+						{{ > productfield_email}}
+						{{ > productfield_number}}
+					</div>
+					
+					<!-- IMAGES -->
+					<span class="product__headline">Bilder</span>
+					<div class="grid grid--half">
+						{{ > productfield_image_side}}
+						{{ > productfield_image_front}}
+						{{ > productfield_image_infront}}
+						{{ > productfield_image_inback}}
+					</div>
+				</div>
+				<div class="product__controls">
+					<a class="product__button product__button--silent" href="/">Zurück zur Liste</a>
+					<a class="product__button">Löschen</a>
+				</div>
+			</article>
 		</div>
 	</section>
 </template>

@@ -1,7 +1,9 @@
 if (Meteor.isClient) {
 
-	// PRODUCTS 
+	// SUBSCRIPTIONS
+	Meteor.subscribe('products');
 
+	// PRODUCTS 
 		// PRODUCTS - DISPLAY
 		Template.products.helpers({
 			products: function(){
@@ -51,7 +53,7 @@ if (Meteor.isClient) {
 		});
 
 		// PRODUCTS - REMOVE
-		Template.product_list.events({
+		Template.products.events({
 			'click .product__button--remove': function() {
 				Products.remove(this._id);
 			}
@@ -59,7 +61,13 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
+	// STARTUP
 	Meteor.startup(function () {
 
+	});
+
+	// PIBLICATIONS
+	Meteor.publish('products', function() {
+		return Products.find();     
 	});
 }
