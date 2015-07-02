@@ -1,0 +1,47 @@
+<template name="product">
+	<article class="product">
+		<div class="product__content">
+			<div class="product__listimage">
+				Image
+				</div>
+			<div class="product__details">
+				<h1 class="product__title">{{model}}</h1>
+				<div class="grid">
+					<div class="product__label">Kilometers</div>
+					<div class="product__detail">{{kilometers}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">built</div>
+					<div class="product__detail">{{built}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">wof</div>
+					<div class="product__detail">{{wof}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">reg</div>
+					<div class="product__detail">{{reg}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">price</div>
+					<div class="product__detail">{{price}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">description</div>
+					<div class="product__detail">{{description}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">email</div>
+					<div class="product__detail">{{email}}</div>
+				</div>
+				<div class="grid">
+					<div class="product__label">number</div>
+					<div class="product__detail">{{number}}</div>
+				</div>
+			</div>
+		</div>
+		<div class="product__controls">
+			<button class="product__button product__button--remove">Remove</button>
+		</div>
+	</article>
+</template>

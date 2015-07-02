@@ -7,24 +7,6 @@
 		color: black;
 		margin: padding 0;
 	
-	.form__row
-		display: flex;
-		flex: 1;
-		margin-bottom padding;
-		
-		&.form__row--half
-			flex-direction: row;
-			
-			.form__row
-				margin-bottom: 0;
-				
-				&:first-child
-					margin-right: 5px;
-				
-				&:last-child
-					margin-left: 5px;
-			
-			
 	.form__label
 		width: 100px;
 		background: grey;
@@ -35,12 +17,6 @@
 		border-top-left-radius: radius;
 		border-bottom-left-radius: radius;
 		cursor: pointer;
-		
-		&:after
-			content: '';
-			width: 10px;
-			height: 10px;
-			border-radius: 100px;
 			
 	.form__input
 		flex: 1;
@@ -56,7 +32,8 @@
 		
 	.form__controls
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
+		align-items: center;
 		
 	.form__button
 		align-self: flex-end;
@@ -65,4 +42,9 @@
 		color: #FFF;
 		border: none;
 		border-radius: radius;
+		cursor: pointer;
+		
+		&.form__button--silent
+			background: grey;
+			color: black2;
 		

@@ -99,7 +99,7 @@
 			"file": "main.js",
 			"settings":
 			{
-				"buffer_size": 88,
+				"buffer_size": 533,
 				"line_ending": "Unix"
 			}
 		},
@@ -107,8 +107,24 @@
 			"file": "main.styl",
 			"settings":
 			{
-				"buffer_size": 663,
-				"line_ending": "Unix"
+				"buffer_size": 843,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/components/form_products_add.html",
+			"settings":
+			{
+				"buffer_size": 2836,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/styles/components/form.styl",
+			"settings":
+			{
+				"buffer_size": 1151,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -226,12 +242,13 @@
 	"expanded_folders":
 	[
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/uploads"
 	],
 	"file_history":
 	[
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/form.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/routes.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_mnav.styl",
@@ -357,13 +374,11 @@
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/messages/Tutorial.todo",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/PlainTasks (Windows).sublime-settings",
 		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/messages/install.txt",
-		"/C/Users/Gothmog/Desktop/test",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/CSS Format/Example.sublime-keymap",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/CSS3/CSS3.sublime-settings"
+		"/C/Users/Gothmog/Desktop/test"
 	],
 	"find":
 	{
-		"height": 47.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -375,9 +390,17 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"fileupload",
+			"form__input",
+			"email",
+			"Datei",
+			"description",
+			"price",
+			"Price",
+			"price",
 			"');",
 			");",
 			";",
@@ -497,15 +520,7 @@
 			"wp-image-2683",
 			"size-full",
 			"alignnone",
-			"is-covering-one-third",
-			"http://kiwiquest.de/download-job-tracking-list-work-travel-jobs-neuseeland/",
-			"http://kiwiquest.de/download-seasonal-jobs-work-travel-neuseeland",
-			"http://kiwiquest.de/download-packliste-fuer-work-and-travel-in-neuseeland",
-			"http://kiwiquest.de/neuseeland-downloads/step-by-step-guide/",
-			"\">\n",
-			"mascot",
-			".panel",
-			"mascot\""
+			"is-covering-one-third"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -523,7 +538,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -532,15 +547,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 88,
+						"buffer_size": 533,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								81,
-								81
+								450,
+								450
 							]
 						],
 						"settings":
@@ -548,13 +563,14 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -563,15 +579,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 663,
+						"buffer_size": 843,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								180,
-								180
+								234,
+								234
 							]
 						],
 						"settings":
@@ -585,7 +601,71 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/templates/components/form_products_add.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 864.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/styles/components/form.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1151,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -643,6 +723,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"add",
+				"client\\templates\\pages\\my_products_add.html"
+			],
+			[
+				"form",
+				"client\\styles\\components\\form.styl"
+			],
+			[
+				"formadd",
+				"client\\templates\\components\\form_products_add.html"
+			],
 			[
 				"main",
 				"main.styl"

@@ -14,3 +14,6 @@ accounts-password
 accounts-facebook
 accounts-ui
 pagebakers:ionicons
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem

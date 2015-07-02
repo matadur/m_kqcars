@@ -6,8 +6,9 @@
 		</header>
 		<!-- CONTENT -->
 		<div class="panel__content">
-			Liste mit allen Angeboten
-			<a href="products_detail">Angebot ansehen</a>
+			{{#each products}}
+				{{> product_list}}
+			{{/each}}
 		</div>
 	</section>
 </template>
