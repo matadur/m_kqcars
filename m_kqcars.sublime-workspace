@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"prodc",
+				"product__content	(product_list.html)"
+			],
+			[
+				"products",
+				"products_detail	(products_detail.html)"
+			],
+			[
+				"produc",
+				"product__detail	(product.html)"
+			],
+			[
+				"prdo",
+				"product__button"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"product",
+				"product"
+			],
+			[
+				"form",
+				"form_products_add"
+			],
+			[
+				"form_",
+				"form_products_add	(form_products_add.html)"
+			],
+			[
 				"compon",
 				"component_logo	(component_header.html)"
 			],
@@ -96,34 +132,53 @@
 	"buffers":
 	[
 		{
-			"file": "main.js",
+			"file": "main.styl",
 			"settings":
 			{
-				"buffer_size": 533,
+				"buffer_size": 986,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/collections.js",
+			"settings":
+			{
+				"buffer_size": 167,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/scripts/products.js",
+			"settings":
+			{
+				"buffer_size": 1345,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "if (Meteor.isClient) {\n\n	// SUBSCRIPTIONS\n	Meteor.subscribe('products');\n	Meteor.subscribe('images');\n\n	// IMAGES - UPLOAD\n	Template.form_products_add.events({\n		'change .fileinput': function(event, template) {\n			FS.Utility.eachFile(event, function(file) {\n				Images.insert(_.extend(file, {product:'myproductid', otherInfo: {}}), function (err, fileObj) {\n					// Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP\n				});\n			});\n		}\n	});\n\n	// IMAGES - DISPLAY\n	Template.productfield_image_side.helpers({\n		images: function () {\n			return Images.find();\n		}\n	});\n\n}\n\nif (Meteor.isServer) {\n	// STARTUP\n	Meteor.startup(function () {\n\n	});\n\n	// PIBLICATIONS\n	Meteor.publish('products', function() {\n		return Products.find();     \n	});\n	Meteor.publish('images', function() {\n		return Images.find();     \n	});\n}\n",
+			"file": "main.js",
+			"file_size": 789,
+			"file_write_time": 130804225296650583,
+			"settings":
+			{
+				"buffer_size": 839,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "main.styl",
+			"file": "client/styles/base.styl",
 			"settings":
 			{
-				"buffer_size": 843,
+				"buffer_size": 465,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/components/form_products_add.html",
+			"file": "client/templates/components/product/productfields.html",
 			"settings":
 			{
-				"buffer_size": 2836,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/styles/components/form.styl",
-			"settings":
-			{
-				"buffer_size": 1151,
+				"buffer_size": 2015,
 				"line_ending": "Windows"
 			}
 		}
@@ -242,15 +297,64 @@
 	"expanded_folders":
 	[
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/scripts",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/uploads"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/public",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/public/uploads",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server"
 	],
 	"file_history":
 	[
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfields.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/form_products_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfields.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/scripts/products.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_detail.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/form.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/routes.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/product.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/button.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/form_account_signup.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/form_account_login.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/sidebar/sidebar_products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfields_account.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfield_image_inback.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_built.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_description.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_email.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_image_main.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_kilometers.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_model.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_number.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_price.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_reg.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_wof.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/product_image_main.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfield_account_lastname.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfield_account_email.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_wof.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_reg.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_price.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_model.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form_account_login.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_kilometers.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_email.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_description.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_built.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_number.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_model.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_list.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form_account_signup.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form_products_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/grid.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/routes.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products_add.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_mnav.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_logo.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_header.styl",
@@ -263,7 +367,6 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/page_map.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/page_home.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/layouts/layout_base.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/app_header.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/app_base.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_home.html",
@@ -330,51 +433,7 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/buddypress/bp-loader.php",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/bb-config.php",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-admin/network/site-new.php",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/messages/Tutorial.todo",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/KiwiQuest_Todo",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/contact-form-7-to-database-extension/phpunit/UnCurlyQuoteTest.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/js/tinymce/utils/form_utils.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-admin/freedoms.php",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/buddypress/bp-forums/bbpress/bb-templates/kakumei/register-success.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/easy-digital-downloads/includes/admin/settings/register-settings.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/contact-form-7/modules/response.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/SimplePie/Restriction.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/wysija-newsletters/helpers/render_engine.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/readme.html",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/User/Base File.sublime-settings",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/User/CSS.sublime-settings",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/Alignment/Base File.sublime-settings",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/Alignment/Default (Windows).sublime-keymap",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/User/CSS Format.sublime-settings",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/CSS Format/CSS Format.sublime-settings",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/default-constants.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/default-filters.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/contact-form-7-to-database-extension/phpunit/DereferenceShortcodeVars_ExportTest.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/date.php",
-		"/C/Users/Gothmog/Desktop/Sites/TierparkHTML/css/style.css",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/CodeFormatter/CodeFormatter.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Gothmog/Desktop/Sites/TierparkHTML/index.html",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/CSS Format/CSS Format.sublime-settings",
-		"/C/Users/Gothmog/Desktop/test.css",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/LiveReload/LiveReload.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/Alignment/Base File.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/CSS.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/Alignment/Default (Windows).sublime-keymap",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/ColorHighlighter.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Installed Packages/Color Highlighter.sublime-package",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/Color Highlighter/Default.sublime-keymap",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/tasks-white.hidden-tmTheme",
-		"/C/Users/Gothmog/Desktop/test.html",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/SublimeLinter.sublime-settings",
-		"/C/Users/Gothmog/Desktop/tes.todo",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/messages/Tutorial.todo",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/PlainTasks (Windows).sublime-settings",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/messages/install.txt",
-		"/C/Users/Gothmog/Desktop/test"
+		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/PlainTasks/messages/Tutorial.todo"
 	],
 	"find":
 	{
@@ -393,6 +452,30 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"product__",
+			"form__",
+			"product__",
+			"form__",
+			"form__b",
+			"form",
+			"> product_",
+			"product_",
+			"_detail_",
+			"_detail",
+			"email",
+			"d=\"\"",
+			" grid--half",
+			"grid",
+			"Kilometers",
+			"bottom",
+			"form__row",
+			";",
+			"model",
 			"fileupload",
 			"form__input",
 			"email",
@@ -496,31 +579,7 @@
 			"mascot--center",
 			"mascot_hero",
 			"masc",
-			"style",
-			"small",
-			"price",
-			"note",
-			"price",
-			"<?php do_shortcode('as_facebook_mem_likebox_widget');?> \n					<?php flc_count( $echo = true ); ?>\n					<a href=\"https://www.facebook.com/KiwiQuest\" target=\"_blank\" class=\"flc_button shortcode_button green margin0\" onclick=\"javascript:_gaq.push(['_trackEvent','Click','FacebookPage']);\">FB-Connect</a href=\"https://www.facebook.com/KiwiQuest\" target=\"_blank\">",
-			"input[type=s",
-			"input[ty",
-			"http://kiwiquest.de/work-and-travel-camper",
-			"ne_third_last",
-			" size-full wp-image-2798",
-			"alignnone",
-			"size-full wp-image-2683",
-			"is-strechin-one-third",
-			"is-covering-one-third",
-			".post-title",
-			"0px 28px 0px",
-			"http://kiwiquest.de/download-100-spoken-english-words",
-			"target=\"_blank\"",
-			".pdf",
-			"http://kiwiquest.de/download-100-written-english-words",
-			"wp-image-2683",
-			"size-full",
-			"alignnone",
-			"is-covering-one-third"
+			"style"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -538,24 +597,118 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.js",
+					"file": "main.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 533,
+						"buffer_size": 986,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								450,
-								450
+								883,
+								883
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/collections.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								89
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/scripts/products.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								857,
+								857
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 144.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 839,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								328
 							]
 						],
 						"settings":
@@ -570,24 +723,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "main.styl",
+					"buffer": 4,
+					"file": "client/styles/base.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 843,
+						"buffer_size": 465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								234,
-								234
+								170,
+								170
 							]
 						],
 						"settings":
@@ -595,30 +748,31 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 144.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/templates/components/form_products_add.html",
+					"buffer": 5,
+					"file": "client/templates/components/product/productfields.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2836,
+						"buffer_size": 2015,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								310,
-								310
+								1773,
+								1773
 							]
 						],
 						"settings":
@@ -630,42 +784,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 864.0,
+						"translation.y": 1368.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/styles/components/form.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -724,28 +846,84 @@
 		"selected_items":
 		[
 			[
+				"base",
+				"client\\styles\\base.styl"
+			],
+			[
+				"prod",
+				"client\\templates\\components\\product\\productfields.html"
+			],
+			[
+				"fields",
+				"client\\templates\\components\\form\\formfields.html"
+			],
+			[
+				"fiel",
+				"client\\templates\\components\\product\\productfields.html"
+			],
+			[
 				"add",
-				"client\\templates\\pages\\my_products_add.html"
+				"client\\templates\\components\\form\\form_products_add.html"
 			],
 			[
 				"form",
 				"client\\styles\\components\\form.styl"
 			],
 			[
-				"formadd",
-				"client\\templates\\components\\form_products_add.html"
+				"pfiel",
+				"client\\templates\\components\\product\\productfields.html"
+			],
+			[
+				"side",
+				"client\\templates\\components\\sidebar\\sidebar_products.html"
+			],
+			[
+				"formf",
+				"client\\templates\\components\\form\\formfields.html"
+			],
+			[
+				"field",
+				"client\\templates\\components\\product\\productfields.html"
 			],
 			[
 				"main",
-				"main.styl"
+				"main.js"
+			],
+			[
+				"rout",
+				"lib\\routes.js"
+			],
+			[
+				"sign",
+				"client\\templates\\components\\form_account_signup.html"
+			],
+			[
+				"forma",
+				"client\\templates\\components\\form_account_login.html"
+			],
+			[
+				"from",
+				"client\\styles\\components\\form.styl"
+			],
+			[
+				"produ",
+				"client\\styles\\components\\product.styl"
+			],
+			[
+				"prods",
+				"client\\templates\\pages\\products.html"
+			],
+			[
+				"grid",
+				"client\\styles\\components\\grid.styl"
 			],
 			[
 				"rou",
 				"routes.js"
 			],
 			[
-				"rout",
-				"routes.js"
+				"formadd",
+				"client\\templates\\components\\form_products_add.html"
 			],
 			[
 				"foot",
@@ -870,7 +1048,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\m_workstreams\\workstreams.sublime-project"
+				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\m_baustellen\\mb_baustellen.sublime-project"
 			],
 			[
 				"ki",

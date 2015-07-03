@@ -1,62 +1,55 @@
 .product
 	display: flex;
 	flex-direction: column;
-	padding: padding;
-	border: border;
-	margin-bottom padding;
-	
-	&:last-child
-		margin-bottom: 0;
-	
-	&.product--noframe
-		padding: 0;
-		border: none;
+
+	&.product--listview
+		margin-bottom padding;
+		
+		&:last-child
+			margin-bottom: 0;
+
+	.product__title
+		font-size: 24px;
+		color: black;
+		font-weight: bold;
+		margin: 0 0 padding 0;
+		padding: 0 0 10px 0;
+		border-bottom: border;
 	
 	.product__content
 		display: flex;
+		flex-direction: column;
+		flex: 1;
 		
+	// LISTVIEW
+	.product__listwrapper
+		display: flex;
+	
 	.product__listimage
 		width: 200px;
 	
-	.product__details
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-
-	.product__title
-		font-size: 16px;
-	
+	// DETAILS
 	.product__headline
 		font-weight bold;
 		color: black;
 		margin: padding 0;
 		
 	.product__label
-		width: 100px;
+		width: 110px;
 		background: grey;
 		font-size: size-small;
 		padding: 9px 0 0 8px;
 		border: border;
 		border-radius: radius;
+		line-height: 1.5;
 
 	.product__detail
 		flex: 1;
 		padding: 8px;
+		line-height: 1.5;
 	
+	// CONTROLS
 	.product__controls
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		
-	.product__button
-		align-self: flex-end;
-		background: green;
-		padding: 10px 15px;
-		color: #FFF;
-		border: none;
-		border-radius: radius;
-		cursor: pointer;
-		
-		&.product__button--silent
-			background: grey;
-			color: black2;
