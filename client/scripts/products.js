@@ -1,28 +1,30 @@
 // IMAGE-PRODUCT-RELATION-HOOK
-// Count user products when add-form-route gets called
-// Add this number to images and the product to connect them
-function productNumber() {
-	var currentUser = Meteor.userId();
-	var productCount = Products.find({owner: currentUser}).count();
-	productCount++;
+// When routed to add-form:
+// Generate "productCountId"
+// Add it to images & product to connect them
+function productCountId() {
+	var currentUser 	= Meteor.userId();
+	var productCount 	= Products.find({owner: currentUser}).count() + 1;
+	var randomNumber 	= Math.floor(Math.random() * 123456789) + 1;
+	var productCountId 	= "ProductNo_" + productCount + "_ProductId_" + randomNumber;
 
-	Session.set('productNumber', productCount);
-	this.next();
+	Session.set('productCountId', productCountId);
+	this.next(); // For Iron:Router
 }
-Router.onRun(productNumber, {only: ['my_products_add']});
+Router.onRun(productCountId, {only: ['my_products_add']});
 
 
 
 
-// IMAGES - UPLOAD
+// IMAGES - UPLOAD - SIDEIMAGE
 Template.form_products_add.events({
 	'change .fileinput': function(event, template) {
-		var productNumber = Session.get('productNumber');
+		var productCountId = Session.get('productCountId');
 
 		FS.Utility.eachFile(event, function(file) {
-			var tmpdoc = new FS.File(file);
-			tmpdoc.productNumber = productNumber;
-			tmpdoc.imageType = "sideimage";
+			var tmpdoc 				= new FS.File(file);
+			tmpdoc.productCountId 	= productCountId;
+			tmpdoc.imageType 		= "sideimage";
 
 			Images.insert(tmpdoc, function (err) {
 				
@@ -51,7 +53,7 @@ Template.products.helpers({
 // PRODUCTS - ADD
 Template.form_products_add.events({
 	'submit .form--products_add': function(event){
-		var productNumber 	= Session.get('productNumber');
+		var productCountId 	= Session.get('productCountId');
 		var owner		 	= Meteor.userId();
 		var model 			= event.target.model.value;
 		var kilometers 		= event.target.kilometers.value;
@@ -64,7 +66,7 @@ Template.form_products_add.events({
 		var number 			= event.target.number.value;
 
 		Products.insert({
-			productNumber: productNumber,
+			productCountId: productCountId,
 			owner: owner,
 			model: model,
 			kilometers: kilometers,
