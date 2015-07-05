@@ -1,104 +1,104 @@
-// IMAGE-PRODUCT-RELATION-HOOK
-// When routed to add-form:
-// Generate "productCountId"
-// Add it to images & product to connect them
-function productCountId() {
-	var currentUser 	= Meteor.userId();
-	var productCount 	= Products.find({owner: currentUser}).count() + 1;
-	var randomNumber 	= Math.floor(Math.random() * 123456789) + 1;
-	var productCountId 	= "ProductNo_" + productCount + "_ProductId_" + randomNumber;
+//------------------------------------------------------------------------------------
+// SETUP - IMAGE-PRODUCT-RELATION-HOOK
+//------------------------------------------------------------------------------------
 
-	Session.set('productCountId', productCountId);
-	this.next(); // For Iron:Router
-}
-Router.onRun(productCountId, {only: ['my_products_add']});
+	// SETUP - GENERATE A SHARED IMAGE-PRODUCT-ID---------------------------------
+	function productCountId() {
+		var currentUser 	= Meteor.userId();
+		var productCount 	= Products.find({owner: currentUser}).count() + 1;
+		var productId 		= Math.floor(Math.random() * 123456789) + 1;
+		var productCountId 	= "ProductNo_" + productCount + "_ProductId_" + productId;
+
+		Session.set('productCountId', productCountId);
+		this.next(); // For Iron:Router
+	}
+	// SETUP - GENERATE SHARED IMAGE-PRODUCT-ID ON ROUTE---------------------------
+	Router.onRun(productCountId, {only: ['my_products_add']});
 
 
 
 
-// IMAGES - UPLOAD - SIDEIMAGE
-Template.form_products_add.events({
-	'change .fileinput': function(event, template) {
-		var productCountId = Session.get('productCountId');
+//------------------------------------------------------------------------------------
+// IMAGES
+//------------------------------------------------------------------------------------
 
-		FS.Utility.eachFile(event, function(file) {
-			var tmpdoc 				= new FS.File(file);
-			tmpdoc.productCountId 	= productCountId;
-			tmpdoc.imageType 		= "sideimage";
+	// IMAGES - DISPLAY - SIDEIMAGE---------------------------------------------------
+	Template.productfield_image_side.helpers({
+		sideimages: function () {
+			return Images.find({imageType: "sideimage"});
+		}
+	});
 
-			Images.insert(tmpdoc, function (err) {
-				
+	// IMAGES - UPLOAD - SIDEIMAGE----------------------------------------------------
+	Template.form_products_add.events({
+		'change .fileinput': function(event, template) {
+			var productCountId = Session.get('productCountId');
+
+			FS.Utility.eachFile(event, function(file) {
+				var tmpdoc 				= new FS.File(file);
+				tmpdoc.productCountId 	= productCountId;
+				tmpdoc.imageType 		= "sideimage";
+
+				Images.insert(tmpdoc, function (err) {
+					
+				});
 			});
-		});
-	}
-});
-
-// IMAGES - DISPLAY - SIDE
-Template.productfield_image_side.helpers({
-	sideimages: function () {
-		return Images.find({imageType: "sideimage"});
-	}
-});
+		}
+	});
 
 
 
 
-// PRODUCTS - DISPLAY
-Template.products.helpers({
-	products: function(){
-		return Products.find();
-	}
-});
+//------------------------------------------------------------------------------------
+// PRODUCTS
+//------------------------------------------------------------------------------------
 
-// PRODUCTS - ADD
-Template.form_products_add.events({
-	'submit .form--products_add': function(event){
-		var productCountId 	= Session.get('productCountId');
-		var owner		 	= Meteor.userId();
-		var model 			= event.target.model.value;
-		var kilometers 		= event.target.kilometers.value;
-		var built 			= event.target.built.value;
-		var wof 			= event.target.wof.value;
-		var reg 			= event.target.reg.value;
-		var price 			= event.target.price.value;
-		var description 	= event.target.description.value;
-		var email 			= event.target.email.value;
-		var number 			= event.target.number.value;
+	// PRODUCTS - DISPLAY-------------------------------------------------------------
+	Template.products.helpers({
+		products: function(){
+			return Products.find();
+		}
+	});
 
-		Products.insert({
-			productCountId: productCountId,
-			owner: owner,
-			model: model,
-			kilometers: kilometers,
-			built: built,
-			wof: wof,
-			reg: reg,
-			price: price,
-			description: description,
-			email: email,
-			number: number,
-			createdAt: new Date()
-		});
+	// PRODUCTS - ADD-----------------------------------------------------------------
+	Template.form_products_add.events({
+		'submit .form--products_add': function(event){
+			var productCountId 	= Session.get('productCountId');
+			var owner		 	= Meteor.userId();
+			var model 			= event.target.model.value;
+			var kilometers 		= event.target.kilometers.value;
+			var built 			= event.target.built.value;
+			var wof 			= event.target.wof.value;
+			var reg 			= event.target.reg.value;
+			var price 			= event.target.price.value;
+			var description 	= event.target.description.value;
+			var email 			= event.target.email.value;
+			var number 			= event.target.number.value;
 
-		event.preventDefault();
+			Meteor.call('addProduct', productCountId, owner, model, kilometers, built, wof, reg, price, description, email, number)
 
-		event.target.model.value = "";
-		event.target.kilometers.value = "";
-		event.target.built.value = "";
-		event.target.wof.value = "";
-		event.target.reg.value = "";
-		event.target.price.value = "";
-		event.target.description.value = "";
-		event.target.email.value = "";
-		event.target.number.value = "";
+			event.preventDefault();
 
-		Router.go('/');
-	}
-});
+			event.target.model.value 		= "";
+			event.target.kilometers.value 	= "";
+			event.target.built.value 		= "";
+			event.target.wof.value 			= "";
+			event.target.reg.value 			= "";
+			event.target.price.value 		= "";
+			event.target.description.value 	= "";
+			event.target.email.value 		= "";
+			event.target.number.value 		= "";
 
-// PRODUCTS - REMOVE
-Template.products.events({
-	'click .remove': function() {
-		Products.remove(this._id);
-	}
-});
+			Router.go('/');
+		}
+	});
+
+	// PRODUCTS - REMOVE--------------------------------------------------------------
+	Template.products.events({
+		'click .remove': function() {
+			var clickedProduct = Products.findOne(this._id);
+			var productCountId = clickedProduct.productCountId;
+
+			Meteor.call('removeProduct', productCountId);
+		}
+	});
