@@ -33,6 +33,12 @@
 	Template.form_products_add.events({
 		'change .fileinput': function(event, template) {
 			var productCountId = Session.get('productCountId');
+			var imageTypeCount = Images.find({imageType: "sideimage"}).count();
+
+			// Note: remove previous image before re-upload
+			if (imageTypeCount != 0) {
+				Meteor.call('removeSideimage', productCountId);
+			};
 
 			FS.Utility.eachFile(event, function(file) {
 				var tmpdoc 				= new FS.File(file);
