@@ -2,7 +2,7 @@
 // SETUP - IMAGE-PRODUCT-RELATION-HOOK
 //------------------------------------------------------------------------------------
 
-	// SETUP - GENERATE A SHARED IMAGE-PRODUCT-ID---------------------------------
+	// SETUP - GENERATE A SHARED IMAGE-PRODUCT-ID-------------------------------------
 	function productCountId() {
 		var currentUser 	= Meteor.userId();
 		var productCount 	= Products.find({owner: currentUser}).count() + 1;
@@ -12,7 +12,7 @@
 		Session.set('productCountId', productCountId);
 		this.next(); // For Iron:Router
 	}
-	// SETUP - GENERATE SHARED IMAGE-PRODUCT-ID ON ROUTE---------------------------
+	// SETUP - GENERATE SHARED IMAGE-PRODUCT-ID ON ROUTE------------------------------
 	Router.onRun(productCountId, {only: ['my_products_add']});
 
 
@@ -46,7 +46,7 @@
 				tmpdoc.imageType 		= "sideimage";
 
 				Images.insert(tmpdoc, function (err) {
-					
+
 				});
 			});
 		}
