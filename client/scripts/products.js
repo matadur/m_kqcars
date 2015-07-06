@@ -28,6 +28,14 @@
 			return Images.find({imageType: "sideimage"});
 		}
 	});
+	// Template.list.helpers({
+	// 	cards: function() {
+	// 		var baustelle = Baustellen.findOne(this._id);
+	// 		var baustellenTitel = baustelle.title;
+
+	// 		return Mitarbeiter.find({baustelle: baustellenTitel});
+	// 	}
+	// });
 
 	// IMAGES - UPLOAD - SIDEIMAGE----------------------------------------------------
 	Template.form_products_add.events({
