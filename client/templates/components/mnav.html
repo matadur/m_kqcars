@@ -5,13 +5,13 @@
 			<div class="mnav__link mnav__dropdown">
 				{{currentUser.profile.name}}
 				<div class="mnav__dropdown__content">
-					<a class="mnav__link" href="my_products_add_rules">Neues Angebot<i class="ion-plus"></i></a>
-					<a class="mnav__link" href="my_products_view_all">Meine Angebote<i class="ion-android-car"></i></a>
-					<a class="mnav__link logout" href="">Logout</a>
+					<a class="mnav__link" href="/my_products_add_rules">Neues Angebot<i class="ion-plus"></i></a>
+					<a class="mnav__link" href="/my_products_view_all">Meine Angebote<i class="ion-android-car"></i></a>
+					<a class="mnav__link logout" href="#">Logout</a>
 				</div>
 			</div>
 		{{else}}
-			<a class="mnav__link" href="account_login">Login</a>
+			<a class="mnav__link" href="/account_login">Login</a>
 		{{/if}}
 	</nav>
 </template>

@@ -108,3 +108,12 @@
 			Meteor.call('removeProduct', productCountId);
 		}
 	});
+	Template.products_detail.events({
+		'click .remove': function() {
+			var clickedProduct = Products.findOne(this._id);
+			var productCountId = clickedProduct.productCountId;
+
+			Meteor.call('removeProduct', productCountId);
+			Router.go('/');
+		}
+	});
