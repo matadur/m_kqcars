@@ -31,10 +31,38 @@
 			return Images.find({productCountId: productCountId, imageType: "sideimage"});
 		}
 	});
+	// IMAGES - DISPLAY - FRONTIMAGE--------------------------------------------------
+	Template.productfield_image_front.helpers({
+		frontimages: function () {
+			var product 		= Products.findOne(this._id);
+			var productCountId 	= product.productCountId;
 
-	// IMAGES - UPLOAD - SIDEIMAGE----------------------------------------------------
+			return Images.find({productCountId: productCountId, imageType: "frontimage"});
+		}
+	});
+	// IMAGES - DISPLAY - INFRONTIMAGE------------------------------------------------
+	Template.productfield_image_infront.helpers({
+		infrontimages: function () {
+			var product 		= Products.findOne(this._id);
+			var productCountId 	= product.productCountId;
+
+			return Images.find({productCountId: productCountId, imageType: "infrontimage"});
+		}
+	});
+	// IMAGES - DISPLAY - INBACKIMAGE-------------------------------------------------
+	Template.productfield_image_inback.helpers({
+		inbackimages: function () {
+			var product 		= Products.findOne(this._id);
+			var productCountId 	= product.productCountId;
+
+			return Images.find({productCountId: productCountId, imageType: "inbackimage"});
+		}
+	});
+
+	// IMAGES - UPLOAD----------------------------------------------------------------
 	Template.form_products_add.events({
-		'change .fileinput': function(event, template) {
+		// SIDEIMAGE------------------------------------------------------------------
+		'change .fileinput--side': function(event, template) {
 			var productCountId = Session.get('productCountId');
 			var imageTypeCount = Images.find({imageType: "sideimage"}).count();
 
@@ -48,9 +76,61 @@
 				tmpdoc.productCountId 	= productCountId;
 				tmpdoc.imageType 		= "sideimage";
 
-				Images.insert(tmpdoc, function (err) {
+				Images.insert(tmpdoc, function (err) {});
+			});
+		},
+		// FRONTIMAGE-----------------------------------------------------------------
+		'change .fileinput--front': function(event, template) {
+			var productCountId = Session.get('productCountId');
+			var imageTypeCount = Images.find({imageType: "frontimage"}).count();
 
-				});
+			// Note: remove previous image before re-upload
+			if (imageTypeCount != 0) {
+				Meteor.call('removeFrontimage', productCountId);
+			};
+
+			FS.Utility.eachFile(event, function(file) {
+				var tmpdoc 				= new FS.File(file);
+				tmpdoc.productCountId 	= productCountId;
+				tmpdoc.imageType 		= "frontimage";
+
+				Images.insert(tmpdoc, function (err) {});
+			});
+		},
+		// INFRONTIMAGE---------------------------------------------------------------
+		'change .fileinput--infront': function(event, template) {
+			var productCountId = Session.get('productCountId');
+			var imageTypeCount = Images.find({imageType: "infrontimage"}).count();
+
+			// Note: remove previous image before re-upload
+			if (imageTypeCount != 0) {
+				Meteor.call('removeInfrontimage', productCountId);
+			};
+
+			FS.Utility.eachFile(event, function(file) {
+				var tmpdoc 				= new FS.File(file);
+				tmpdoc.productCountId 	= productCountId;
+				tmpdoc.imageType 		= "infrontimage";
+
+				Images.insert(tmpdoc, function (err) {});
+			});
+		},
+		// INBACKIMAGE----------------------------------------------------------------
+		'change .fileinput--inback': function(event, template) {
+			var productCountId = Session.get('productCountId');
+			var imageTypeCount = Images.find({imageType: "inbackimage"}).count();
+
+			// Note: remove previous image before re-upload
+			if (imageTypeCount != 0) {
+				Meteor.call('removeInbackimage', productCountId);
+			};
+
+			FS.Utility.eachFile(event, function(file) {
+				var tmpdoc 				= new FS.File(file);
+				tmpdoc.productCountId 	= productCountId;
+				tmpdoc.imageType 		= "inbackimage";
+
+				Images.insert(tmpdoc, function (err) {});
 			});
 		}
 	});

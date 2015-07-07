@@ -74,11 +74,23 @@
 	{{/each}}
 </template>
 <template name="productfield_image_front">
-	Image Front
+	{{#each frontimages}}
+		<a href="{{this.url}}" target="_blank">
+			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+		</a>
+	{{/each}}
 </template>
 <template name="productfield_image_infront">
-	Image Infront
+	{{#each infrontimages}}
+		<a href="{{this.url}}" target="_blank">
+			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+		</a>
+	{{/each}}
 </template>
 <template name="productfield_image_inback">
-	Image Inback
+	{{#each inbackimages}}
+		<a href="{{this.url}}" target="_blank">
+			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+		</a>
+	{{/each}}
 </template>
