@@ -25,17 +25,12 @@
 	// IMAGES - DISPLAY - SIDEIMAGE---------------------------------------------------
 	Template.productfield_image_side.helpers({
 		sideimages: function () {
-			return Images.find({imageType: "sideimage"});
+			var product 		= Products.findOne(this._id);
+			var productCountId 	= product.productCountId;
+
+			return Images.find({productCountId: productCountId, imageType: "sideimage"});
 		}
 	});
-	// Template.list.helpers({
-	// 	cards: function() {
-	// 		var baustelle = Baustellen.findOne(this._id);
-	// 		var baustellenTitel = baustelle.title;
-
-	// 		return Mitarbeiter.find({baustelle: baustellenTitel});
-	// 	}
-	// });
 
 	// IMAGES - UPLOAD - SIDEIMAGE----------------------------------------------------
 	Template.form_products_add.events({
