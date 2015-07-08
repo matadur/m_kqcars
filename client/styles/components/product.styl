@@ -1,65 +1,77 @@
-.product
-	display: flex;
-	flex-direction: column;
-
-	&.product--listview
-		margin-bottom padding;
-		
-		&:last-child
-			margin-bottom: 0;
-
-	.product__title
-		font-size: 24px;
-		color: black;
-		font-weight: bold;
-		margin: 0 0 padding 0;
-		padding: 0 0 10px 0;
-		border-bottom: border;
+//------------------------------------------------------------------------------------
+// PRODUCTS
+//------------------------------------------------------------------------------------
 	
-	.product__content
+	// PRODUCTS - BASE----------------------------------------------------------------
+	.product
 		display: flex;
 		flex-direction: column;
-		flex: 1;
-		
-	// LISTVIEW
-	.product__listwrapper
-		display: flex;
-	
-	.product__listimage
-		width: 200px;
-		padding-right: padding;
-	
-	// DETAILS
-	.product__headline
-		font-weight bold;
-		color: black;
-		margin: padding 0;
-		
-	.product__label
-		width: 110px;
-		background: grey;
-		font-size: size-small;
-		padding: 9px 0 0 8px;
-		border: border;
-		border-radius: radius;
-		line-height: 1.5;
 
-	.product__detail
-		flex: 1;
-		padding: 8px;
-		line-height: 1.5;
-	
-	// CONTROLS
-	.product__controls
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+		&.product--listview
+			margin-bottom padding;
+			
+			&:last-child
+				margin-bottom: 0;
+
+		.product__title
+			font-size: 24px;
+			color: black;
+			font-weight: bold;
+			margin: 0 0 padding 0;
+			padding: 0 0 10px 0;
+			border-bottom: border;
 		
-	// IMAGES
-	.product__image 
-		flex: 1;
-		background: #FFF;
-		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-		padding: 5px;
-		padding-bottom: 30px;
-		overflow: hidden;
+		.product__content
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			
+	// PRODUCTS - LISTVIEW------------------------------------------------------------
+		.product__listwrapper
+			display: flex;
+		
+		.product__listimage
+			width: 200px;
+			padding-right: padding;
+		
+	// PRODUCTS - DETAILVIEW----------------------------------------------------------
+		.product__headline
+			font-weight bold;
+			color: black;
+			margin: padding 0;
+			
+		.product__label
+			width: 110px;
+			background: grey;
+			font-size: size-small;
+			padding: 9px 0 0 8px;
+			border: border;
+			border-radius: radius;
+			line-height: 1.5;
+
+		.product__detail
+			flex: 1;
+			padding: 8px;
+			line-height: 1.5;
+		
+	// PRODUCTS - CONTROLS------------------------------------------------------------
+		.product__controls
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+
+
+
+//------------------------------------------------------------------------------------
+// IMAGES
+//------------------------------------------------------------------------------------
+
+	// IMAGES - DISPLAY---------------------------------------------------------------
+		.product__image 
+			flex: 1;
+			background: #FFF;
+			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+			padding: 5px;
+			padding-bottom: 30px;
+			overflow: hidden;
