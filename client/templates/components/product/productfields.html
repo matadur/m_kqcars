@@ -67,30 +67,38 @@
 
 <!-- IMAGES -->
 <template name="productfield_image_side">
-	{{#each sideimages}}
-		<a href="{{this.url}}" target="_blank">
-			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
-		</a>
-	{{/each}}
+	<div class="product__image">
+		{{#each sideimages}}
+			<a href="{{this.url}}" target="_blank">
+				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+			</a>
+		{{/each}}
+	</div>
 </template>
 <template name="productfield_image_front">
-	{{#each frontimages}}
-		<a href="{{this.url}}" target="_blank">
-			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
-		</a>
-	{{/each}}
+	<div class="product__image">
+		{{#each frontimages}}
+			<a href="{{this.url}}" target="_blank">
+				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+			</a>
+		{{/each}}
+	</div>
 </template>
 <template name="productfield_image_infront">
-	{{#each infrontimages}}
-		<a href="{{this.url}}" target="_blank">
-			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
-		</a>
-	{{/each}}
+	<div class="product__image">
+		{{#each infrontimages}}
+			<a href="{{this.url}}" target="_blank">
+				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+			</a>
+		{{/each}}
+	</div>
 </template>
 <template name="productfield_image_inback">
-	{{#each inbackimages}}
-		<a href="{{this.url}}" target="_blank">
-			<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
-		</a>
-	{{/each}}
+	<div class="product__image">
+		{{#each inbackimages}}
+			<a href="{{this.url}}" target="_blank">
+				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+			</a>
+		{{/each}}
+	</div>
 </template>
