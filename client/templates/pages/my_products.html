@@ -1,17 +1,18 @@
-<template name="products">
+<template name="my_products">
 	<section class="panel main">
 		<!-- TITLE -->
 		<header class="panel__title">
-			Alle Angebote
+			Meine Angebote
 		</header>
 		<!-- CONTENT -->
 		<div class="panel__content">
-			{{#each products}}
+			{{#each my_products}}
 				<article class="product product--listview">
 					<!-- TITLE -->
 					<h1 class="product__title">
 						{{model}}
 					</h1>
+					
 					<!-- CONTENT-WRAPPER -->
 					<div class="product__listwrapper">
 						<div class="product__listimage">
@@ -29,10 +30,11 @@
 							{{ > productfield_price}}
 						</div>
 					</div>
+					
 					<!-- CONTROLS -->
 					{{> productcontrols}}
 				</article>
 			{{/each}}
 		</div>
-	</section>
+	</section>	
 </template>

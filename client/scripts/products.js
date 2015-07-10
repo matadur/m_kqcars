@@ -16,8 +16,6 @@
 	Router.onRun(productCountId, {only: ['my_products_add']});
 
 
-
-
 //------------------------------------------------------------------------------------
 // IMAGES
 //------------------------------------------------------------------------------------
@@ -136,8 +134,6 @@
 	});
 
 
-
-
 //------------------------------------------------------------------------------------
 // PRODUCTS
 //------------------------------------------------------------------------------------
@@ -145,7 +141,15 @@
 	// PRODUCTS - DISPLAY-------------------------------------------------------------
 	Template.products.helpers({
 		products: function(){
-			return Products.find();
+			return Products.find({}, {sort: {createdAt: -1}});
+		}
+	});
+	// PRODUCTS - DISPLAY - MY PRODUCTS-----------------------------------------------
+	Template.my_products.helpers({
+		my_products: function(){
+			var owner = Meteor.userId();
+
+			return Products.find({owner: owner}, {sort: {createdAt: -1}});
 		}
 	});
 
@@ -178,25 +182,16 @@
 			event.target.email.value 		= "";
 			event.target.number.value 		= "";
 
-			Router.go('/');
+			Router.go('/products_add_success');
 		}
 	});
 
 	// PRODUCTS - REMOVE--------------------------------------------------------------
-	Template.products.events({
+	Template.productcontrols.events({
 		'click .remove': function() {
 			var clickedProduct = Products.findOne(this._id);
 			var productCountId = clickedProduct.productCountId;
 
 			Meteor.call('removeProduct', productCountId);
-		}
-	});
-	Template.products_detail.events({
-		'click .remove': function() {
-			var clickedProduct = Products.findOne(this._id);
-			var productCountId = clickedProduct.productCountId;
-
-			Meteor.call('removeProduct', productCountId);
-			Router.go('/');
 		}
 	});

@@ -1,5 +1,12 @@
 <template name="form_products_add">
 	<form class="form form--products_add">
+		<!-- IMAGES -->
+		<span class="form__headline">Bilder</span>
+		{{> formfield_image_side}}
+		{{> formfield_image_front}}
+		{{> formfield_image_infront}}
+		{{> formfield_image_inback}}
+		
 		<!-- DETAILS -->
 		<span class="form__headline">Details</span>
 		{{> formfield_model}}
@@ -18,14 +25,7 @@
 			{{> formfield_email}}
 			{{> formfield_number}}	
 		</div>
-		
-		<!-- IMAGES -->
-		<span class="form__headline">Bilder</span>
-		{{> formfield_image_side}}
-		{{> formfield_image_front}}
-		{{> formfield_image_infront}}
-		{{> formfield_image_inback}}
-		
+
 		<!-- CONTROLS -->
 		<div class="form__controls">
 			<a class="button button--silent" href="/">Abbrechen</a>

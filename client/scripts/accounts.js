@@ -46,6 +46,16 @@ Template.account_login.events({
 		});
 
 		event.preventDefault();
+	},
+	// GOOGLE
+	'click .account_login_google':function(event){
+		Meteor.loginWithGoogle(function(err){
+			if(!err) {
+				Router.go('/');
+			}
+		});
+
+		event.preventDefault();
 	}
 });
 
