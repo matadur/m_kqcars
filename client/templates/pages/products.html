@@ -10,8 +10,9 @@
 				<article class="product product--listview">
 					<!-- TITLE -->
 					<h1 class="product__title">
-						{{model}}
+						{{#if markedAsSold}}(verkauft){{/if}} {{model}}
 					</h1>
+
 					<!-- CONTENT-WRAPPER -->
 					<div class="product__listwrapper">
 						<div class="product__listimage">
@@ -29,6 +30,7 @@
 							{{ > productfield_price}}
 						</div>
 					</div>
+					
 					<!-- CONTROLS -->
 					{{> productcontrols}}
 				</article>

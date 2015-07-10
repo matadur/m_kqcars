@@ -47,6 +47,7 @@
 			Products.insert({
 				productCountId: productCountId,
 				owner: owner,
+				markedAsSold: false,
 				model: model,
 				kilometers: kilometers,
 				built: built,

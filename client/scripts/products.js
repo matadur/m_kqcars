@@ -144,12 +144,52 @@
 			return Products.find({}, {sort: {createdAt: -1}});
 		}
 	});
+	
 	// PRODUCTS - DISPLAY - MY PRODUCTS-----------------------------------------------
 	Template.my_products.helpers({
 		my_products: function(){
 			var owner = Meteor.userId();
 
 			return Products.find({owner: owner}, {sort: {createdAt: -1}});
+		}
+	});
+
+	// PPRODUCTS - CONTROLS VISIBILITY------------------------------------------------
+	Template.productcontrols.helpers({
+		currentUsersProduct: function(){
+			var currentUser = Meteor.userId();
+			var currentProduct = this;
+			var currentProductOwner = currentProduct.owner;
+
+			if (currentUser == currentProductOwner) {
+				return true;
+			} else{
+				return false;
+			};
+		}
+	});
+
+	// PPRODUCTS - MARK AS SOLD-------------------------------------------------------
+	var markedAsSoldHelper = {
+		markedAsSold: function() {
+			var currentProduct = this;
+			var markedAsSold = currentProduct.markedAsSold;
+
+			if (markedAsSold == true) {
+				return true;
+			} else{
+				return false;
+			};
+		}
+	};
+	Template.products_detail.helpers(markedAsSoldHelper);
+	Template.products.helpers(markedAsSoldHelper);
+	Template.my_products.helpers(markedAsSoldHelper);
+	Template.productcontrols.helpers(markedAsSoldHelper);
+
+	Template.productcontrols.events({
+		'click .mark_as_sold': function() {
+			Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}})
 		}
 	});
 

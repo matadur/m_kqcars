@@ -67,37 +67,37 @@
 
 <!-- IMAGES -->
 <template name="productfield_image_side">
-	<div class="product__image">
+	<div class="product__imagewrapper">
 		{{#each sideimages}}
 			<a href="{{this.url}}" target="_blank">
-				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+				<div class="product__image" style="background-image: url('{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}')"></div>
 			</a>
 		{{/each}}
 	</div>
 </template>
 <template name="productfield_image_front">
-	<div class="product__image">
+	<div class="product__imagewrapper">
 		{{#each frontimages}}
 			<a href="{{this.url}}" target="_blank">
-				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+				<div class="product__image" style="background-image: url('{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}')"></div>
 			</a>
 		{{/each}}
 	</div>
 </template>
 <template name="productfield_image_infront">
-	<div class="product__image">
+	<div class="product__imagewrapper">
 		{{#each infrontimages}}
 			<a href="{{this.url}}" target="_blank">
-				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+				<div class="product__image" style="background-image: url('{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}')"></div>
 			</a>
 		{{/each}}
 	</div>
 </template>
 <template name="productfield_image_inback">
-	<div class="product__image">
+	<div class="product__imagewrapper">
 		{{#each inbackimages}}
 			<a href="{{this.url}}" target="_blank">
-				<img src="{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}"/>
+				<div class="product__image" style="background-image: url('{{this.url uploading='loader-uploading.gif' storing='loader-storing.gif'}}')"></div>
 			</a>
 		{{/each}}
 	</div>

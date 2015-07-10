@@ -1,9 +1,18 @@
 <template name="productcontrols">
 	<div class="product__controls">
-		<a class="button button--silent generate-pdf">Generate PDF</a>
-		<a class="button button--silent mark-as-sold">Verkauft</a>
-		<a class="button button--silent remove">Löschen</a>
-		<a class="button button--silent" href="/products_edit">Bearbeiten</a>
+		{{#if currentUsersProduct}}
+			<a class="button button--silent generate_pdf">pdf</a>
+			<a class="button button--silent push_top">push</a>
+			<a class="button button--silent remove">del</a>
+			<a class="button button--silent mark_as_sold">
+				{{#if markedAsSold}}
+					Als "nicht-verkauft" markieren
+				{{else}}
+					Als "verkauft" markieren
+				{{/if}}
+			</a>
+			<a class="button button--silent" href="/products_edit">Bearbeiten</a>
+		{{/if}}
 		<a class="button" href="/products_detail/{{this._id}}">Ansehen</a>
 	</div>
 </template>

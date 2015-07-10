@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mark",
+				"markedAsSold"
+			],
+			[
+				"curr",
+				"currentProductOwner"
+			],
+			[
 				"my_products_",
 				"my_products_view_all	(routes.js)"
 			],
@@ -167,34 +175,18 @@
 			"file": "lib/routes.js",
 			"settings":
 			{
-				"buffer_size": 2784,
+				"buffer_size": 2565,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/pages/my_products.html",
-			"settings":
-			{
-				"buffer_size": 958,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "//------------------------------------------------------------------------------------\n// SETUP - IMAGE-PRODUCT-RELATION-HOOK\n//------------------------------------------------------------------------------------\n\n	// SETUP - GENERATE A SHARED IMAGE-PRODUCT-ID-------------------------------------\n	function productCountId() {\n		var currentUser 	= Meteor.userId();\n		var productCount 	= Products.find({owner: currentUser}).count() + 1;\n		var productId 		= Math.floor(Math.random() * 123456789) + 1;\n		var productCountId 	= \"ProductNo_\" + productCount + \"_ProductId_\" + productId;\n\n		Session.set('productCountId', productCountId);\n		this.next(); // For Iron:Router\n	}\n	// SETUP - GENERATE SHARED IMAGE-PRODUCT-ID ON ROUTE------------------------------\n	Router.onRun(productCountId, {only: ['my_products_add']});\n\n\n\n\n//------------------------------------------------------------------------------------\n// IMAGES\n//------------------------------------------------------------------------------------\n\n	// IMAGES - DISPLAY - SIDEIMAGE---------------------------------------------------\n	Template.productfield_image_side.helpers({\n		sideimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"sideimage\"});\n		}\n	});\n	// IMAGES - DISPLAY - FRONTIMAGE--------------------------------------------------\n	Template.productfield_image_front.helpers({\n		frontimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"frontimage\"});\n		}\n	});\n	// IMAGES - DISPLAY - INFRONTIMAGE------------------------------------------------\n	Template.productfield_image_infront.helpers({\n		infrontimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"infrontimage\"});\n		}\n	});\n	// IMAGES - DISPLAY - INBACKIMAGE-------------------------------------------------\n	Template.productfield_image_inback.helpers({\n		inbackimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"inbackimage\"});\n		}\n	});\n\n	// IMAGES - UPLOAD----------------------------------------------------------------\n	Template.form_products_add.events({\n		// SIDEIMAGE------------------------------------------------------------------\n		'change .fileinput--side': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"sideimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeSideimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"sideimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		},\n		// FRONTIMAGE-----------------------------------------------------------------\n		'change .fileinput--front': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"frontimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeFrontimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"frontimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		},\n		// INFRONTIMAGE---------------------------------------------------------------\n		'change .fileinput--infront': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"infrontimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeInfrontimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"infrontimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		},\n		// INBACKIMAGE----------------------------------------------------------------\n		'change .fileinput--inback': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"inbackimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeInbackimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"inbackimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		}\n	});\n\n\n\n\n//------------------------------------------------------------------------------------\n// PRODUCTS\n//------------------------------------------------------------------------------------\n\n	// PRODUCTS - DISPLAY-------------------------------------------------------------\n	Template.products.helpers({\n		products: function(){\n			return Products.find(),\n			, {\n								sort: {createdAt: +1}\n							});;\n		}\n	});\n	// PRODUCTS - DISPLAY - MY PRODUCTS-----------------------------------------------\n	Template.my_products.helpers({\n		my_products: function(){\n			var owner = Meteor.userId();\n\n			return Products.find({owner: owner});\n		}\n	});\n\n	// PRODUCTS - ADD-----------------------------------------------------------------\n	Template.form_products_add.events({\n		'submit .form--products_add': function(event){\n			var productCountId 	= Session.get('productCountId');\n			var owner		 	= Meteor.userId();\n			var model 			= event.target.model.value;\n			var kilometers 		= event.target.kilometers.value;\n			var built 			= event.target.built.value;\n			var wof 			= event.target.wof.value;\n			var reg 			= event.target.reg.value;\n			var price 			= event.target.price.value;\n			var description 	= event.target.description.value;\n			var email 			= event.target.email.value;\n			var number 			= event.target.number.value;\n\n			Meteor.call('addProduct', productCountId, owner, model, kilometers, built, wof, reg, price, description, email, number)\n\n			event.preventDefault();\n\n			event.target.model.value 		= \"\";\n			event.target.kilometers.value 	= \"\";\n			event.target.built.value 		= \"\";\n			event.target.wof.value 			= \"\";\n			event.target.reg.value 			= \"\";\n			event.target.price.value 		= \"\";\n			event.target.description.value 	= \"\";\n			event.target.email.value 		= \"\";\n			event.target.number.value 		= \"\";\n\n			Router.go('/products_add_success');\n		}\n	});\n\n	// PRODUCTS - REMOVE--------------------------------------------------------------\n	Template.productcontrols.events({\n		'click .remove': function() {\n			var clickedProduct = Products.findOne(this._id);\n			var productCountId = clickedProduct.productCountId;\n\n			Meteor.call('removeProduct', productCountId);\n		}\n	});",
+			"contents": "//------------------------------------------------------------------------------------\n// SETUP - IMAGE-PRODUCT-RELATION-HOOK\n//------------------------------------------------------------------------------------\n\n	// SETUP - GENERATE A SHARED IMAGE-PRODUCT-ID-------------------------------------\n	function productCountId() {\n		var currentUser 	= Meteor.userId();\n		var productCount 	= Products.find({owner: currentUser}).count() + 1;\n		var productId 		= Math.floor(Math.random() * 123456789) + 1;\n		var productCountId 	= \"ProductNo_\" + productCount + \"_ProductId_\" + productId;\n\n		Session.set('productCountId', productCountId);\n		this.next(); // For Iron:Router\n	}\n	// SETUP - GENERATE SHARED IMAGE-PRODUCT-ID ON ROUTE------------------------------\n	Router.onRun(productCountId, {only: ['my_products_add']});\n\n\n//------------------------------------------------------------------------------------\n// IMAGES\n//------------------------------------------------------------------------------------\n\n	// IMAGES - DISPLAY - SIDEIMAGE---------------------------------------------------\n	Template.productfield_image_side.helpers({\n		sideimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"sideimage\"});\n		}\n	});\n	// IMAGES - DISPLAY - FRONTIMAGE--------------------------------------------------\n	Template.productfield_image_front.helpers({\n		frontimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"frontimage\"});\n		}\n	});\n	// IMAGES - DISPLAY - INFRONTIMAGE------------------------------------------------\n	Template.productfield_image_infront.helpers({\n		infrontimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"infrontimage\"});\n		}\n	});\n	// IMAGES - DISPLAY - INBACKIMAGE-------------------------------------------------\n	Template.productfield_image_inback.helpers({\n		inbackimages: function () {\n			var product 		= Products.findOne(this._id);\n			var productCountId 	= product.productCountId;\n\n			return Images.find({productCountId: productCountId, imageType: \"inbackimage\"});\n		}\n	});\n\n	// IMAGES - UPLOAD----------------------------------------------------------------\n	Template.form_products_add.events({\n		// SIDEIMAGE------------------------------------------------------------------\n		'change .fileinput--side': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"sideimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeSideimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"sideimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		},\n		// FRONTIMAGE-----------------------------------------------------------------\n		'change .fileinput--front': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"frontimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeFrontimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"frontimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		},\n		// INFRONTIMAGE---------------------------------------------------------------\n		'change .fileinput--infront': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"infrontimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeInfrontimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"infrontimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		},\n		// INBACKIMAGE----------------------------------------------------------------\n		'change .fileinput--inback': function(event, template) {\n			var productCountId = Session.get('productCountId');\n			var imageTypeCount = Images.find({imageType: \"inbackimage\"}).count();\n\n			// Note: remove previous image before re-upload\n			if (imageTypeCount != 0) {\n				Meteor.call('removeInbackimage', productCountId);\n			};\n\n			FS.Utility.eachFile(event, function(file) {\n				var tmpdoc 				= new FS.File(file);\n				tmpdoc.productCountId 	= productCountId;\n				tmpdoc.imageType 		= \"inbackimage\";\n\n				Images.insert(tmpdoc, function (err) {});\n			});\n		}\n	});\n\n\n//------------------------------------------------------------------------------------\n// PRODUCTS\n//------------------------------------------------------------------------------------\n\n	// PRODUCTS - DISPLAY-------------------------------------------------------------\n	Template.products.helpers({\n		products: function(){\n			return Products.find({}, {sort: {createdAt: -1}});\n		}\n	});\n	\n	// PRODUCTS - DISPLAY - MY PRODUCTS-----------------------------------------------\n	Template.my_products.helpers({\n		my_products: function(){\n			var owner = Meteor.userId();\n\n			return Products.find({owner: owner}, {sort: {createdAt: -1}});\n		}\n	});\n\n	// PPRODUCTS - CONTROLS VISIBILITY------------------------------------------------\n	Template.productcontrols.helpers({\n		currentUsersProduct: function(){\n			var currentUser = Meteor.userId();\n			var currentProduct = this;\n			var currentProductOwner = currentProduct.owner;\n\n			if (currentUser == currentProductOwner) {\n				return true;\n			} else{\n				return false;\n			};\n		}\n	});\n\n	// PPRODUCTS - MARK AS SOLD-------------------------------------------------------\n	Template.products_detail.helpers({\n		markedAsSold: function() {\n			return true;\n		}\n	});\n	Template.productcontrols.events({\n		'click .mark_as_sold'. function() {\n			Products.update(this._id, {markedAsSold: {$set: != markedAsSold}})\n		}\n	});\n\n	// PRODUCTS - ADD-----------------------------------------------------------------\n	Template.form_products_add.events({\n		'submit .form--products_add': function(event){\n			var productCountId 	= Session.get('productCountId');\n			var owner		 	= Meteor.userId();\n			var model 			= event.target.model.value;\n			var kilometers 		= event.target.kilometers.value;\n			var built 			= event.target.built.value;\n			var wof 			= event.target.wof.value;\n			var reg 			= event.target.reg.value;\n			var price 			= event.target.price.value;\n			var description 	= event.target.description.value;\n			var email 			= event.target.email.value;\n			var number 			= event.target.number.value;\n\n			Meteor.call('addProduct', productCountId, owner, model, kilometers, built, wof, reg, price, description, email, number)\n\n			event.preventDefault();\n\n			event.target.model.value 		= \"\";\n			event.target.kilometers.value 	= \"\";\n			event.target.built.value 		= \"\";\n			event.target.wof.value 			= \"\";\n			event.target.reg.value 			= \"\";\n			event.target.price.value 		= \"\";\n			event.target.description.value 	= \"\";\n			event.target.email.value 		= \"\";\n			event.target.number.value 		= \"\";\n\n			Router.go('/products_add_success');\n		}\n	});\n\n	// PRODUCTS - REMOVE--------------------------------------------------------------\n	Template.productcontrols.events({\n		'click .remove': function() {\n			var clickedProduct = Products.findOne(this._id);\n			var productCountId = clickedProduct.productCountId;\n\n			Meteor.call('removeProduct', productCountId);\n		}\n	});",
 			"file": "client/scripts/products.js",
-			"file_size": 7388,
-			"file_write_time": 130809989696888548,
+			"file_size": 8014,
+			"file_write_time": 130810062634676935,
 			"settings":
 			{
-				"buffer_size": 7237,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/templates/components/sidebar/sidebar_products.html",
-			"settings":
-			{
-				"buffer_size": 527,
+				"buffer_size": 7947,
 				"line_ending": "Windows"
 			}
 		},
@@ -207,18 +199,26 @@
 			}
 		},
 		{
-			"file": "client/templates/components/product/productcontrols.html",
+			"file": "client/templates/pages/products_detail.html",
 			"settings":
 			{
-				"buffer_size": 407,
+				"buffer_size": 1371,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/templates/pages/products_detail.html",
+			"file": "client/templates/components/product/productcontrols.html",
 			"settings":
 			{
-				"buffer_size": 1295,
+				"buffer_size": 508,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/templates/pages/products_edit.html",
+			"settings":
+			{
+				"buffer_size": 282,
 				"line_ending": "Windows"
 			}
 		}
@@ -338,22 +338,26 @@
 	[
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/scripts",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/public",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/public/uploads",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/lib"
 	],
 	"file_history":
 	[
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/lib/methods.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_add_rules.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/sidebar/sidebar_my_products.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_add_success.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_add_error.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/sidebar/sidebar_products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/mnav.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/scripts/mnav.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products_add_rules.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_edit.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products_view_all.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productcontrols.html",
@@ -366,17 +370,14 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/scripts/products.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/lib/methods.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfields.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfields.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/base.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_detail.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/form.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/product.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/form_account_signup.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/sidebar/sidebar_products.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfields_account.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/formfield_image_inback.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product/productfield_built.html",
@@ -472,19 +473,11 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-admin/network/site-info.php",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/template-shop.php",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/theme-compat/header.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/wysija-newsletters/helpers/dividers.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/images/icon-nav-mobile-heart.png",
-		"/C/Users/NILSDA~1/AppData/Local/Temp/Rar$DR08.928/advanced-custom-fields-pro/readme.txt",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/js/heartbeat.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/easy-digital-downloads/includes/class-edd-html-elements.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/http.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/groups/groups-loop.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/googlea9a843da2d85cab8.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/organictabs.jquery.js"
+		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/plugins/wysija-newsletters/helpers/dividers.php"
 	],
 	"find":
 	{
-		"height": 48.0
+		"height": 72.0
 	},
 	"find_in_files":
 	{
@@ -499,6 +492,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			";\n",
+			"currentProduct",
+			"layout_my_products",
 			"facebook",
 			"function",
 			",",
@@ -623,10 +619,7 @@
 			"fix ",
 			"Fix",
 			"fix",
-			"Fix",
-			"fix",
-			"Fix",
-			"ol>li"
+			"Fix"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -644,7 +637,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -653,15 +646,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2784,
+						"buffer_size": 2565,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1020,
-								1040
+								200,
+								200
 							]
 						],
 						"settings":
@@ -676,56 +669,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/templates/pages/my_products.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								27
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "client/scripts/products.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7237,
+						"buffer_size": 7947,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5478,
-								5478
+								6396,
+								6396
 							]
 						],
 						"settings":
@@ -737,27 +698,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 202.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/templates/components/sidebar/sidebar_products.html",
+					"buffer": 2,
+					"file": "client/templates/pages/products.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 527,
+						"buffer_size": 938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								387,
-								387
+								254,
+								254
 							]
 						],
 						"settings":
@@ -776,20 +737,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "client/templates/pages/products.html",
+					"buffer": 3,
+					"file": "client/templates/pages/products_detail.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 938,
+						"buffer_size": 1371,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								493,
-								493
+								856,
+								803
 							]
 						],
 						"settings":
@@ -801,27 +762,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 72.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "client/templates/components/product/productcontrols.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 407,
+						"buffer_size": 508,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								301,
-								301
+								255,
+								267
 							]
 						],
 						"settings":
@@ -835,24 +796,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "client/templates/pages/products_detail.html",
+					"buffer": 5,
+					"file": "client/templates/pages/products_edit.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1295,
+						"buffer_size": 282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								185
+								234,
+								234
 							]
 						],
 						"settings":
@@ -864,10 +825,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -925,6 +886,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"metho",
+				"server\\lib\\methods.js"
+			],
+			[
+				"edit",
+				"client\\templates\\pages\\products_edit.html"
+			],
+			[
+				"rul",
+				"client\\templates\\pages\\products_add_rules.html"
+			],
+			[
+				"mnav",
+				"client\\templates\\components\\mnav.html"
+			],
+			[
+				"mna",
+				"client\\scripts\\mnav.js"
+			],
 			[
 				"sideb",
 				"client\\templates\\components\\sidebar\\sidebar_products.html"

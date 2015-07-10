@@ -9,7 +9,7 @@
 			<article class="product">
 				<!-- TITLE -->
 				<h1 class="product__title">
-					{{model}}
+					{{#if markedAsSold}}(verkauft){{/if}} {{model}}
 				</h1>
 				
 				<!-- CONTENT -->
@@ -29,10 +29,14 @@
 						
 					<!-- CONTACT -->
 					<span class="product__headline">Kontakt</span>
-					<div class="grid grid--half">
-						{{ > productfield_email}}
-						{{ > productfield_number}}
-					</div>
+					{{#if markedAsSold}}
+						Sorry, aber dieses Auto wurde als "schon verkauft" markiert.
+					{{else}}
+						<div class="grid grid--half">
+							{{ > productfield_email}}
+							{{ > productfield_number}}
+						</div>
+					{{/if}}
 					
 					<!-- IMAGES -->
 					<span class="product__headline">Bilder</span>
