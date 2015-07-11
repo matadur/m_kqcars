@@ -1,9 +1,9 @@
 <template name="products_detail">
 	<section class="panel main">
 		<!-- TITLE -->
-		<header class="panel__title">
+		<h1 class="panel__title">
 			Details
-		</header>
+		</h1>
 		<!-- CONTENT -->
 		<div class="panel__content">
 			<article class="product">
@@ -30,7 +30,9 @@
 					<!-- CONTACT -->
 					<span class="product__headline">Kontakt</span>
 					{{#if markedAsSold}}
-						Sorry, aber dieses Auto wurde als "schon verkauft" markiert.
+						<div class="grid">
+							Sorry, aber dieses Auto wurde als "schon verkauft" markiert.
+						</div>
 					{{else}}
 						<div class="grid grid--half">
 							{{ > productfield_email}}

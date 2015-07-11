@@ -1,17 +1,18 @@
 <template name="productcontrols">
 	<div class="product__controls">
 		{{#if currentUsersProduct}}
-			<a class="button button--silent generate_pdf">pdf</a>
-			<a class="button button--silent push_top">push</a>
-			<a class="button button--silent remove">del</a>
+			<a class="button button--silent generate_pdf"><i class="ion-android-document"></i> PDF</a>
+			<a class="button button--silent push_top"><i class="ion-android-star"></i> Highlight</a>
+			<a class="button button--silent remove"><i class="ion-android-delete"></i> Delete</a>
+			<a class="button button--silent" href="/products_edit"><i class="ion-android-create"></i> Bearbeiten</a>
 			<a class="button button--silent mark_as_sold">
 				{{#if markedAsSold}}
-					Als "nicht-verkauft" markieren
+					<i class="ion-android-checkbox-blank"></i> Mark: For Sale
 				{{else}}
-					Als "verkauft" markieren
+					<i class="ion-android-checkbox"></i> Mark: Sold
 				{{/if}}
 			</a>
-			<a class="button button--silent" href="/products_edit">Bearbeiten</a>
+			<a class="button button--silent options"><i class="ion-android-settings"></i></a>
 		{{/if}}
 		<a class="button" href="/products_detail/{{this._id}}">Ansehen</a>
 	</div>
