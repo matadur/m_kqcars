@@ -13,7 +13,7 @@
 		this.next(); // For Iron:Router
 	}
 	// SETUP - GENERATE SHARED IMAGE-PRODUCT-ID ON ROUTE------------------------------
-	Router.onRun(productCountId, {only: ['my_products_add']});
+	Router.onRun(productCountId, {only: ['products_add']});
 
 
 //------------------------------------------------------------------------------------
