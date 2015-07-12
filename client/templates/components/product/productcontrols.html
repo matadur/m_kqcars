@@ -1,15 +1,20 @@
 <template name="productcontrols">
 	<div class="product__controls">
 		{{#if currentUsersProduct}}
+			<!-- Pdf & Highlight -->
 			<a class="button button--silent button--pdf"><i class="ion-android-document"></i> PDF</a>
 			<a class="button button--silent button--push"><i class="ion-android-star"></i> Highlight</a>
 			<!-- Options-Dropdown -->
 			<div class="button button--silent button--options dropdown">
 				<i class="ion-android-settings"></i>
+				<!-- Options-Dropdown Content -->
 				<ul class="dropdown__content {{toggleClass}}">
 					<div class="dropdown__title">Optionen <i class="ion-android-close"></i></div>
+					<!-- Remove -->
 					<li><a class="remove"><i class="ion-android-delete"></i> Delete</a></li>
+					<!-- Edit -->
 					<li><a href="/products_edit"><i class="ion-android-create"></i> Bearbeiten</a></li>
+					<!-- Mark as sold -->
 					<li>
 						<a class="mark_as_sold">
 							{{#if markedAsSold}}
@@ -22,6 +27,7 @@
 				</ul>
 			</div>
 		{{/if}}
+		<!-- Read More -->
 		<a class="button" href="/products_detail/{{this._id}}">Ansehen <i class="ion-android-exit"></i></a>
 	</div>
 </template>
