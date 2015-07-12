@@ -18,3 +18,4 @@ cfs:gridfs
 cfs:filesystem
 accounts-google
 cfs:graphicsmagick
+percolate:synced-cron
