@@ -1,7 +1,7 @@
 SyncedCron.add({
 	name: 'Remove old Products & Images (60 Days)',
 	schedule: function(parser) {
-    	return parser.text('every 8 hours');
+    	return parser.text('every 24 hours');
 	},
 	job: function() {
 		var today = new Date();
