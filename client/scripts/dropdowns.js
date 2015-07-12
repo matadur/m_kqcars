@@ -16,7 +16,7 @@ Template.productcontrols.helpers({
 		var dropdownCurrentProduct = this._id;
 		var dropdownCurrentProductSession = Session.get('dropdownCurrentProductSession');
 
-		if (dropdownCurrentProduct == currentProductDropdown) {
+		if (dropdownCurrentProduct == dropdownCurrentProductSession) {
 			return 'dropdown__content--active';
 		};
 	}
