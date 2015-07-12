@@ -16,6 +16,11 @@ img
 	max-width: 100%;
 	margin: 0;
 	vertical-align: middle;
+
+i
+	font-size: 21px;
+	position: relative;
+	top: 1px;
 	
 h1, h2, h3, h4, h5, h6
 	font-family: 'Droid Sans', sans-serif;
@@ -29,7 +34,18 @@ p
 a
 	color: green
 	text-decoration: none;
+
+ul 
+	display: flex;
+	flex-direction: column;
+	list-style: none;
 	
+	li 
+		padding-bottom: padding;
+		
+		&:last-child
+			padding-bottom: 0;	
+		
 .container
 	center(xlarge)
 	width 100%;

@@ -1,0 +1,38 @@
+.dropdown
+	position: relative;
+	
+	.dropdown__title
+		padding-bottom: 9px;
+		margin: 0 0 15px 0;
+		border-bottom: border;
+		color: #BEBEBE;
+		
+		i 
+			float: right;
+			font-size: 15px;
+			margin-top: -2px;
+		
+	.dropdown__content
+		width: 0px;
+		height: 0px;
+		opacity: 0;
+		pointer-events: none;
+		overflow hidden;
+		background-color: #fff;
+		margin: 0;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		border-radius: radius;
+		box-shadow: shadow2;
+		padding: padding;
+		
+		transition: all 200ms;
+		
+		&.dropdown__content--active
+			width: 200px;
+			height: 175px;
+			opacity: 1;
+			pointer-events: all;
+			
+			transition: all 200ms;

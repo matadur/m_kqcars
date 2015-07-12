@@ -7,10 +7,28 @@
 	border-radius: radius;
 	cursor: pointer;
 	
+	a 
+		color: #FFF;
+		
 	&.button--silent
 		background: grey;
 		color: black2;
+	
+		a 
+			color: black2;
+	
+	&.button--options
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		margin-right: 5px; 
+		border-left: border;
 		
+	&.button--push
+		border-radius: 0;
+	&.button--pdf
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;		
+
 	&.button--facebook,
 	&.button--google
 		align-self: stretch;

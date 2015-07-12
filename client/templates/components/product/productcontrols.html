@@ -1,19 +1,27 @@
 <template name="productcontrols">
 	<div class="product__controls">
 		{{#if currentUsersProduct}}
-			<a class="button button--silent generate_pdf"><i class="ion-android-document"></i> PDF</a>
-			<a class="button button--silent push_top"><i class="ion-android-star"></i> Highlight</a>
-			<a class="button button--silent remove"><i class="ion-android-delete"></i> Delete</a>
-			<a class="button button--silent" href="/products_edit"><i class="ion-android-create"></i> Bearbeiten</a>
-			<a class="button button--silent mark_as_sold">
-				{{#if markedAsSold}}
-					<i class="ion-android-checkbox-blank"></i> Mark: For Sale
-				{{else}}
-					<i class="ion-android-checkbox"></i> Mark: Sold
-				{{/if}}
-			</a>
-			<a class="button button--silent options"><i class="ion-android-settings"></i></a>
+			<a class="button button--silent button--pdf"><i class="ion-android-document"></i> PDF</a>
+			<a class="button button--silent button--push"><i class="ion-android-star"></i> Highlight</a>
+			<!-- Options-Dropdown -->
+			<div class="button button--silent button--options dropdown">
+				<i class="ion-android-settings"></i>
+				<ul class="dropdown__content">
+					<div class="dropdown__title">Optionen <i class="ion-android-close"></i></div>
+					<li><a class="remove"><i class="ion-android-delete"></i> Delete</a></li>
+					<li><a href="/products_edit"><i class="ion-android-create"></i> Bearbeiten</a></li>
+					<li>
+						<a class="mark_as_sold">
+							{{#if markedAsSold}}
+								<i class="ion-android-checkbox-blank"></i> Mark as "For Sale"
+							{{else}}
+								<i class="ion-android-checkbox"></i> Mark as "Sold"
+							{{/if}}
+						</a>
+					</li>
+				</ul>
+			</div>
 		{{/if}}
-		<a class="button" href="/products_detail/{{this._id}}">Ansehen</a>
+		<a class="button" href="/products_detail/{{this._id}}">Ansehen <i class="ion-android-exit"></i></a>
 	</div>
 </template>
