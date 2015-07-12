@@ -73,7 +73,8 @@
 				var tmpdoc 				= new FS.File(file);
 				tmpdoc.productCountId 	= productCountId;
 				tmpdoc.imageType 		= "sideimage";
-
+				tmpdoc.createdAt		= new Date();
+				
 				Images.insert(tmpdoc, function (err) {});
 			});
 		},
@@ -91,7 +92,8 @@
 				var tmpdoc 				= new FS.File(file);
 				tmpdoc.productCountId 	= productCountId;
 				tmpdoc.imageType 		= "frontimage";
-
+				tmpdoc.createdAt		= new Date();
+				
 				Images.insert(tmpdoc, function (err) {});
 			});
 		},
@@ -109,7 +111,8 @@
 				var tmpdoc 				= new FS.File(file);
 				tmpdoc.productCountId 	= productCountId;
 				tmpdoc.imageType 		= "infrontimage";
-
+				tmpdoc.createdAt		= new Date();
+				
 				Images.insert(tmpdoc, function (err) {});
 			});
 		},
@@ -127,7 +130,8 @@
 				var tmpdoc 				= new FS.File(file);
 				tmpdoc.productCountId 	= productCountId;
 				tmpdoc.imageType 		= "inbackimage";
-
+				tmpdoc.createdAt		= new Date();
+				
 				Images.insert(tmpdoc, function (err) {});
 			});
 		}
