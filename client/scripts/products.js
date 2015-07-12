@@ -229,10 +229,12 @@
 	// PRODUCTS - REMOVE--------------------------------------------------------------
 	Template.productcontrols.events({
 		'click .remove': function() {
-			var clickedProduct = Products.findOne(this._id);
-			var productCountId = clickedProduct.productCountId;
+			if (confirm("Are you sure that you want to delete this Product?")) {
+				var clickedProduct = Products.findOne(this._id);
+				var productCountId = clickedProduct.productCountId;
 
-			Meteor.call('removeProduct', productCountId);
-			Router.go('/');
+				Meteor.call('removeProduct', productCountId);
+				Router.go('/');
+			}
 		}
 	});
