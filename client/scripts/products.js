@@ -233,5 +233,6 @@
 			var productCountId = clickedProduct.productCountId;
 
 			Meteor.call('removeProduct', productCountId);
+			Router.go('/');
 		}
 	});
