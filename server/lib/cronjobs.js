@@ -1,3 +1,4 @@
+// Setup Cronjobs
 SyncedCron.add({
 	name: 'Remove old Products & Images (60 Days)',
 	schedule: function(parser) {
@@ -15,7 +16,7 @@ SyncedCron.add({
 		targetDate.setMinutes(0);
 		targetDate.setSeconds(0);
 
-		// Remove matchng Documents
+		// Remove matching Documents
 		Products.remove({createdAt: {$lt: targetDate}});
 		Images.remove({createdAt: {$lt: targetDate}});
 	}
