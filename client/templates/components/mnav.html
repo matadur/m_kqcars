@@ -1,12 +1,14 @@
 <template name="mnav">
 	<nav class="mnav">
-		<a class="mnav__link" href="/">Alle Angebote</a>
 		{{#if currentUser}}
-			<div class="mnav__link mnav__dropdown">
+			<div class="mnav__user">
 				{{currentUser.profile.name}}
+			</div>
+			<div class="mnav__dropdown">
+				<i class="ion-more"></i>
 				<div class="mnav__dropdown__content">
-					<a class="mnav__link" href="/products_add_rules">Neues Angebot<i class="ion-plus"></i></a>
-					<a class="mnav__link" href="/my_products">Meine Angebote<i class="ion-android-car"></i></a>
+					<a class="mnav__link" href="/products_add_rules">Neues Angebot</a>
+					<a class="mnav__link" href="/my_products">Meine Angebote</a>
 					<a class="mnav__link logout" href="#">Logout</a>
 				</div>
 			</div>
