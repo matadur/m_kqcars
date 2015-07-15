@@ -13,7 +13,7 @@
 					<!-- Remove -->
 					<li><a class="remove"><i class="ion-android-delete"></i> Delete</a></li>
 					<!-- Edit -->
-					<li><a href="/products_edit"><i class="ion-android-create"></i> Bearbeiten</a></li>
+					<li><a href="/products_detail/{{this._id}}/{{this.model}}/edit"><i class="ion-android-create"></i> Bearbeiten</a></li>
 					<!-- Mark as sold -->
 					<li>
 						<a class="mark_as_sold">
@@ -28,6 +28,6 @@
 			</div>
 		{{/if}}
 		<!-- Read More -->
-		<a class="button" href="/products_detail/{{this._id}}">Ansehen <i class="ion-android-exit"></i></a>
+		<a class="button" href="/products_detail/{{this._id}}/{{this.model}}">Ansehen <i class="ion-android-exit"></i></a>
 	</div>
 </template>
