@@ -1,4 +1,4 @@
-Template.productcontrols.events({
+Template.product_controls.events({
 	'click .dropdown': function() {
 		var dropdownCurrentProduct = this._id;
 		var dropdownCurrentProductSession = Session.get('dropdownCurrentProductSession');
@@ -11,7 +11,7 @@ Template.productcontrols.events({
 	}
 });
 
-Template.productcontrols.helpers({
+Template.product_controls.helpers({
 	toggleClass: function() {
 		var dropdownCurrentProduct = this._id;
 		var dropdownCurrentProductSession = Session.get('dropdownCurrentProductSession');

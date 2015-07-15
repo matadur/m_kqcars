@@ -1,17 +1,17 @@
 //------------------------------------------------------------------------------------
-// PRODUCTS
+// PRODUCT
 //------------------------------------------------------------------------------------
 	
-	// PRODUCTS - BASE----------------------------------------------------------------
-	.product
-		display: flex;
-		flex-direction: column;
+	// PRODUCT - BASE-----------------------------------------------------------------
+		.product
+			display: flex;
+			flex-direction: column;
 
-		&.product--listview
-			margin-bottom padding;
-			
-			&:last-child
-				margin-bottom: 0;
+			&.product--listview
+				margin-bottom padding;
+				
+				&:last-child
+					margin-bottom: 0;
 
 		.product__title
 			font-size: 17px;
@@ -26,7 +26,7 @@
 			flex-direction: column;
 			flex: 1;
 			
-	// PRODUCTS - LISTVIEW------------------------------------------------------------
+	// PRODUCT - LISTVIEW-------------------------------------------------------------
 		.product__listwrapper
 			display: flex;
 		
@@ -34,7 +34,7 @@
 			width: 200px;
 			padding-right: padding;
 		
-	// PRODUCTS - DETAILVIEW----------------------------------------------------------
+	// PRODUCT - DETAILVIEW-----------------------------------------------------------
 		.product__headline
 			font-weight bold;
 			color: black;
@@ -54,22 +54,8 @@
 			padding: 8px;
 			line-height: 1.5;
 		
-	// PRODUCTS - CONTROLS------------------------------------------------------------
+	// PRODUCT - CONTROLS-------------------------------------------------------------
 		.product__controls
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
-
-
-
-
-//------------------------------------------------------------------------------------
-// IMAGES
-//------------------------------------------------------------------------------------
-
-	// IMAGES - DISPLAY---------------------------------------------------------------
-		.product__imagewrapper
-			flex: 1;
-			padding: 5px;
-			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-			overflow: hidden;

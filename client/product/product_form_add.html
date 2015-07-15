@@ -1,0 +1,35 @@
+<template name="product_form_add">
+	<form class="form form--product_add">
+		<!-- IMAGES -->
+		<span class="form__headline">Bilder</span>
+		{{> product_formfield_image_side}}
+		{{> product_formfield_image_front}}
+		{{> product_formfield_image_infront}}
+		{{> product_formfield_image_inback}}
+		
+		<!-- DETAILS -->
+		<span class="form__headline">Details</span>
+		{{> product_formfield_model}}
+		{{> product_formfield_kilometers}}
+		{{> product_formfield_built}}
+		<div class="grid grid--half">
+			{{> product_formfield_wof}}
+			{{> product_formfield_reg}}
+		</div>
+		{{> product_formfield_price}}
+		{{> product_formfield_description}}
+		
+		<!-- KONTAKT -->
+		<span class="form__headline">Kontakt</span>
+		<div class="grid grid--half">
+			{{> product_formfield_email}}
+			{{> product_formfield_number}}	
+		</div>
+
+		<!-- CONTROLS -->
+		<div class="form__controls">
+			<a class="button button--silent" href="/">Abbrechen</a>
+			<button class="button" type="submit">Veröffentlichen</button>
+		</div>
+	</form>
+</template>

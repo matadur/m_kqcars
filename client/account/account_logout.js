@@ -1,14 +1,12 @@
 //------------------------------------------------------------------------------------
-// LOGO
+// ACCOUNT - LOGOUT
 //------------------------------------------------------------------------------------
-	.logo
-		display: flex;
-		align-items: center;
-		
-		height: 60px;
-		font-weight bold;
-		padding-right: 20px;
-		border-right: border;
-		
-		a 
-			color: black;
+Template.mnav.events({
+	'click .logout': function () {
+		Meteor.logout(function(err){
+			if(!err) {
+				Router.go('/');
+			}
+		});
+	}
+});

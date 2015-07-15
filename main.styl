@@ -1,49 +1,56 @@
-/* SETUP */
-@import 'nib';
-@import 'axis';
-@import 'jeet';
-@import 'rupture';
+//------------------------------------------------------------------------------------
+// MAIN
+//------------------------------------------------------------------------------------
 
-normalize-css();
+	// SETUP--------------------------------------------------------------------------
+		@import 'nib';
+		@import 'axis';
+		@import 'jeet';
+		@import 'rupture';
 
-/*VARIABLES*/
-black 	= #333333;
-black2 	= #555555;
-green 	= #49BE39;
-blue 	= #AEDBED;
-red  	= #EC471C;
-grey 	= #EEEEEE;
-grey2 	= #AAAAAA;
+		normalize-css();
 
-shadow 	= 0px 1px 5px rgba(0, 0, 0, 0.25);
-shadow2 = 0px 4px 6px rgba(0, 0, 0, 0.3);
-border 	= 1px solid #E5E5E5;
-radius 	= 2px;
-padding = 15px;
+	// VARIABLES----------------------------------------------------------------------
+		black 	= #333333;
+		black2 	= #555555;
+		green 	= #49BE39;
+		blue 	= #AEDBED;
+		red  	= #EC471C;
+		grey 	= #EEEEEE;
+		grey2 	= #AAAAAA;
 
-size-small = 14px;
-size-normal = 16px;
-size-big = 25px;
+		shadow 	= 0px 1px 5px rgba(0, 0, 0, 0.25);
+		shadow2 = 0px 4px 6px rgba(0, 0, 0, 0.3);
+		border 	= 1px solid #E5E5E5;
+		radius 	= 2px;
+		padding = 15px;
 
-/*BREAKPOINTS*/
-xlarge  = 1100px;
-large 	= 800px;
-medium 	= 600px;
-small 	= 400px;
+		size-small 	= 14px;
+		size-normal = 16px;
+		size-big 	= 25px;
 
-scale = 0 small medium large xlarge;
+	// BREAKPOINTS--------------------------------------------------------------------
+		xlarge  = 1100px;
+		large 	= 800px;
+		medium 	= 600px;
+		small 	= 400px;
+		scale 	= 0 small medium large xlarge;
 
-/*PARTIALS*/
-@import 'client/styles/base.styl';
+	// PARTIALS-----------------------------------------------------------------------
+		@import 'client/styles/base.styl';
 
-@import 'client/styles/components/grid.styl';
-@import 'client/styles/components/header.styl';
-@import 'client/styles/components/logo.styl';
-@import 'client/styles/components/mnav.styl';
-@import 'client/styles/components/panel.styl';
-@import 'client/styles/components/button.styl';
-@import 'client/styles/components/loader.styl';
-@import 'client/styles/components/dropdown.styl';
+		@import 'client/styles/components/grid.styl';
+		@import 'client/styles/components/header.styl';
+		@import 'client/styles/components/logo.styl';
+		@import 'client/styles/components/panel.styl';
+		@import 'client/styles/components/button.styl';
+		@import 'client/styles/components/loader.styl';
+		@import 'client/styles/components/dropdown.styl';
 
-@import 'client/styles/components/form.styl';
-@import 'client/styles/components/product.styl';
+		@import 'client/styles/components/form.styl';
+
+	// FINISHED COMPONENTS------------------------------------------------------------
+		@import 'client/account/account.styl';
+		@import 'client/mnav/mnav.styl';
+		@import 'client/product/product.styl';
+		@import 'client/product/product_images.styl';

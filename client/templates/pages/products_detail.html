@@ -17,15 +17,15 @@
 					<!-- DETAILS -->
 					<span class="product__headline">Details</span>
 					<div class="grid grid--half">
-						{{ > productfield_built}}
-						{{ > productfield_kilometers}}
+						{{ > product_outputfield_built}}
+						{{ > product_outputfield_kilometers}}
 					</div>
 					<div class="grid grid--half">
-						{{ > productfield_wof}}
-						{{ > productfield_reg}}
+						{{ > product_outputfield_wof}}
+						{{ > product_outputfield_reg}}
 					</div>
-					{{ > productfield_price}}
-					{{ > productfield_description}}
+					{{ > product_outputfield_price}}
+					{{ > product_outputfield_description}}
 						
 					<!-- CONTACT -->
 					<span class="product__headline">Kontakt</span>
@@ -35,23 +35,23 @@
 						</div>
 					{{else}}
 						<div class="grid grid--half">
-							{{ > productfield_email}}
-							{{ > productfield_number}}
+							{{ > product_outputfield_email}}
+							{{ > product_outputfield_number}}
 						</div>
 					{{/if}}
 					
 					<!-- IMAGES -->
 					<span class="product__headline">Bilder</span>
 					<div class="grid grid--half">
-						{{ > productfield_image_side}}
-						{{ > productfield_image_front}}
-						{{ > productfield_image_infront}}
-						{{ > productfield_image_inback}}
+						{{ > product_outputfield_image_side}}
+						{{ > product_outputfield_image_front}}
+						{{ > product_outputfield_image_infront}}
+						{{ > product_outputfield_image_inback}}
 					</div>
 				</div>
 
 				<!-- CONTROLS -->
-				{{> productcontrols}}
+				{{> product_controls}}
 			</article>
 		</div>
 	</section>

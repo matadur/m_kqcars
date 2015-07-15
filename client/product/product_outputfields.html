@@ -1,0 +1,115 @@
+<!-- SIDEIMAGE -->
+	<template name="product_outputfield_image_side">
+		<div class="product__imagewrapper">
+			{{#each sideimages}}
+				<a href="{{this.url store='images'}}" target="_blank">
+					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
+				</a>
+			{{/each}}
+		</div>
+	</template>
+
+<!-- FRONTIMAGE -->
+	<template name="product_outputfield_image_front">
+		<div class="product__imagewrapper">
+			{{#each frontimages}}
+				<a href="{{this.url store='images'}}" target="_blank">
+					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
+				</a>
+			{{/each}}
+		</div>
+	</template>
+
+<!-- INFRONTIMAGE -->
+	<template name="product_outputfield_image_infront">
+		<div class="product__imagewrapper">
+			{{#each infrontimages}}
+				<a href="{{this.url store='images'}}" target="_blank">
+					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
+				</a>
+			{{/each}}
+		</div>
+	</template>
+
+<!-- INBACKIMAGE -->
+	<template name="product_outputfield_image_inback">
+		<div class="product__imagewrapper">
+			{{#each inbackimages}}
+				<a href="{{this.url store='images'}}" target="_blank">
+					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
+				</a>
+			{{/each}}
+		</div>
+	</template>
+
+<!-- MODEL -->
+	<template name="product_outputfield_model">
+		<div class="grid">
+			<div class="product__label">Modell</div>
+			<div class="product__detail">{{model}}</div>
+		</div>
+	</template>
+
+<!-- BUILT -->
+	<template name="product_outputfield_built">
+		<div class="grid">
+			<div class="product__label">Baujahr</div>
+			<div class="product__detail">{{built}}</div>
+		</div>
+	</template>
+
+<!-- KILOMETERS -->
+	<template name="product_outputfield_kilometers">
+		<div class="grid">
+			<div class="product__label">Kilometers</div>
+			<div class="product__detail">{{kilometers}}</div>
+		</div>
+	</template>
+
+<!-- WOF -->
+	<template name="product_outputfield_wof">
+		<div class="grid">
+			<div class="product__label">WOF</div>
+			<div class="product__detail">{{wof}}</div>
+		</div>
+	</template>
+
+<!-- REG -->
+	<template name="product_outputfield_reg">
+		<div class="grid">
+			<div class="product__label">REG</div>
+			<div class="product__detail">{{reg}}</div>
+		</div>
+	</template>
+
+<!-- PRICE -->
+	<template name="product_outputfield_price">
+		<div class="grid">
+			<div class="product__label">Preis</div>
+			<div class="product__detail">{{price}}</div>
+		</div>
+	</template>
+
+<!-- DESCRIPTION -->
+	<template name="product_outputfield_description">
+		<div class="grid">
+			<div class="product__label">Beschreibung</div>
+			<div class="product__detail">{{description}}</div>
+		</div>
+	</template>
+
+<!-- EMAIL -->
+	<template name="product_outputfield_email">
+		<div class="grid">
+			<div class="product__label">Email</div>
+			<div class="product__detail">{{email}}</div>
+		</div>
+	</template>
+
+<!-- NUMBER -->
+	<template name="product_outputfield_number">
+		<div class="grid">
+			<div class="product__label">Nummer</div>
+			<div class="product__detail">{{number}}</div>
+		</div>
+	</template>

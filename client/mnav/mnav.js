@@ -1,14 +1,8 @@
 //------------------------------------------------------------------------------------
-// LOGO
+// MNAV - DROPDOWN
 //------------------------------------------------------------------------------------
-	.logo
-		display: flex;
-		align-items: center;
-		
-		height: 60px;
-		font-weight bold;
-		padding-right: 20px;
-		border-right: border;
-		
-		a 
-			color: black;
+Template.mnav.events({
+	'click .mnav__dropdown': function() {
+		$('.mnav__dropdown').toggleClass('mnav__dropdown--active');
+	}
+});
