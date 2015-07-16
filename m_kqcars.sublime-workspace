@@ -207,6 +207,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "server/publications.js",
+			"settings":
+			{
+				"buffer_size": 339,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/subscriptions.js",
+			"settings":
+			{
+				"buffer_size": 252,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/methods.js",
+			"settings":
+			{
+				"buffer_size": 1980,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -321,11 +345,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars"
 	],
 	"file_history":
 	[
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/logo/logo.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/dropdown/dropdown.styl",
@@ -340,7 +364,6 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/security.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/form_products_add.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/products_edit.html",
@@ -617,8 +640,105 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "server/publications.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/subscriptions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								252,
+								252
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/methods.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1980,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1799,
+								1978
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -674,6 +794,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"publ",
+				"server\\publications.js"
+			],
 			[
 				"main",
 				"main.styl"
@@ -961,7 +1085,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\m_workstreams\\workstreams.sublime-project"
+				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\KiwiQuest_WP_V2\\KiwiQuest_WP_V2.sublime-project"
 			],
 			[
 				"ki",
