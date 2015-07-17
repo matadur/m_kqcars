@@ -1,0 +1,31 @@
+<template name="product_form_edit">
+	{{#autoForm collection="Products" id="product_form_edit" class="form form--product_edit" type="update" doc=this}}
+		<!-- DETAILS -->
+		<span class="form__headline">Details</span>
+		{{> product_formfield_model}}
+		{{> product_formfield_cartype}}
+		{{> product_formfield_geartype}}
+		{{> product_formfield_fueltype}}
+
+		<span class="form__headline">Condition</span>
+		{{> product_formfield_kilometers}}
+		{{> product_formfield_built}}
+		{{> product_formfield_wof}}
+		{{> product_formfield_reg}}
+
+		<span class="form__headline">Price and Description</span>
+		{{> product_formfield_price}}
+		{{> product_formfield_description}}
+		
+		<!-- KONTAKT -->
+		<span class="form__headline">Kontakt</span>
+		{{> product_formfield_email}}
+		{{> product_formfield_number}}	
+
+		<!-- CONTROLS -->
+		<div class="form__controls">
+			<a class="button button--silent" href="/">Abbrechen</a>
+			<button class="button" type="submit">Submit</button>
+		</div>
+	{{/autoForm}}
+</template>

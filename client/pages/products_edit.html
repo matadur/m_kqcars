@@ -6,14 +6,7 @@
 		</h1>
 		<!-- CONTENT -->
 		<div class="panel__content">
-			<article class="product">
-				<!-- TITLE -->
-				<h1 class="product__title">
-					{{#if markedAsSold}}(verkauft){{/if}} {{model}}
-				</h1>
-			</article>
-			<a href="/">Fertig</a>
-			<a href="/">Abbrechen</a>
+			{{> product_form_edit}}
 		</div>
 	</section>
 </template>
