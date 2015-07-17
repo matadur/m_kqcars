@@ -1,5 +1,17 @@
 <template name="product_form_edit">
 	{{#autoForm collection="Products" id="product_form_edit" class="form form--product_edit" type="update" doc=this}}
+		<!-- IMAGES -->
+		<span class="form__headline">Images</span>
+		<!-- SIDEIMAGE -->
+			<div class="form__group form__group--half">
+				{{#if sideImageChangeRequest}}
+					{{> product_formfield_image_side}}
+				{{else}}
+					{{> product_outputfield_image_side}}
+					<div class="imagechanger imagechanger__side">Change</div>
+				{{/if}}
+			</div>
+
 		<!-- DETAILS -->
 		<span class="form__headline">Details</span>
 		{{> product_formfield_model}}

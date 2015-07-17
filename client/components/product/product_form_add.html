@@ -1,5 +1,12 @@
 <template name="product_form_add">
 	{{#autoForm collection="Products" id="product_form_add" class="form form--product_add" type="insert"}}
+		<!-- IMAGES -->
+		<span class="form__headline">Images</span>
+		{{> product_formfield_image_side}}
+		{{> product_formfield_image_front}}
+		{{> product_formfield_image_infront}}
+		{{> product_formfield_image_inback}}
+
 		<!-- DETAILS -->
 		<span class="form__headline">Details</span>
 		{{> product_formfield_model}}

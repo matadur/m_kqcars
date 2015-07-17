@@ -40,29 +40,7 @@
 //------------------------------------------------------------------------------------
 
 	// PRODUCTS - ADD-----------------------------------------------------------------
-		// Meteor.methods({
-		// 	addProduct: function(productCountId, owner, model, cartype, geartype, fueltype, kilometers, built, wof, reg, price, description, email, number) {
-		// 		Products.insert({
-		// 			productCountId: productCountId,
-		// 			owner: owner,
-		// 			markedAsSold: false,
-		// 			model: model,
-		// 			cartype: cartype,
-		// 			geartype: geartype,
-		// 			fueltype: fueltype,
-		// 			kilometers: kilometers,
-		// 			built: built,
-		// 			wof: wof,
-		// 			reg: reg,
-		// 			price: price,
-		// 			description: description,
-		// 			email: email,
-		// 			number: number,
-		// 			createdAt: new Date()
-		// 		});
-		// 	}
-		// });
-
+	
 	// PRODUCTS - REMOVE--------------------------------------------------------------
 		Meteor.methods({
 			removeProduct: function(productCountId){

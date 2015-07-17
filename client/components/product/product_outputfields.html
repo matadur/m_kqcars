@@ -1,6 +1,6 @@
 <!-- SIDEIMAGE -->
 	<template name="product_outputfield_image_side">
-		<div class="product__imagewrapper">
+		<div class="imagewrapper">
 			{{#each sideimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
@@ -11,7 +11,7 @@
 
 <!-- FRONTIMAGE -->
 	<template name="product_outputfield_image_front">
-		<div class="product__imagewrapper">
+		<div class="imagewrapper">
 			{{#each frontimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
@@ -22,7 +22,7 @@
 
 <!-- INFRONTIMAGE -->
 	<template name="product_outputfield_image_infront">
-		<div class="product__imagewrapper">
+		<div class="imagewrapper">
 			{{#each infrontimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
@@ -33,7 +33,7 @@
 
 <!-- INBACKIMAGE -->
 	<template name="product_outputfield_image_inback">
-		<div class="product__imagewrapper">
+		<div class="imagewrapper">
 			{{#each inbackimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='loader-uploading.gif' storing='loader-storing.gif'}}" alt="thumbnail">
