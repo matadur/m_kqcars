@@ -16,6 +16,11 @@
 				<div class="product__content">
 					<!-- DETAILS -->
 					<span class="product__headline">Details</span>
+					{{ > product_outputfield_cartype}}
+					<div class="grid grid--half">
+						{{ > product_outputfield_geartype}}
+						{{ > product_outputfield_fueltype}}
+					</div>
 					<div class="grid grid--half">
 						{{ > product_outputfield_built}}
 						{{ > product_outputfield_kilometers}}

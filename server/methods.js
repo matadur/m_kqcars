@@ -41,12 +41,15 @@
 
 	// PRODUCTS - ADD-----------------------------------------------------------------
 		Meteor.methods({
-			addProduct: function(productCountId, owner, model, kilometers, built, wof, reg, price, description, email, number) {
+			addProduct: function(productCountId, owner, model, cartype, geartype, fueltype, kilometers, built, wof, reg, price, description, email, number) {
 				Products.insert({
 					productCountId: productCountId,
 					owner: owner,
 					markedAsSold: false,
 					model: model,
+					cartype: cartype,
+					geartype: geartype,
+					fueltype: fueltype,
 					kilometers: kilometers,
 					built: built,
 					wof: wof,

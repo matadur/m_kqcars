@@ -63,6 +63,9 @@
 				var productCountId 	= Session.get('productCountId');
 				var owner		 	= Meteor.userId();
 				var model 			= event.target.model.value;
+				var cartype			= event.target.cartype.value;
+				var geartype		= event.target.geartype.value;
+				var fueltype		= event.target.fueltype.value;
 				var kilometers 		= event.target.kilometers.value;
 				var built 			= event.target.built.value;
 				var wof 			= event.target.wof.value;
@@ -72,11 +75,14 @@
 				var email 			= event.target.email.value;
 				var number 			= event.target.number.value;
 
-				Meteor.call('addProduct', productCountId, owner, model, kilometers, built, wof, reg, price, description, email, number)
+				Meteor.call('addProduct', productCountId, owner, model, cartype, geartype, fueltype, kilometers, built, wof, reg, price, description, email, number)
 
 				event.preventDefault();
 
 				event.target.model.value 		= "";
+				event.target.cartype.value		= "";
+				event.target.geartype.value		= "";
+				event.target.fueltype.value		= "";
 				event.target.kilometers.value 	= "";
 				event.target.built.value 		= "";
 				event.target.wof.value 			= "";
