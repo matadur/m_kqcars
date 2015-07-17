@@ -19,3 +19,6 @@ cfs:filesystem
 accounts-google
 cfs:graphicsmagick
 percolate:synced-cron
+aldeed:autoform
+aldeed:collection2
+cfs:autoform

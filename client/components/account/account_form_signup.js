@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------------
 // ACCOUNT - SIGNUP
 //------------------------------------------------------------------------------------
-Template.account_signup.events({
+Template.account_form_signup.events({
 	// SIGNUP - EMAIL-----------------------------------------------------------------
 	'submit .form--account_signup': function (event) {
 		var email 		= event.target.email.value;

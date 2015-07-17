@@ -58,43 +58,29 @@
 		});
 
 	// PRODUCTS - ADD-----------------------------------------------------------------
-		Template.product_form_add.events({
-			'submit .form--product_add': function(event){
-				var productCountId 	= Session.get('productCountId');
-				var owner		 	= Meteor.userId();
-				var model 			= event.target.model.value;
-				var cartype			= event.target.cartype.value;
-				var geartype		= event.target.geartype.value;
-				var fueltype		= event.target.fueltype.value;
-				var kilometers 		= event.target.kilometers.value;
-				var built 			= event.target.built.value;
-				var wof 			= event.target.wof.value;
-				var reg 			= event.target.reg.value;
-				var price 			= event.target.price.value;
-				var description 	= event.target.description.value;
-				var email 			= event.target.email.value;
-				var number 			= event.target.number.value;
-
-				Meteor.call('addProduct', productCountId, owner, model, cartype, geartype, fueltype, kilometers, built, wof, reg, price, description, email, number)
-
-				event.preventDefault();
-
-				event.target.model.value 		= "";
-				event.target.cartype.value		= "";
-				event.target.geartype.value		= "";
-				event.target.fueltype.value		= "";
-				event.target.kilometers.value 	= "";
-				event.target.built.value 		= "";
-				event.target.wof.value 			= "";
-				event.target.reg.value 			= "";
-				event.target.price.value 		= "";
-				event.target.description.value 	= "";
-				event.target.email.value 		= "";
-				event.target.number.value 		= "";
-
+		var addProductHooks = {
+			before: {
+				insert: function(doc) {
+					doc.productCountId 	= Session.get('productCountId');
+					doc.owner 			= Meteor.userId();
+					doc.markedAsSold 	= false;
+					doc.createdAt 		= new Date();
+					return doc;
+				}
+			},
+			onSuccess: function() {
 				Router.go('/products_add_success');
 			}
-		});
+		}
+		AutoForm.addHooks('product_form_add', addProductHooks);
+
+	// PRODUCTS - EDIT-----------------------------------------------------------------
+		var editProductHooks = {
+			onSuccess: function() {
+				Router.go('/my_products');
+			}
+		}
+		AutoForm.addHooks('product_form_edit', editProductHooks);
 
 	// PRODUCTS - REMOVE--------------------------------------------------------------
 		Template.product_controls.events({

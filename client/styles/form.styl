@@ -1,39 +1,76 @@
-.form
-	display: flex;
-	flex-direction: column;
-	
-	// DETAILS
-	.form__headline
-		font-weight bold;
-		color: black;
-		margin: padding 0;
-	
-	.form__label
-		width: 110px;
-		background: grey;
-		font-size: size-small;
-		padding: 9px 0 0 8px;
-		border: border;
-		border-right: none;
-		border-top-left-radius: radius;
-		border-bottom-left-radius: radius;
-		cursor: pointer;
-			
-	.form__input
-		flex: 1;
-		padding: 8px;
-		outline: none;
-		border: border;
-		border-top-right-radius: radius;
-		border-bottom-right-radius: radius;
-		
-		&.form__input--area
-			min-height: 150px;
-			line-height 1.5;
-		
-	// CONTROLS
-	.form__controls
+//------------------------------------------------------------------------------------
+// FORM
+//------------------------------------------------------------------------------------
+	.form
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+		flex-direction: column;
+		
+	// FORM - GROUP------------------------------------------------------------------
+		.form__group
+			display: flex;
+			flex: 1;
+			margin-bottom padding;
+			
+			&.form__group--error
+				display: flex;
+				flex: 1;
+				margin-bottom padding;
+				
+				.form__label
+					color: white;
+					background: red;
+
+		&.form__group--half
+			flex-direction: row;
+			
+			.form__group
+				margin-bottom: 0;
+				
+				&:first-child
+					margin-right: 5px;
+				
+				&:last-child
+					margin-left: 5px;
+				
+	// FORM - FIELDS-----------------------------------------------------------------
+		.form__headline
+			font-weight bold;
+			color: black;
+			margin: padding 0;
+		
+		.form__label
+			width: 110px;
+			background: grey;
+			font-size: size-small;
+			padding: 9px 0 0 8px;
+			border: border;
+			border-right: none;
+			border-top-left-radius: radius;
+			border-bottom-left-radius: radius;
+			cursor: pointer;
+				
+		.form__input
+			flex: 1;
+			padding: 8px;
+			outline: none;
+			border: border;
+			border-top-right-radius: radius;
+			border-bottom-right-radius: radius;
+			
+			&.form__input--area
+				min-height: 150px;
+				line-height 1.5;
+	
+	// FORM - VALIDATION-------------------------------------------------------------
+		.form__message 
+			font-size: 14px;
+			
+			&.form__message--error
+				color: red;
+				
+	// FORM - CONTROLS---------------------------------------------------------------
+		.form__controls
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
 		

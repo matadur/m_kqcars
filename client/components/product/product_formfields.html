@@ -1,6 +1,6 @@
 <!-- SIDEIMAGE -->
 	<template name="product_formfield_image_side">
-		<div class="grid">
+		<div class="form__group">
 			<label class="form__label" for="file-side">Seite</label>
 			<input class="form__input fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
 		</div>
@@ -8,7 +8,7 @@
 
 <!-- FRONTIMAGE -->
 	<template name="product_formfield_image_front">
-		<div class="grid">
+		<div class="form__group">
 			<label class="form__label" for="file-front">Vorne</label>
 			<input class="form__input fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
 		</div>
@@ -16,7 +16,7 @@
 
 <!-- INFRONTIMAGE -->
 	<template name="product_formfield_image_infront">
-		<div class="grid">
+		<div class="form__group">
 			<label class="form__label" for="file-inside">Innen 1</label>
 			<input class="form__input fileinput fileinput--infront" type="file" name="file" id="file-inside" accept="image/*"> 
 		</div>
@@ -24,7 +24,7 @@
 
 <!-- INBACKIMAGE -->
 	<template name="product_formfield_image_inback">
-		<div class="grid">
+		<div class="form__group">
 			<label class="form__label" for="file-inside2">Innen 2</label>
 			<input class="form__input fileinput fileinput--inback" type="file" name="file" id="file-inside2" accept="image/*"> 
 		</div>
@@ -35,96 +35,156 @@
 
 <!-- MODEL -->
 	<template name="product_formfield_model">
-		<div class="grid">
-			<label class="form__label" for="model">Model</label>
-			<input class="form__input" type="text" name="model" id="model" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='model'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='model'}} form__group--error{{/if}}">
+			<label for="model" class="form__label">Model</label>
+			{{> afFieldInput name='model' class="form__input" id='model'}}
 		</div>
 	</template>
 
 <!-- CARTYPE -->
 	<template name="product_formfield_cartype">
-		<div class="grid">
-			<label class="form__label" for="cartype">Cartype</label>
-			<input class="form__input" type="text" name="cartype" id="cartype" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='cartype'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='cartype'}} form__group--error{{/if}}">
+			<label for="cartype" class="form__label">Cartype</label>
+			{{> afFieldInput name='cartype' class="form__input" id='cartype'}}
 		</div>
 	</template>
 
 <!-- GEARTYPE -->
 	<template name="product_formfield_geartype">
-		<div class="grid">
-			<label class="form__label" for="geartype">Geartype</label>
-			<input class="form__input" type="text" name="geartype" id="geartype" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='geartype'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='geartype'}} form__group--error{{/if}}">
+			<label for="geartype" class="form__label">Geartype</label>
+			{{> afFieldInput name='geartype' class="form__input" id='geartype'}}
 		</div>
 	</template>
 
 <!-- FUELTYPE -->
 	<template name="product_formfield_fueltype">
-		<div class="grid">
-			<label class="form__label" for="fueltype">Fueltype</label>
-			<input class="form__input" type="text" name="fueltype" id="fueltype" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='fueltype'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='fueltype'}} form__group--error{{/if}}">
+			<label for="fueltype" class="form__label">Fueltype</label>
+			{{> afFieldInput name='fueltype' class="form__input" id='fueltype'}}
 		</div>
 	</template>
 
 <!-- BUILT -->
 	<template name="product_formfield_built">
-		<div class="grid">
-			<label class="form__label" for="built">Baujahr</label>
-			<input class="form__input" type="text" name="built" id="built" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='built'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='built'}} form__group--error{{/if}}">
+			<label for="built" class="form__label">Built</label>
+			{{> afFieldInput name='built' class="form__input" id='built'}}
 		</div>
 	</template>
 
 <!-- KILOMETERS -->
 	<template name="product_formfield_kilometers">
-		<div class="grid">
-			<label class="form__label" for="kilometers">Kilometers</label>
-			<input class="form__input" type="text" name="kilometers" id="kilometers" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='kilometers'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='kilometers'}} form__group--error{{/if}}">
+			<label for="kilometers" class="form__label">Kilometers</label>
+			{{> afFieldInput name='kilometers' class="form__input" id='kilometers'}}
 		</div>
 	</template>
 
 <!-- WOF -->
 	<template name="product_formfield_wof">
-		<div class="grid">
-			<label class="form__label" for="wof">WOF</label>
-			<input class="form__input" type="text" name="wof" id="wof" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='wof'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='wof'}} form__group--error{{/if}}">
+			<label for="wof" class="form__label">WOF</label>
+			{{> afFieldInput name='wof' class="form__input" id='wof'}}
 		</div>
 	</template>
 
 <!-- REG -->
 	<template name="product_formfield_reg">
-		<div class="grid">
-			<label class="form__label" for="reg">REG</label>
-			<input class="form__input" type="text" name="reg" id="reg" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='reg'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='reg'}} form__group--error{{/if}}">
+			<label for="reg" class="form__label">REG</label>
+			{{> afFieldInput name='reg' class="form__input" id='reg'}}
 		</div>
 	</template>
 
 <!-- PRICE -->
 	<template name="product_formfield_price">
-		<div class="grid">
-			<label class="form__label" for="price">Price</label>
-			<input class="form__input" type="text" name="price" id="price" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='price'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='price'}} form__group--error{{/if}}">
+			<label for="price" class="form__label">Price</label>
+			{{> afFieldInput name='price' class="form__input" id='price'}}
 		</div>
 	</template>
 
 <!-- DESCRIPTION -->
 	<template name="product_formfield_description">
-		<div class="grid">
-			<label class="form__label" for="description">Beschreibung</label>
-			<textarea class="form__input form__input--area" name="description" id="description" value=""></textarea>
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='description'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='description'}} form__group--error{{/if}}">
+			<label for="description" class="form__label">Description</label>
+			{{> afFieldInput name='description' class="form__input" id='description'}}
 		</div>
 	</template>
 
 <!-- EMAIL -->
 	<template name="product_formfield_email">
-		<div class="grid">
-			<label class="form__label" for="email">Email</label>
-			<input class="form__input" type="text" name="email" id="email" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='email'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='email'}} form__group--error{{/if}}">
+			<label for="email" class="form__label">Email</label>
+			{{> afFieldInput name='email' class="form__input" id='email'}}
 		</div>
 	</template>
 
 <!-- NUMBER -->
 	<template name="product_formfield_number">
-		<div class="grid">
-			<label class="form__label" for="number">Nummer</label>
-			<input class="form__input" type="text" name="number" id="number" value="">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='number'}}
+			<span class="form__message form__message--error">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="form__group {{#if afFieldIsInvalid name='number'}} form__group--error{{/if}}">
+			<label for="number" class="form__label">Number</label>
+			{{> afFieldInput name='number' class="form__input" id='number'}}
 		</div>
 	</template>
