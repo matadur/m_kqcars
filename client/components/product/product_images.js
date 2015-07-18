@@ -63,10 +63,67 @@
 						Images.insert(tmpdoc, function (err) {});
 					});
 				},
+			// FRONTIMAGE-------------------------------------------------------------
+				'change .fileinput--front': function(event, template) {
+					var productCountId = Session.get('productCountId');
+					var imageTypeCount = Images.find({imageType: "frontimage"}).count();
+
+					// Note: remove previous image before re-upload
+					if (imageTypeCount != 0) {
+						Meteor.call('removeFrontimage', productCountId);
+					};
+
+					FS.Utility.eachFile(event, function(file) {
+						var tmpdoc 				= new FS.File(file);
+						tmpdoc.productCountId 	= productCountId;
+						tmpdoc.imageType 		= "frontimage";
+						tmpdoc.createdAt		= new Date();
+						
+						Images.insert(tmpdoc, function (err) {});
+					});
+				},
+			// INFRONTIMAGE-----------------------------------------------------------
+				'change .fileinput--infront': function(event, template) {
+					var productCountId = Session.get('productCountId');
+					var imageTypeCount = Images.find({imageType: "infrontimage"}).count();
+
+					// Note: remove previous image before re-upload
+					if (imageTypeCount != 0) {
+						Meteor.call('removeInfrontimage', productCountId);
+					};
+
+					FS.Utility.eachFile(event, function(file) {
+						var tmpdoc 				= new FS.File(file);
+						tmpdoc.productCountId 	= productCountId;
+						tmpdoc.imageType 		= "infrontimage";
+						tmpdoc.createdAt		= new Date();
+						
+						Images.insert(tmpdoc, function (err) {});
+					});
+				},
+			// INBACKIMAGE------------------------------------------------------------
+				'change .fileinput--inback': function(event, template) {
+					var productCountId = Session.get('productCountId');
+					var imageTypeCount = Images.find({imageType: "inbackimage"}).count();
+
+					// Note: remove previous image before re-upload
+					if (imageTypeCount != 0) {
+						Meteor.call('removeInfrontimage', productCountId);
+					};
+
+					FS.Utility.eachFile(event, function(file) {
+						var tmpdoc 				= new FS.File(file);
+						tmpdoc.productCountId 	= productCountId;
+						tmpdoc.imageType 		= "inbackimage";
+						tmpdoc.createdAt		= new Date();
+						
+						Images.insert(tmpdoc, function (err) {});
+					});
+				}
 		});
 
 	// IMAGES - EDIT------------------------------------------------------------------
-		// SIDEIMAGE--------------------------------------------------------------
+		// SIDEIMAGE------------------------------------------------------------------
 			Template.product_form_edit.helpers({
 				// Request Image Change Helper--------------------------------------------
 					sideImageChangeRequest: function() {

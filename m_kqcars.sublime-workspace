@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"if",
+				"if	if"
+			],
+			[
+				"prod",
+				"product_form_edit"
+			],
+			[
+				"image",
+				"imageChangeRequest"
+			],
+			[
+				"produ",
+				"products_edit	(routes.js)"
+			],
+			[
+				"file",
+				"fileinput"
+			],
+			[
+				"product_form_",
+				"product_form_edit	(product_form_edit.html)"
+			],
+			[
+				"reg",
+				"reg	(methods.js)"
+			],
+			[
+				"WOF",
+				"WOF	(product_formfields.html)"
+			],
+			[
+				"Kilometers",
+				"Kilometers	(product_formfields.html)"
+			],
+			[
 				"mnav",
 				"mnav_cartypes	(mnav_cartypes.styl)"
 			],
@@ -48,10 +84,6 @@
 				"productcontrols"
 			],
 			[
-				"prod",
-				"productDropdown"
-			],
-			[
 				"border",
 				"border-radius"
 			],
@@ -86,10 +118,6 @@
 			[
 				"ima",
 				"imageId"
-			],
-			[
-				"if",
-				"ife	if … else"
 			],
 			[
 				"prodc",
@@ -208,26 +236,26 @@
 	"buffers":
 	[
 		{
-			"file": "server/publications.js",
+			"file": "client/components/product/product_form_edit.html",
 			"settings":
 			{
-				"buffer_size": 339,
+				"buffer_size": 1344,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/subscriptions.js",
+			"file": "client/components/product/product_images.js",
 			"settings":
 			{
-				"buffer_size": 252,
+				"buffer_size": 4450,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server/methods.js",
+			"file": "client/components/product/product_images.styl",
 			"settings":
 			{
-				"buffer_size": 1980,
+				"buffer_size": 452,
 				"line_ending": "Windows"
 			}
 		}
@@ -345,10 +373,34 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib"
 	],
 	"file_history":
 	[
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_outputfields.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/.meteor/local/build/programs/.build786149.web.browser/app/client/components/product/template.product_outputfields.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_form_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_formfields.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/form.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/methods.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_edit.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_form_edit.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_add.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/my_products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/account/account_form_signup.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/account/account_form_signup.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/grid.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_detail.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/publications.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/subscriptions.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/logo/logo.styl",
@@ -361,8 +413,6 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/dropdown/dropdown.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/filter/filter.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/filter/filter.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/security.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form/form_products_add.html",
@@ -459,24 +509,7 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_pricing.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/m_kqcars.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/template-angebot.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/functions.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/footer.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/css/default.css",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/KiwiQuest_Todo.todo",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/theme-compat/footer.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/header.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/css/jquery.countdown.css",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/jquery.countdown.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/_inc/css/responsive.css",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/template-angebot-overview.php",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/js/countdown.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/sftp-config.json",
-		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-includes/functions.php",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scss/base/_main.scss",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scripts/main.js",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scss/base/_navigation.scss",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/assets/scss/_settings.scss",
-		"/C/Users/Nils Dannemann/Dropbox/SUBLIME TEXT3/Data/Packages/STProjectMaker/Sample-Templates/New Project [Mixture]/project.todo"
+		"/C/Users/Nils Dannemann/Desktop/Sites/KiwiQuest_WP_V2/wp-content/themes/WildCommunity/functions.php"
 	],
 	"find":
 	{
@@ -495,6 +528,32 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"sideImageChangeRequest",
+			"imageChangeRequest",
+			"product__imagewrapper",
+			"formfield",
+			"addProductHooks",
+			"true",
+			"false",
+			"addProductHooks",
+			"product_form_add",
+			"false",
+			" {{#if afFieldIsInvalid name='cost'}} form__group--error{{/if}}",
+			"form__group",
+			"#if afFieldIsInvalid",
+			"true",
+			"label:",
+			"Ouch, something is wrong here! Please check! ",
+			"{{#if afFieldIsInvalid n",
+			"model",
+			"grid",
+			"insertBookForm",
+			"geartype",
+			"cartype",
+			"geartype",
+			"cartype",
+			"model",
+			";",
 			"carswitcher",
 			"components",
 			"from__label",
@@ -596,33 +655,7 @@
 			"countdown",
 			"</",
 			"<",
-			"    ",
-			".js",
-			"  ",
-			";",
-			"  ",
-			"width: 25%;\n			font-family: 'DroidSansBold', sans-serif;",
-			"  ",
-			"figure",
-			"iframe",
-			"blog-post-right .panel",
-			".blog-post-right .panel",
-			"grid",
-			"angebot",
-			"footer",
-			"body",
-			"{\n",
-			"body",
-			"</span><span class=\"ra",
-			"'rating')",
-			"rating__star",
-			"rating-star",
-			"shortc",
-			"ratin",
-			"full",
-			"\") :",
-			"\")",
-			"}?>"
+			"    "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -640,65 +673,33 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/publications.js",
+					"file": "client/components/product/product_form_edit.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 339,
+						"buffer_size": 1344,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								266
+								441,
+								441
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
-							"open_with_edit": true,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/subscriptions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 252,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								252,
-								252
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"open_with_edit": true,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -708,20 +709,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "server/methods.js",
+					"buffer": 1,
+					"file": "client/components/product/product_images.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1980,
+						"buffer_size": 4450,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1799,
-								1978
+								2689,
+								2689
 							]
 						],
 						"settings":
@@ -732,11 +733,42 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/components/product/product_images.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								419,
+								431
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -795,6 +827,62 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"client\\styles\\form.styl"
+			],
+			[
+				"fields",
+				"client\\components\\product\\product_formfields.html"
+			],
+			[
+				"edit",
+				"client\\pages\\products_edit.html"
+			],
+			[
+				"meth",
+				"server\\methods.js"
+			],
+			[
+				"form_s",
+				"client\\components\\account\\account_form_signup.js"
+			],
+			[
+				"from_sign",
+				"client\\components\\account\\account_form_signup.html"
+			],
+			[
+				"coll",
+				"lib\\collections.js"
+			],
+			[
+				"grid",
+				"client\\styles\\grid.styl"
+			],
+			[
+				"add",
+				"client\\pages\\products_add.html"
+			],
+			[
+				"_add",
+				"client\\components\\product\\product_form_add.html"
+			],
+			[
+				"prodd",
+				"client\\pages\\products_detail.html"
+			],
+			[
+				"prodou",
+				"client\\components\\product\\product_outputfields.html"
+			],
+			[
+				"prod",
+				"client\\components\\product\\product.js"
+			],
+			[
+				"prodfiel",
+				"client\\components\\product\\product_formfields.html"
+			],
+			[
 				"publ",
 				"server\\publications.js"
 			],
@@ -811,14 +899,6 @@
 				"lib\\routes.js"
 			],
 			[
-				"edit",
-				"client\\templates\\pages\\products_edit.html"
-			],
-			[
-				"form",
-				"client\\styles\\components\\form.styl"
-			],
-			[
 				"rou",
 				"lib\\routes.js"
 			],
@@ -827,20 +907,8 @@
 				"client\\scripts\\products.js"
 			],
 			[
-				"coll",
-				"lib\\collections.js"
-			],
-			[
-				"prod",
-				"client\\scripts\\products.js"
-			],
-			[
 				"method",
 				"server\\lib\\methods.js"
-			],
-			[
-				"_add",
-				"client\\templates\\components\\form\\form_products_add.html"
 			],
 			[
 				"controls",
@@ -919,14 +987,6 @@
 				"lib\\routes.js"
 			],
 			[
-				"add",
-				"client\\templates\\components\\form\\form_products_add.html"
-			],
-			[
-				"fields",
-				"client\\templates\\components\\form\\formfields.html"
-			],
-			[
 				"fiel",
 				"client\\templates\\components\\product\\productfields.html"
 			],
@@ -957,10 +1017,6 @@
 			[
 				"produ",
 				"client\\styles\\components\\product.styl"
-			],
-			[
-				"grid",
-				"client\\styles\\components\\grid.styl"
 			],
 			[
 				"formadd",
