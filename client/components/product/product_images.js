@@ -127,9 +127,10 @@
 			Template.product_form_edit.helpers({
 				// Request Image Change Helper--------------------------------------------
 					sideImageChangeRequest: function() {
+						var imageTypeCount = Images.find({imageType: "sideimage"}).count();
 						var sideImageChangeRequest = Session.get('sideImageChangeRequest');
 
-						if (sideImageChangeRequest != null) {
+						if (imageTypeCount == 0 || sideImageChangeRequest != null) {
 							return true;
 						} else{
 							return false;
@@ -141,35 +142,27 @@
 					'click .imagechanger__side': function(event, template) {
 						var currentProduct = Products.findOne(this._id);
 						var productCountId = currentProduct.productCountId;
-						var imageTypeCount = Images.find({imageType: "sideimage"}).count();
+						var confirmRemoval = confirm("Delete this image & upload a new one?");
 
-						// Note: remove previous image before re-upload
-						if (imageTypeCount != 0) {
-							var confirmRemoval = confirm("Delete this image & upload a new one?");
-							if (confirmRemoval) {
-								Session.set('sideImageChangeRequest', true);
-								Meteor.call('removeSideimage', productCountId);
-							};
+						if (confirmRemoval) {
+							Session.set('sideImageChangeRequest', true);
+							Meteor.call('removeSideimage', productCountId);
 						};
 					},
 				// Upload new Image---------------------------------------------------
 						'change .fileinput--side': function(event, template) {
-							var sideImageChangeRequest = Session.get('sideImageChangeRequest');
+							var currentProduct = Products.findOne(this._id);
+							var productCountId = currentProduct.productCountId;
 
-							if (sideImageChangeRequest != null) {
-								var currentProduct = Products.findOne(this._id);
-								var productCountId = currentProduct.productCountId;
+							FS.Utility.eachFile(event, function(file) {
+								var tmpdoc 				= new FS.File(file);
+								tmpdoc.productCountId 	= productCountId;
+								tmpdoc.imageType 		= "sideimage";
+								tmpdoc.createdAt		= new Date();
+								
+								Images.insert(tmpdoc, function (err) {});
+							});
 
-								Session.set('sideImageChangeRequest', null);
-
-								FS.Utility.eachFile(event, function(file) {
-									var tmpdoc 				= new FS.File(file);
-									tmpdoc.productCountId 	= productCountId;
-									tmpdoc.imageType 		= "sideimage";
-									tmpdoc.createdAt		= new Date();
-									
-									Images.insert(tmpdoc, function (err) {});
-								});
-							};
+							Session.set('sideImageChangeRequest', null);
 						}
 			});
