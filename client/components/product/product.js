@@ -18,45 +18,6 @@
 			}
 		});
 
-	// PPRODUCTS - CONTROLS VISIBILITY------------------------------------------------
-		Template.product_controls.helpers({
-			currentUsersProduct: function(){
-				var currentUser = Meteor.userId();
-				var currentProduct = this;
-				var currentProductOwner = currentProduct.owner;
-
-				if (currentUser == currentProductOwner) {
-					return true;
-				} else{
-					return false;
-				};
-			}
-		});
-
-	// PPRODUCTS - MARK AS SOLD-------------------------------------------------------
-		var markedAsSoldHelper = {
-			markedAsSold: function() {
-				var currentProduct = this;
-				var markedAsSold = currentProduct.markedAsSold;
-
-				if (markedAsSold == true) {
-					return true;
-				} else{
-					return false;
-				};
-			}
-		};
-		Template.products_detail.helpers(markedAsSoldHelper);
-		Template.products.helpers(markedAsSoldHelper);
-		Template.my_products.helpers(markedAsSoldHelper);
-		Template.product_controls.helpers(markedAsSoldHelper);
-
-		Template.product_controls.events({
-			'click .mark_as_sold': function() {
-				Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}})
-			}
-		});
-
 	// PRODUCTS - ADD-----------------------------------------------------------------
 		var addProductHooks = {
 			before: {
@@ -74,7 +35,7 @@
 		}
 		AutoForm.addHooks('product_form_add', addProductHooks);
 
-	// PRODUCTS - EDIT-----------------------------------------------------------------
+	// PRODUCTS - EDIT----------------------------------------------------------------
 		var editProductHooks = {
 			onSuccess: function() {
 				Router.go('/my_products');
