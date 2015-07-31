@@ -76,7 +76,7 @@
 				var description = this.description;
 				var email 		= this.email;
 				var number 		= this.number;
-
+				
 				// Define the pdf-document
 				var docDefinition = { 
 					pageSize: 'A4',
@@ -108,21 +108,38 @@
 							columns: [
 								// Fueltype
 								{ width: '15%', text: 'Fueltype:', style: ['listItem', 'listLabel'] },
-								{ width: '35%', text: fueltype, style: ['listItem', 'listText'] },
+								{ width: '35%', text: fueltype, style: ['listItem', 'listText'] }
+							]
+						},
+						{ text: 'About the Car:', style: 'section' },
+						{ text: description, style: 'mainText' },
+						{
+							columns: [
 								// Askingprice
 								{ width: '15%', text: 'Askingprice:', style: ['listItem', 'listLabel'] },
 								{ width: '35%', text: price, style: ['listItem', 'listText'] }
 							]
 						},
-						{ text: description, style: 'mainText' }
+						{ text: 'Contact:', style: 'section' },
+						{
+							columns: [
+								// Email
+								{ width: '15%', text: 'Emailadress:', style: ['listItem', 'listLabel'] },
+								{ width: '35%', text: email, style: ['listItem', 'listText'] },
+								// Number
+								{ width: '15%', text: 'Number:', style: ['listItem', 'listLabel'] },
+								{ width: '35%', text: number, style: ['listItem', 'listText'] }
+							]
+						}
 					],
 
 					styles: {
 						headline: 	{ fontSize: 25, bold: true, margin: [0, 0, 0, 25] },
+						section: 	{ fontSize: 16, bold: true, margin: [0, 25, 0, 10] },
 						listItem:	{ fontSize: 12, margin: [0, 0, 0, 10] },
 						listLabel: 	{ bold: true },
 						listText: 	{ italic: true },
-						mainText: 	{ fontSize: 12, margin: [0, 15, 0, 15] }
+						mainText: 	{ fontSize: 12, margin: [0, 0, 0, 10] }
 					}
 				};
 

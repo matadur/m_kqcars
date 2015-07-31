@@ -239,15 +239,7 @@
 			"file": "client/components/product/product_controls.js",
 			"settings":
 			{
-				"buffer_size": 3334,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/components/product/product_controls.html",
-			"settings":
-			{
-				"buffer_size": 1329,
+				"buffer_size": 4224,
 				"line_ending": "Windows"
 			}
 		}
@@ -374,6 +366,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_controls.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_form_edit.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/.meteor/packages",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_images.styl",
@@ -500,8 +493,7 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/app_header.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_sell.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_map.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_pricing.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/m_kqcars.js"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_pricing.html"
 	],
 	"find":
 	{
@@ -520,6 +512,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"30",
+			"14",
+			"Built",
+			"Price",
+			"Geartype",
+			"Cartype",
+			"Geartype",
+			"/ Gearty",
+			"// Geartyp",
 			"10",
 			"'listLabel'",
 			"40",
@@ -638,16 +639,7 @@
 			"form__row",
 			";",
 			"model",
-			"fileupload",
-			"form__input",
-			"email",
-			"Datei",
-			"description",
-			"price",
-			"Price",
-			"price",
-			"');",
-			");"
+			"fileupload"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -674,15 +666,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3334,
+						"buffer_size": 4224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3333,
-								1965
+								466,
+								466
 							]
 						],
 						"settings":
@@ -694,42 +686,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1436.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/components/product/product_controls.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1329,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								161,
-								172
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1106,7 +1066,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\meteor-pdfmake\\meteor-pdfmake.sublime-project"
+				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\KiwiQuest_WP_V2\\KiwiQuest_WP_V2.sublime-project"
 			],
 			[
 				"ki",
