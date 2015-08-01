@@ -1,103 +1,126 @@
 <!-- SIDEIMAGE -->
 	<template name="product_outputfield_image_side">
-		<div class="ui small image">
-			{{#each sideimages}}
-				<a href="{{this.url store='images'}}" target="_blank">
-					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
-				</a>
-			{{/each}}
-		</div>
+		{{#each sideimages}}
+			<a href="{{this.url store='images'}}" target="_blank">
+				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+			</a>
+		{{/each}}
 	</template>
 
 <!-- FRONTIMAGE -->
 	<template name="product_outputfield_image_front">
-		<div class="ui small image">
-			{{#each frontimages}}
-				<a href="{{this.url store='images'}}" target="_blank">
-					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
-				</a>
-			{{/each}}
-		</div>
+		{{#each frontimages}}
+			<a href="{{this.url store='images'}}" target="_blank">
+				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+			</a>
+		{{/each}}
 	</template>
 
 <!-- INFRONTIMAGE -->
 	<template name="product_outputfield_image_infront">
-		<div class="ui small image">
-			{{#each infrontimages}}
-				<a href="{{this.url store='images'}}" target="_blank">
-					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
-				</a>
-			{{/each}}
-		</div>
+		{{#each infrontimages}}
+			<a href="{{this.url store='images'}}" target="_blank">
+				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+			</a>
+		{{/each}}
 	</template>
 
 <!-- INBACKIMAGE -->
 	<template name="product_outputfield_image_inback">
-		<div class="ui small image">
-			{{#each inbackimages}}
-				<a href="{{this.url store='images'}}" target="_blank">
-					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
-				</a>
-			{{/each}}
-		</div>
+		{{#each inbackimages}}
+			<a href="{{this.url store='images'}}" target="_blank">
+				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+			</a>
+		{{/each}}
 	</template>
 
 <!-- MODEL -->
 	<template name="product_outputfield_model">
-		Modell: {{model}}
+		<div class="content">
+			<div class="item">
+				<div class="header">
+					Modell:
+				</div>
+				<div class="description">
+					{{model}}
+				</div>
+			</div>
+		</div>
 	</template>
 
 <!-- CARTYPE -->
 	<template name="product_outputfield_cartype">
-		Cartype: {{cartype}}
+		<div class="item">
+			<div class="ui horizontal label">Cartype:</div> {{cartype}}
+		</div>
 	</template>
 
 <!-- GEARTYPE -->
 	<template name="product_outputfield_geartype">
-		Geartype: {{geartype}}
+		<div class="item">
+			<div class="ui horizontal label">Geartype:</div> {{geartype}}
+		</div>
 	</template>
 
 <!-- FUELTYPE -->
 	<template name="product_outputfield_fueltype">
-		Fueltype: {{fueltype}}
+		<div class="item">
+			<div class="ui horizontal label">Fueltype:</div> {{fueltype}}
+		</div>
 	</template>
 
 <!-- BUILT -->
 	<template name="product_outputfield_built">
-		Baujahr: {{built}}
+		<div class="item">
+			<div class="ui horizontal label">Baujahr:</div> {{built}}
+		</div>
 	</template>
 
 <!-- KILOMETERS -->
 	<template name="product_outputfield_kilometers">
-		Kilometers: {{kilometers}}
+		<div class="item">
+	 				<div class="ui horizontal label">Kilometers:</div>	{{kilometers}}
+		</div>
 	</template>
 
 <!-- WOF -->
 	<template name="product_outputfield_wof">
-		WOF: {{wof}}
+		<div class="item">
+			<div class="ui horizontal label">WOF:</div> {{wof}}
+		</div>
 	</template>
 
 <!-- REG -->
 	<template name="product_outputfield_reg">
-		REG: {{reg}}
+		<div class="item">
+			<div class="ui horizontal label">REG:</div> {{reg}}
+		</div>
 	</template>
 
 <!-- PRICE -->
 	<template name="product_outputfield_price">
-		Preis: {{price}}
+		<div class="item">
+			<div class="ui horizontal label">Preis:</div> {{price}}
+		</div>
 	</template>
 
 <!-- DESCRIPTION -->
 	<template name="product_outputfield_description">
-		Beschreibung: {{description}}
+		<div class="item">
+			 <div class="ui horizontal label">Description:</div> {{description}}
+		</div>
 	</template>
 
 <!-- EMAIL -->
 	<template name="product_outputfield_email">
-		Email: {{email}}
+		<div class="item">
+			<div class="ui horizontal label">Email:</div> {{email}}
+		</div>
 	</template>
 
 <!-- NUMBER -->
 	<template name="product_outputfield_number">
-		Nummer: {{number}}
+		<div class="item">
+			<div class="ui horizontal label">Nummer:</div> {{number}}
+		</div>
 	</template>

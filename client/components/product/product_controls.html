@@ -1,34 +1,34 @@
 <template name="product_controls">
+	<div class="ui left floated basic buttons">
+		<!-- Favorite -->
+		<a class="ui icon button" href="#">
+			<i class="empty heart icon"></i>
+		</a>
+	</div>
 	<div class="ui right floated basic buttons">
 		{{#if currentUsersProduct}}
-			<!-- Pdf & Highlight -->
-			<a class="ui animated fade button button--pdf">
-				<div class="visible content">PDF</div>
-				<div class="hidden content"><i class="download icon"></i></div>
-			</a>
-			<a class="ui animated fade button">
-				<div class="visible content">Highlight</div>
-				<div class="hidden content">1,50 €</div>
-			</a>
 			<!-- Options-Dropdown -->
-			<div class="ui dropdown button">
-				Options
-				<div class="menu transition hidden">
+			<div class="ui floating icon dropdown button">
+				<i class="setting icon"></i>
+				<div class="ui menu transition hidden">
 					<!-- Remove -->
-					<a class="item remove">Delete</a>
+					<a class="ui item remove">Delete</a>
 					<!-- Edit -->
-					<a class="item" href="/products_detail/{{this._id}}/{{this.model}}/edit"><i class="ion-android-create"></i> Edit</a>
+					<a class="ui item" href="/products_detail/{{this._id}}/{{this.model}}/edit">Edit</a>
 					<!-- Mark as sold -->
-					<a class="item mark_as_sold">
+					<a class="ui item mark_as_sold">
 						{{#if markedAsSold}}
 							Mark as "For Sale"
 						{{else}}
 							Mark as "Sold"
 						{{/if}}
 					</a>
+					<!-- Pdf & Highlight -->
+					<div class="divider"></div>
+					<a class="ui item button--pdf">PDF</a>
+					<a class="ui item">Highlight</a>
 				</div>
 			</div>
-			<div class="or"></div>
 		{{/if}}
 		<!-- Read More -->
 		<a class="ui green animated button" href="/products_detail/{{this._id}}/{{this.model}}">

@@ -1,29 +1,31 @@
 <template name="products">
 	<!-- CONTENT -->
-	{{#each products}}
-		<article class="ui padded segment">
-			<div class="ui items">
-
-				<div class="ui item">
-					<!-- IMAGE -->
-					{{> product_outputfield_image_side}}
-					
+	<div class="ui three cards">
+		{{#each products}}
+				<article class="card">
 					<!-- CONTENT -->
 					<div class="content">
-						<h3 class="header">{{#if markedAsSold}}(sold){{/if}}{{model}}</h3>
-						<div class="meta">
-							{{ > product_outputfield_built}}
-							{{ > product_outputfield_kilometers}}
+						{{#if markedAsSold}}<div class="ui top right attached label">sold</div>{{/if}}
+						{{model}}
+					</div>
+					<!-- IMAGE -->
+					<div class="ui fluid image">
+						{{> product_outputfield_image_side}}
+						<a class="ui green ribbon label">WOF + REG</a>
+					</div>
+					<!-- CONTENT -->
+					<div class="content">
+						<div class="ui divided relaxed list">
 							{{ > product_outputfield_wof}}
 							{{ > product_outputfield_reg}}
 							{{ > product_outputfield_price}}
 						</div>
-						
-						<!-- CONTROLS -->
+					</div>
+					<!-- CONTROLS -->
+					<div class="extra content">
 						{{> product_controls}}
 					</div>
-				</div>
-			</div>
-		</article>
-	{{/each}}
+				</article>
+		{{/each}}
+	</div>
 </template>
