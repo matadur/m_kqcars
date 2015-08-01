@@ -39,8 +39,6 @@
 // PRODUCTS
 //------------------------------------------------------------------------------------
 
-	// PRODUCTS - ADD-----------------------------------------------------------------
-	
 	// PRODUCTS - REMOVE--------------------------------------------------------------
 		Meteor.methods({
 			removeProduct: function(productCountId){
@@ -48,4 +46,3 @@
 				Images.remove({productCountId: productCountId});
 			}
 		});
-

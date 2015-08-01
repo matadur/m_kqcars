@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"current",
+				"currentProduct"
+			],
+			[
+				"prd",
+				"product_controls"
+			],
+			[
+				"product",
+				"product_controls	(products.html)"
+			],
+			[
+				"header_",
+				"header_filter	(header.html)"
+			],
+			[
+				"side",
+				"sideImage"
+			],
+			[
 				"if",
 				"if	if"
 			],
@@ -46,10 +66,6 @@
 			[
 				"Date",
 				"Date"
-			],
-			[
-				"product",
-				"products	(routes.js)"
 			],
 			[
 				"curr",
@@ -236,10 +252,66 @@
 	"buffers":
 	[
 		{
+			"file": "client/pages/products.html",
+			"settings":
+			{
+				"buffer_size": 834,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/collections.js",
+			"settings":
+			{
+				"buffer_size": 2777,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/components/product/product_controls.js",
 			"settings":
 			{
-				"buffer_size": 4224,
+				"buffer_size": 4279,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/components/product/product.js",
+			"settings":
+			{
+				"buffer_size": 1962,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/pages/my_products.html",
+			"settings":
+			{
+				"buffer_size": 840,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/components/product/product_controls.html",
+			"settings":
+			{
+				"buffer_size": 1216,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/components/sidebar/sidebar_products.html",
+			"settings":
+			{
+				"buffer_size": 792,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/routes.js",
+			"settings":
+			{
+				"buffer_size": 3402,
 				"line_ending": "Windows"
 			}
 		}
@@ -336,7 +408,7 @@
 				"Set Syntax: CSS3"
 			]
 		],
-		"width": 581.0
+		"width": 713.0
 	},
 	"console":
 	{
@@ -360,40 +432,75 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/site/globals",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/themes",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/themes/default",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/themes/default/globals",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/public"
 	],
 	"file_history":
 	[
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/semantic_ui.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header_filter.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/layouts/layout_products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_outputfields.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_images.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/sidebar/sidebar_products.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_controls.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.variables.import.less",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.overrides.import.less",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/methods.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_formfields.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header_account.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_controls.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_detail.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header_logo.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/layouts/layout_account.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/layouts/layout_loading.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header_login.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/account/account_logout.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/mnav/header_login.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/mnav/header_account.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/mnav/mnav_search.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/mnav/mnav_filter.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/logo/logo.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/mnav/mnav_account.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header_dropdown_account.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/search/search.html",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/custom.semantic.json",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/themes/default/globals/site.variables",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.styl",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/.custom.semantic.json",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic_ui/semantic.js",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic-ui/.custom.semantic.json",
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/lib/semantic-ui/custom.semantic.json",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_form_edit.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/.meteor/packages",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_images.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_images.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/routes.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/lib/collections.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_outputfields.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/.meteor/local/build/programs/.build786149.web.browser/app/client/components/product/template.product_outputfields.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_form_add.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product_formfields.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/form.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/methods.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/product/product.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_edit.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_add.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/my_products.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/account/account_form_signup.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/account/account_form_signup.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/grid.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/pages/products_detail.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/server/publications.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/subscriptions.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.js",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header/header.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/logo/logo.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/dropdown/dropdown.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/main.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/header",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/filter/filter.styl",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components/account/account_form_login.js",
@@ -464,36 +571,7 @@
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form_account_login.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_kilometers.html",
 		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_email.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_description.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_built.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_number.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_model.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_list.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form_account_signup.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/form_products_add.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/grid.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/routes.js",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/my_products_add.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_mnav.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_logo.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/components/component_header.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/component_logo.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/component_mnav.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/component_header.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/layout/layout_base.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/page_sell.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/page_pricing.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/page_map.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/pages/page_home.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/layouts/layout_base.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/app_header.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/app_base.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_home.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/styles/app_header.styl",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_sell.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_map.html",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/section_pricing.html"
+		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/templates/components/product_detail_description.html"
 	],
 	"find":
 	{
@@ -512,6 +590,53 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"insert",
+			"file-inback",
+			"inside",
+			"<a class=\"item",
+			"</a>",
+			"a>\n					</div>",
+			"					<div class=\"item\">\n",
+			"href=\"",
+			"=\"item\">\n					<d",
+			"</div>\n			</div>\n		</div>\n	</template>",
+			"<div class=\"content\">\n				<div class=\"description\">",
+			"<i class=\"icon email\"></i>",
+			"div class=\"content\">\n				<div class=\"description\">",
+			"\"content\">\n				<div class=\"description\">",
+			"\"item\">\n			<div class=\"content\">\n				<div class=\"header\">",
+			"em\">\n				<div class=\"header\">",
+			"{{/each}}\n		</div>",
+			"		<div class=\"image\">\n",
+			"class=\"ui image\" ",
+			"img src=\"",
+			"a",
+			"small",
+			"<div class=\"content\">",
+			": {{",
+			"\">",
+			"border",
+			"rounded",
+			"</li>",
+			"<li>",
+			"button button--silent ",
+			"</div>\n		</div>",
+			"</div>\n			<div class=\"product__detail\">",
+			"<div class=\"grid\">\n			<div class=\"product__label\">",
+			"imagewrapper",
+			"mark",
+			"h1",
+			"</a>",
+			"div",
+			"mnav",
+			"Only",
+			"}",
+			"mySession",
+			"mapCenterVariable",
+			"helpers",
+			"\"",
+			"}",
+			"{",
 			"30",
 			"14",
 			"Built",
@@ -592,54 +717,7 @@
 			"  ",
 			"{{this.url}}",
 			"uploading=",
-			"uploading",
-			"FileSystem",
-			"  ",
-			"span",
-			"product__image",
-			"markedAsSoldHelpers",
-			");",
-			"(",
-			";\n",
-			"currentProduct",
-			"layout_my_products",
-			"facebook",
-			"function",
-			",",
-			"}\n",
-			"productCountId",
-			"randomNumber",
-			"productCountId",
-			"productNumber",
-			"				\n",
-			"=",
-			"userProductNumber",
-			"    ",
-			"        ",
-			"       ",
-			"      ",
-			"     ",
-			"    ",
-			"product__",
-			"form__",
-			"product__",
-			"form__",
-			"form__b",
-			"form",
-			"> product_",
-			"product_",
-			"_detail_",
-			"_detail",
-			"email",
-			"d=\"\"",
-			" grid--half",
-			"grid",
-			"Kilometers",
-			"bottom",
-			"form__row",
-			";",
-			"model",
-			"fileupload"
+			"uploading"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -657,24 +735,88 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/components/product/product_controls.js",
+					"file": "client/pages/products.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4224,
+						"buffer_size": 834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								466,
-								466
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/collections.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2731,
+								2740
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/components/product/product_controls.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1268,
+								1268
 							]
 						],
 						"settings":
@@ -690,6 +832,166 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/components/product/product.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								978,
+								1036
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 72.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/pages/my_products.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70,
+								79
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/components/product/product_controls.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/components/sidebar/sidebar_products.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "lib/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1298.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -748,8 +1050,64 @@
 		"selected_items":
 		[
 			[
+				"colle",
+				"lib\\collections.js"
+			],
+			[
+				"_ui",
+				"client\\lib\\semantic_ui\\semantic_ui.js"
+			],
+			[
+				"sideba",
+				"client\\components\\sidebar\\sidebar_products.html"
+			],
+			[
+				"filter",
+				"client\\components\\header\\header_filter.html"
+			],
+			[
+				"control",
+				"client\\components\\product\\product_controls.html"
+			],
+			[
+				"routes",
+				"lib\\routes.js"
+			],
+			[
+				"me",
+				"server\\methods.js"
+			],
+			[
+				"coll",
+				"lib\\collections.js"
+			],
+			[
 				"controls",
 				"client\\components\\product\\product_controls.html"
+			],
+			[
+				"output",
+				"client\\components\\product\\product_outputfields.html"
+			],
+			[
+				"detail",
+				"client\\pages\\products_detail.html"
+			],
+			[
+				"headera",
+				"client\\components\\header\\header_account.html"
+			],
+			[
+				"logo",
+				"client\\components\\header\\header_logo.html"
+			],
+			[
+				"route",
+				"lib\\routes.js"
+			],
+			[
+				"image",
+				"client\\components\\product\\product_images.js"
 			],
 			[
 				"package",
@@ -778,10 +1136,6 @@
 			[
 				"from_sign",
 				"client\\components\\account\\account_form_signup.html"
-			],
-			[
-				"coll",
-				"lib\\collections.js"
 			],
 			[
 				"grid",
@@ -822,10 +1176,6 @@
 			[
 				"header",
 				"client\\components\\header.html"
-			],
-			[
-				"route",
-				"lib\\routes.js"
 			],
 			[
 				"rou",
@@ -876,10 +1226,6 @@
 				"client\\styles\\components\\button.styl"
 			],
 			[
-				"detail",
-				"client\\templates\\pages\\products_detail.html"
-			],
-			[
 				"profi",
 				"client\\templates\\components\\product\\productfields.html"
 			],
@@ -905,10 +1251,6 @@
 			],
 			[
 				"ro",
-				"lib\\routes.js"
-			],
-			[
-				"routes",
 				"lib\\routes.js"
 			],
 			[
@@ -1066,7 +1408,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\KiwiQuest_WP_V2\\KiwiQuest_WP_V2.sublime-project"
+				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\m_workstreams\\workstreams.sublime-project"
 			],
 			[
 				"ki",
@@ -1092,7 +1434,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 269.0,
+	"side_bar_width": 285.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

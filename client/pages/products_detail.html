@@ -1,59 +1,69 @@
 <template name="products_detail">
-	<section class="panel main">
-		<!-- CONTENT -->
-		<div class="panel__content">
-			<article class="product">
-				<!-- TITLE -->
-				<h1 class="product__title">
-					{{#if markedAsSold}}(verkauft){{/if}} {{model}}
-				</h1>
-				
-				<!-- CONTENT -->
-				<div class="product__content">
-					<!-- DETAILS -->
-					<span class="product__headline">Details</span>
-					{{ > product_outputfield_cartype}}
-					<div class="grid grid--half">
+	<!-- CONTENT -->
+	<section class="ui very padded segment">
+		<!-- HEAD -->
+			<h1>{{model}}</h1>
+			{{#if markedAsSold}}
+				<div class="ui top right attached label">sold</div>
+			{{/if}}
+			<div class="ui divider"></div>
+		
+		<!-- DETAILS -->
+			<div class="ui three column stackable divided grid">
+				<div class="column">
+					<div class="ui relaxed divided list">
+						{{ > product_outputfield_cartype}}
 						{{ > product_outputfield_geartype}}
 						{{ > product_outputfield_fueltype}}
 					</div>
-					<div class="grid grid--half">
+				</div>
+				
+				<div class="column">
+					<div class="ui relaxed divided list">
 						{{ > product_outputfield_built}}
 						{{ > product_outputfield_kilometers}}
-					</div>
-					<div class="grid grid--half">
 						{{ > product_outputfield_wof}}
-						{{ > product_outputfield_reg}}
 					</div>
-					{{ > product_outputfield_price}}
-					{{ > product_outputfield_description}}
-						
-					<!-- CONTACT -->
-					<span class="product__headline">Kontakt</span>
-					{{#if markedAsSold}}
-						<div class="grid">
-							Sorry, aber dieses Auto wurde als "schon verkauft" markiert.
-						</div>
-					{{else}}
-						<div class="grid grid--half">
+				</div>
+				
+				<div class="column">
+					<div class="ui relaxed divided list">
+						{{ > product_outputfield_reg}}
+						{{ > product_outputfield_price}}
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+
+		<!-- DESCRIPTION -->
+			{{ > product_outputfield_description}}
+			<div class="ui divider"></div>
+		
+		<!-- CONTACT -->
+			{{#if markedAsSold}}
+				Sorry, aber dieses Auto wurde als "schon verkauft" markiert.
+			{{else}}
+				<div class="ui three column stackable divided grid">
+					<div class="column">
+						<div class="ui relaxed divided list">
 							{{ > product_outputfield_email}}
 							{{ > product_outputfield_number}}
 						</div>
-					{{/if}}
-					
-					<!-- IMAGES -->
-					<span class="product__headline">Bilder</span>
-					<div class="grid grid--half">
-						{{ > product_outputfield_image_side}}
-						{{ > product_outputfield_image_front}}
-						{{ > product_outputfield_image_infront}}
-						{{ > product_outputfield_image_inback}}
 					</div>
 				</div>
+			{{/if}}
+			<div class="ui divider"></div>
+		
+		<!-- IMAGES -->
+			<div class="ui small images">
+				{{ > product_outputfield_image_side}}
+				{{ > product_outputfield_image_front}}
+				{{ > product_outputfield_image_infront}}
+				{{ > product_outputfield_image_inback}}
+			</div>
+			<div class="ui divider"></div>
 
-				<!-- CONTROLS -->
-				{{> product_controls}}
-			</article>
-		</div>
+		<!-- CONTROLS -->
+			{{> product_controls}}
 	</section>
 </template>

@@ -1,18 +1,16 @@
 <template name="layout_loading">
 	{{> header}}
-	<section class="ui container">
+	<section class="ui stackable grid container">
 		<!-- MAIN -->
-		<section class="panel main">
-			<!-- TITLE -->
-			<header class="panel__title">
-				Loading...
-			</header>
-			<!-- CONTENT -->
-			<div class="panel__content">
+		<section class="twelve wide column">
+			<section class="ui very padded center aligned segment">
+				<!-- CONTENT -->
 				<img class="loader" src="/loader-uploading.gif" alt="loading content">
-			</div>
+			</section>
 		</section>
 		<!-- SIDEBAR -->
-		{{> sidebar_products}}
+		<aside class="four wide column">
+			{{> sidebar_products}}
+		</aside>
 	</section>
 </template>
