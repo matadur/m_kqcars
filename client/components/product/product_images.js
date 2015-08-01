@@ -108,7 +108,7 @@
 
 					// Note: remove previous image before re-upload
 					if (imageTypeCount != 0) {
-						Meteor.call('removeInfrontimage', productCountId);
+						Meteor.call('removeInbackimage', productCountId);
 					};
 
 					FS.Utility.eachFile(event, function(file) {
