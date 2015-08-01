@@ -1,6 +1,6 @@
 <!-- SIDEIMAGE -->
 	<template name="product_outputfield_image_side">
-		<div class="imagewrapper">
+		<div class="ui small image">
 			{{#each sideimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -11,7 +11,7 @@
 
 <!-- FRONTIMAGE -->
 	<template name="product_outputfield_image_front">
-		<div class="imagewrapper">
+		<div class="ui small image">
 			{{#each frontimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -22,7 +22,7 @@
 
 <!-- INFRONTIMAGE -->
 	<template name="product_outputfield_image_infront">
-		<div class="imagewrapper">
+		<div class="ui small image">
 			{{#each infrontimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -33,7 +33,7 @@
 
 <!-- INBACKIMAGE -->
 	<template name="product_outputfield_image_inback">
-		<div class="imagewrapper">
+		<div class="ui small image">
 			{{#each inbackimages}}
 				<a href="{{this.url store='images'}}" target="_blank">
 					<img src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -44,96 +44,60 @@
 
 <!-- MODEL -->
 	<template name="product_outputfield_model">
-		<div class="grid">
-			<div class="product__label">Modell</div>
-			<div class="product__detail">{{model}}</div>
-		</div>
+		Modell: {{model}}
 	</template>
 
 <!-- CARTYPE -->
 	<template name="product_outputfield_cartype">
-		<div class="grid">
-			<div class="product__label">Cartype</div>
-			<div class="product__detail">{{cartype}}</div>
-		</div>
+		Cartype: {{cartype}}
 	</template>
 
 <!-- GEARTYPE -->
 	<template name="product_outputfield_geartype">
-		<div class="grid">
-			<div class="product__label">Geartype</div>
-			<div class="product__detail">{{geartype}}</div>
-		</div>
+		Geartype: {{geartype}}
 	</template>
 
 <!-- FUELTYPE -->
 	<template name="product_outputfield_fueltype">
-		<div class="grid">
-			<div class="product__label">Fueltype</div>
-			<div class="product__detail">{{fueltype}}</div>
-		</div>
+		Fueltype: {{fueltype}}
 	</template>
 
 <!-- BUILT -->
 	<template name="product_outputfield_built">
-		<div class="grid">
-			<div class="product__label">Baujahr</div>
-			<div class="product__detail">{{built}}</div>
-		</div>
+		Baujahr: {{built}}
 	</template>
 
 <!-- KILOMETERS -->
 	<template name="product_outputfield_kilometers">
-		<div class="grid">
-			<div class="product__label">Kilometers</div>
-			<div class="product__detail">{{kilometers}}</div>
-		</div>
+		Kilometers: {{kilometers}}
 	</template>
 
 <!-- WOF -->
 	<template name="product_outputfield_wof">
-		<div class="grid">
-			<div class="product__label">WOF</div>
-			<div class="product__detail">{{wof}}</div>
-		</div>
+		WOF: {{wof}}
 	</template>
 
 <!-- REG -->
 	<template name="product_outputfield_reg">
-		<div class="grid">
-			<div class="product__label">REG</div>
-			<div class="product__detail">{{reg}}</div>
-		</div>
+		REG: {{reg}}
 	</template>
 
 <!-- PRICE -->
 	<template name="product_outputfield_price">
-		<div class="grid">
-			<div class="product__label">Preis</div>
-			<div class="product__detail">{{price}}</div>
-		</div>
+		Preis: {{price}}
 	</template>
 
 <!-- DESCRIPTION -->
 	<template name="product_outputfield_description">
-		<div class="grid">
-			<div class="product__label">Beschreibung</div>
-			<div class="product__detail">{{description}}</div>
-		</div>
+		Beschreibung: {{description}}
 	</template>
 
 <!-- EMAIL -->
 	<template name="product_outputfield_email">
-		<div class="grid">
-			<div class="product__label">Email</div>
-			<div class="product__detail">{{email}}</div>
-		</div>
+		Email: {{email}}
 	</template>
 
 <!-- NUMBER -->
 	<template name="product_outputfield_number">
-		<div class="grid">
-			<div class="product__label">Nummer</div>
-			<div class="product__detail">{{number}}</div>
-		</div>
+		Nummer: {{number}}
 	</template>

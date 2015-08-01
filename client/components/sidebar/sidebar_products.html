@@ -1,23 +1,26 @@
 <template name="sidebar_products">
-	<aside class="panel sidebar">
+	<div class="ui padded segment">
 		<!-- TITLE -->
-		<h1 class="panel__title">
+		<h3>
 			{{#if currentUser}}
 				Hi {{currentUser.profile.name}}
 			{{else}}
 				About
 			{{/if}}
-		</h1>
+		</h3>
+		<div class="ui divider"></div>
+
 		<!-- CONTENT -->
-		<div class="panel__content">
+		<div>
 			{{#if currentUser}}
 				Willkommen
-				<a href="/products_add_rules">Neues Angebot</a>
-				<a href="/my_products">Meine Angebote</a>
+				<a href="/products_add_rules">Sell a Car</a>
+				<a href="/my_products">My Offers</a>
+				<a href="#">My Favorites</a>
 			{{else}}
 				How-To + About
 				<a href="/account_login">Login to Sell</a>
 			{{/if}}
 		</div>
-	</aside>
+	</div>
 </template>

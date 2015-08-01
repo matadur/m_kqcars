@@ -1,9 +1,22 @@
 <template name="header">
-	<section class="header">
-		<div class="header__container">
-			{{> logo}}
-			{{> filter}}
-			{{> mnav}}
+	<div class="ui top fixed menu">
+		<div class="ui container">
+			<!-- Logo -->
+			{{> header_logo}}
+			<!-- Links -->
+			<a class="item">Link</a>
+			<a class="item">Link</a>
+			<!-- Filter -->
+			{{> header_filter}}
+			<!-- Right Menu -->
+			<div class="right menu">
+				<!-- Search -->
+				{{> header_search}}
+				<!-- My Account -->
+				{{> header_account}}
+				<!-- Login -->
+				{{> header_login}}
+			</div>
 		</div>
-	</section>
+	</div>
 </template>

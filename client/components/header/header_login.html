@@ -1,0 +1,7 @@
+<template name="header_login">
+	{{#if currentUser}}
+		<a class="item" href="/account_logout">Logout</a>
+	{{else}}
+		<a class="item" href="/account_login">Login</a>
+	{{/if}}
+</template>

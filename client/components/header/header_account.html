@@ -1,0 +1,23 @@
+<template name="header_account">
+	{{#if currentUser}}
+		<div class="ui dropdown item" tabindex="0">
+			My Account
+			<i class="dropdown icon"></i>
+			<div class="menu transition hidden" tabindex="-1">
+				<!-- Add Product -->
+				<a href="/products_add_rules" class="item">
+					Sell a Car
+				</a>
+				<!-- My Products -->
+				<a href="/my_products" class="item">
+					My Cars
+				</a>
+				<div class="divider"></div>
+				<!-- Favorites -->
+				<a href="#" class="item">
+					My Favorites
+				</a>
+			</div>
+		</div>
+	{{/if}}
+</template>

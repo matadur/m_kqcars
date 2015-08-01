@@ -1,33 +1,39 @@
 <template name="product_controls">
-	<div class="product__controls">
+	<div class="ui right floated basic buttons">
 		{{#if currentUsersProduct}}
 			<!-- Pdf & Highlight -->
-			<a class="button button--silent button--pdf"><i class="ion-android-document"></i> PDF</a>
-			<a class="button button--silent button--push"><i class="ion-android-star"></i> Highlight</a>
+			<a class="ui animated fade button button--pdf">
+				<div class="visible content">PDF</div>
+				<div class="hidden content"><i class="download icon"></i></div>
+			</a>
+			<a class="ui animated fade button">
+				<div class="visible content">Highlight</div>
+				<div class="hidden content">1,50 €</div>
+			</a>
 			<!-- Options-Dropdown -->
-			<div class="button button--silent button--options dropdown">
-				<i class="ion-android-settings"></i>
-				<!-- Options-Dropdown Content -->
-				<ul class="dropdown__content {{toggleClass}}">
-					<div class="dropdown__title">Optionen <i class="ion-android-close"></i></div>
+			<div class="ui dropdown button">
+				Options
+				<div class="menu transition hidden">
 					<!-- Remove -->
-					<li><a class="remove"><i class="ion-android-delete"></i> Delete</a></li>
+					<a class="item remove">Delete</a>
 					<!-- Edit -->
-					<li><a href="/products_detail/{{this._id}}/{{this.model}}/edit"><i class="ion-android-create"></i> Bearbeiten</a></li>
+					<a class="item" href="/products_detail/{{this._id}}/{{this.model}}/edit"><i class="ion-android-create"></i> Edit</a>
 					<!-- Mark as sold -->
-					<li>
-						<a class="mark_as_sold">
-							{{#if markedAsSold}}
-								<i class="ion-android-checkbox-blank"></i> Mark as "For Sale"
-							{{else}}
-								<i class="ion-android-checkbox"></i> Mark as "Sold"
-							{{/if}}
-						</a>
-					</li>
-				</ul>
+					<a class="item mark_as_sold">
+						{{#if markedAsSold}}
+							Mark as "For Sale"
+						{{else}}
+							Mark as "Sold"
+						{{/if}}
+					</a>
+				</div>
 			</div>
+			<div class="or"></div>
 		{{/if}}
 		<!-- Read More -->
-		<a class="button" href="/products_detail/{{this._id}}/{{this.model}}">Ansehen <i class="ion-android-exit"></i></a>
+		<a class="ui green animated button" href="/products_detail/{{this._id}}/{{this.model}}">
+			<div class="visible content">View</div>
+			<div class="hidden content"><i class="right arrow icon"></i></div>
+		</a>
 	</div>
 </template>
