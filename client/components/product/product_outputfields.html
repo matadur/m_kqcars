@@ -1,4 +1,13 @@
 <!-- SIDEIMAGE -->
+	<template name="product_outputfield_image_list">
+		<a href="/products_detail/{{this._id}}/{{this.model}}">
+			{{#each sideimages}}
+				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+			{{/each}}
+		</a>
+	</template>
+
+<!-- SIDEIMAGE -->
 	<template name="product_outputfield_image_side">
 		{{#each sideimages}}
 			<a href="{{this.url store='images'}}" target="_blank">

@@ -2,6 +2,16 @@
 // PRODUCT - IMAGES
 //------------------------------------------------------------------------------------
 
+	// IMAGES - DISPLAY - LISTIMAGE---------------------------------------------------
+		Template.product_outputfield_image_list.helpers({
+			sideimages: function () {
+				var product 		= Products.findOne(this._id);
+				var productCountId 	= product.productCountId;
+
+				return Images.find({productCountId: productCountId, imageType: "sideimage"});
+			}
+		});
+
 	// IMAGES - DISPLAY - SIDEIMAGE---------------------------------------------------
 		Template.product_outputfield_image_side.helpers({
 			sideimages: function () {
