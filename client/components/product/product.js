@@ -50,7 +50,7 @@
 	// PRODUCTS - EDIT----------------------------------------------------------------
 		var editProductHooks = {
 			onSuccess: function() {
-				Router.go('/my_products');
+				Router.go('/products_edit_success');
 			}
 		}
 		AutoForm.addHooks('product_form_edit', editProductHooks);
