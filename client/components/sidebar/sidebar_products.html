@@ -11,30 +11,28 @@
 		<div class="ui divider"></div>
 
 		<!-- CONTENT -->
-		<div>
-			{{#if currentUser}}
-				Schön, dass du wieder da bist. <br>
-				<div class="ui fluid vertical menu">
-					<a class="item" href="/products_add_rules">
-						Sell a Car
-					</a>
-					<a class="item" href="/">
-						All Offers
-						<div class="ui small label">{{products_count}}</div>
-					</a>
-					<a class="item" href="/my_products">
-						My Offers
-						<div class="ui small label">{{my_products_count}}</div>
-					</a>
-					<a class="item" href="#">My
-						Favorites
-						<div class="ui small label">7</div>
-					</a>
-				</div>
-			{{else}}
-				How-To + About
-				<a href="/account_login">Login to Sell</a>
-			{{/if}}
-		</div>
+		{{#if currentUser}}
+			Nice that you're here. :-)<br>
+			<div class="ui fluid vertical menu">
+				<a class="item" href="/products_add_rules">
+					Sell a Car
+				</a>
+				<a class="item" href="/">
+					All Offers
+					<div class="ui small label">{{products_count}}</div>
+				</a>
+				<a class="item" href="/my_products">
+					My Offers
+					<div class="ui small label">{{my_products_count}}</div>
+				</a>
+				<a class="item" href="#">My
+					Favorites
+					<div class="ui small label">7</div>
+				</a>
+			</div>
+		{{else}}
+			How-To + About
+			<a href="/account_login">Login to Sell</a>
+		{{/if}}
 	</div>
 </template>

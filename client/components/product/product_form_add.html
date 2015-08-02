@@ -1,38 +1,39 @@
 <template name="product_form_add">
-	{{#autoForm collection="Products" id="product_form_add" class="form form--product_add" type="insert"}}
+	{{#autoForm collection="Products" id="product_form_add" class="ui form" type="insert"}}
 		<!-- IMAGES -->
-		<span class="form__headline">Images</span>
+		<h3 class="ui header">Images</h3>
 		{{> product_formfield_image_side}}
 		{{> product_formfield_image_front}}
 		{{> product_formfield_image_infront}}
 		{{> product_formfield_image_inback}}
 
 		<!-- DETAILS -->
-		<span class="form__headline">Details</span>
+		<h3 class="ui header">Details</h3>
 		{{> product_formfield_model}}
 		{{> product_formfield_cartype}}
 		{{> product_formfield_geartype}}
 		{{> product_formfield_fueltype}}
 
-		<span class="form__headline">Condition</span>
+		<h3 class="ui header">Condition</h3>
 		{{> product_formfield_kilometers}}
 		{{> product_formfield_built}}
 		{{> product_formfield_wof}}
 		{{> product_formfield_reg}}
 
-		<span class="form__headline">Price and Description</span>
+		<h3 class="ui header">Price and Description</h3>
 		{{> product_formfield_price}}
 		{{> product_formfield_description}}
 		
 		<!-- KONTAKT -->
-		<span class="form__headline">Kontakt</span>
+		<h3 class="ui header">Contact</h3>
 		{{> product_formfield_email}}
 		{{> product_formfield_number}}	
-
+		
 		<!-- CONTROLS -->
-		<div class="form__controls">
-			<a class="button button--silent" href="/">Abbrechen</a>
-			<button class="button" type="submit">Submit</button>
+		<div class="ui divider"></div>
+		<div class="ui buttons">
+			<a href="/" class="ui button">Cancel</a>
+			<button class="ui positive button" type="submit">Submit</button>
 		</div>
 	{{/autoForm}}
 </template>

@@ -1,14 +1,14 @@
 <template name="account_form_signup">
-	<!-- FORM -->
-	<form class="form form--account_signup">
+	<!-- SIGNUP: EMAIL -->
+	<form class="ui form">
 		{{> account_formfield_email}}
 		{{> account_formfield_firstname}}
 		{{> account_formfield_lastname}}
 		{{> account_formfield_password}}
 		<!-- CONTROLS -->
-		<div class="form__controls">
-			<a class="button button--silent" href="/account_login">Switch to: Login</a>
-			<button class="button" type="submit">Signup</button>
+		<div class="ui buttons">
+			<a class="ui button" href="/account_login">Switch to: Login</a>
+			<button class="ui positive button" type="submit">Signup</button>
 		</div>
 	</form>
 </template>

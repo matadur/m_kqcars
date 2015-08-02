@@ -1,32 +1,32 @@
 <!-- SIDEIMAGE -->
 	<template name="product_formfield_image_side">
-		<div class="form__group">
-			<label class="form__label" for="file-side">Seite</label>
-			<input class="form__input fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
+		<div class="field">
+			<label for="file-side">Side view</label>
+			<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
 		</div>
 	</template>
 
 <!-- FRONTIMAGE -->
 	<template name="product_formfield_image_front">
-		<div class="form__group">
-			<label class="form__label" for="file-front">Vorne</label>
-			<input class="form__input fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
+		<div class="field">
+			<label for="file-front">Front view</label>
+			<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
 		</div>
 	</template>
 
 <!-- INFRONTIMAGE -->
 	<template name="product_formfield_image_infront">
-		<div class="form__group">
-			<label class="form__label" for="file-infront">Innen 1</label>
-			<input class="form__input fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
+		<div class="field">
+			<label for="file-infront">Inside (front)</label>
+			<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
 		</div>
 	</template>
 
 <!-- INBACKIMAGE -->
 	<template name="product_formfield_image_inback">
-		<div class="form__group">
-			<label class="form__label" for="file-inback">Innen 2</label>
-			<input class="form__input fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
+		<div class="field">
+			<label for="file-inback">Inside (back)</label>
+			<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
 		</div>
 	</template>
 
@@ -37,12 +37,16 @@
 	<template name="product_formfield_model">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='model'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='model'}} form__group--error{{/if}}">
-			<label for="model" class="form__label">Model</label>
-			{{> afFieldInput name='model' class="form__input" id='model'}}
+		<div class="field {{#if afFieldIsInvalid name='model'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Model
+				</div>
+				{{> afFieldInput name='model' id='model'}}
+			</div>
 		</div>
 	</template>
 
@@ -50,12 +54,16 @@
 	<template name="product_formfield_cartype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='cartype'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='cartype'}} form__group--error{{/if}}">
-			<label for="cartype" class="form__label">Cartype</label>
-			{{> afFieldInput name='cartype' class="form__input" id='cartype'}}
+		<div class="field {{#if afFieldIsInvalid name='cartype'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Cartype
+				</div>
+				{{> afFieldInput name='cartype' id='cartype'}}
+			</div>
 		</div>
 	</template>
 
@@ -63,12 +71,16 @@
 	<template name="product_formfield_geartype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='geartype'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='geartype'}} form__group--error{{/if}}">
-			<label for="geartype" class="form__label">Geartype</label>
-			{{> afFieldInput name='geartype' class="form__input" id='geartype'}}
+		<div class="field {{#if afFieldIsInvalid name='geartype'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Geartype
+				</div>
+				{{> afFieldInput name='geartype' id='geartype'}}
+			</div>
 		</div>
 	</template>
 
@@ -76,12 +88,16 @@
 	<template name="product_formfield_fueltype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='fueltype'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='fueltype'}} form__group--error{{/if}}">
-			<label for="fueltype" class="form__label">Fueltype</label>
-			{{> afFieldInput name='fueltype' class="form__input" id='fueltype'}}
+		<div class="field {{#if afFieldIsInvalid name='fueltype'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Fueltype
+				</div>
+				{{> afFieldInput name='fueltype' id='fueltype'}}
+			</div>
 		</div>
 	</template>
 
@@ -89,12 +105,16 @@
 	<template name="product_formfield_built">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='built'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='built'}} form__group--error{{/if}}">
-			<label for="built" class="form__label">Built</label>
-			{{> afFieldInput name='built' class="form__input" id='built'}}
+		<div class="field {{#if afFieldIsInvalid name='built'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Build Date
+				</div>
+				{{> afFieldInput name='built' id='built'}}
+			</div>
 		</div>
 	</template>
 
@@ -102,12 +122,16 @@
 	<template name="product_formfield_kilometers">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='kilometers'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='kilometers'}} form__group--error{{/if}}">
-			<label for="kilometers" class="form__label">Kilometers</label>
-			{{> afFieldInput name='kilometers' class="form__input" id='kilometers'}}
+		<div class="field {{#if afFieldIsInvalid name='kilometers'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Kilometers
+				</div>
+				{{> afFieldInput name='kilometers' id='kilometers'}}
+			</div>
 		</div>
 	</template>
 
@@ -115,12 +139,16 @@
 	<template name="product_formfield_wof">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='wof'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='wof'}} form__group--error{{/if}}">
-			<label for="wof" class="form__label">WOF</label>
-			{{> afFieldInput name='wof' class="form__input" id='wof'}}
+		<div class="field {{#if afFieldIsInvalid name='wof'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					WOF
+				</div>
+				{{> afFieldInput name='wof' id='wof'}}
+			</div>
 		</div>
 	</template>
 
@@ -128,12 +156,16 @@
 	<template name="product_formfield_reg">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='reg'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='reg'}} form__group--error{{/if}}">
-			<label for="reg" class="form__label">REG</label>
-			{{> afFieldInput name='reg' class="form__input" id='reg'}}
+		<div class="field {{#if afFieldIsInvalid name='reg'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					REG
+				</div>
+				{{> afFieldInput name='reg' id='reg'}}
+			</div>
 		</div>
 	</template>
 
@@ -141,12 +173,16 @@
 	<template name="product_formfield_price">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='price'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='price'}} form__group--error{{/if}}">
-			<label for="price" class="form__label">Price</label>
-			{{> afFieldInput name='price' class="form__input" id='price'}}
+		<div class="field {{#if afFieldIsInvalid name='price'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Askingprice
+				</div>
+				{{> afFieldInput name='price' id='price'}}
+			</div>
 		</div>
 	</template>
 
@@ -154,12 +190,16 @@
 	<template name="product_formfield_description">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='description'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='description'}} form__group--error{{/if}}">
-			<label for="description" class="form__label">Description</label>
-			{{> afFieldInput name='description' class="form__input" id='description' rows=12}}
+		<div class="field {{#if afFieldIsInvalid name='description'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Description
+				</div>
+				{{> afFieldInput name='description' id='description' rows=12}}
+			</div>
 		</div>
 	</template>
 
@@ -167,12 +207,16 @@
 	<template name="product_formfield_email">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='email'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='email'}} form__group--error{{/if}}">
-			<label for="email" class="form__label">Email</label>
-			{{> afFieldInput name='email' class="form__input" id='email'}}
+		<div class="field {{#if afFieldIsInvalid name='email'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Email
+				</div>
+				{{> afFieldInput name='email' id='email'}}
+			</div>
 		</div>
 	</template>
 
@@ -180,11 +224,15 @@
 	<template name="product_formfield_number">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='number'}}
-			<span class="form__message form__message--error">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Something went wrong, please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
-		<div class="form__group {{#if afFieldIsInvalid name='number'}} form__group--error{{/if}}">
-			<label for="number" class="form__label">Number</label>
-			{{> afFieldInput name='number' class="form__input" id='number'}}
+		<div class="field {{#if afFieldIsInvalid name='number'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label">
+					Mobile
+				</div>
+				{{> afFieldInput name='number' id='number'}}
+			</div>
 		</div>
 	</template>

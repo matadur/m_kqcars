@@ -1,16 +1,19 @@
 <template name="account_form_login">
-	<!-- FACEBOOK -->
-	<button class="button button--facebook account_login_facebook">Login with Facebook</button>
-	<button class="button button--google account_login_google">Login with Google</button>
-	<p>--or--</p>
-	<!-- FORM -->
-	<form class="form form--account_login">
+	<!-- LOGIN: FACEBOOK & GOOGLE -->
+	<div class="ui fluid buttons">
+		<button class="ui button account_login_facebook">Login with Facebook</button>
+		<button class="ui button account_login_google">Login with Google</button>
+	</div>
+	<div class="ui horizontal divider">Or</div>
+	
+	<!-- LOGIN: EMAIL -->
+	<form class="ui form">
 		{{> account_formfield_email}}
 		{{> account_formfield_password}}
 		<!-- CONTROLS -->
-		<div class="form__controls">
-			<a class="button button--silent" href="/account_signup">Switch to: Signup</a>
-			<button class="button" type="submit">Login</button>
+		<div class="ui buttons">
+			<a class="ui button" href="/account_signup">Switch to: Signup</a>
+			<button class="ui positive button" type="submit">Login</button>
 		</div>                     
 	</form>
 </template>
