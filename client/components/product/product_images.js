@@ -146,11 +146,11 @@
 		// SIDEIMAGE------------------------------------------------------------------
 			Template.product_form_edit.helpers({
 				// Request Image Change Helper----------------------------------------
-					sideImageChangeRequest: function() {
+					sideImageUploadRequest: function() {
 						var imageTypeCount = Images.find({imageType: "sideimage"}).count();
-						var sideImageChangeRequest = Session.get('sideImageChangeRequest');
+						var sideImageUploadRequest = Session.get('sideImageUploadRequest');
 
-						if (imageTypeCount == 0 || sideImageChangeRequest != null) {
+						if (imageTypeCount == 0 || sideImageUploadRequest != null) {
 							return true;
 						} else{
 							return false;
@@ -163,15 +163,15 @@
 							var productCountId = Products.findOne(this._id).productCountId;
 
 							insertImage(event, 'sideimage', productCountId);
-							Session.set('sideImageChangeRequest', null);
+							Session.set('sideImageUploadRequest', null);
 						},
 				// Request Image Change Event-----------------------------------------
-					'click .imagechanger__side': function(event, template) {
+					'click .removeimage__side': function(event, template) {
 						var productCountId = Products.findOne(this._id).productCountId;
 						var confirmRemoval = confirm("Delete this image & upload a new one?");
 
 						if (confirmRemoval) {
-							Session.set('sideImageChangeRequest', true);
+							Session.set('sideImageUploadRequest', true);
 							Meteor.call('removeSideimage', productCountId);
 						};
 					}
@@ -179,11 +179,11 @@
 		// FRONTIMAGE-----------------------------------------------------------------
 			Template.product_form_edit.helpers({
 				// Request Image Change Helper----------------------------------------
-					frontImageChangeRequest: function() {
+					frontImageUploadRequest: function() {
 						var imageTypeCount = Images.find({imageType: "frontimage"}).count();
-						var frontImageChangeRequest = Session.get('frontImageChangeRequest');
+						var frontImageUploadRequest = Session.get('frontImageUploadRequest');
 
-						if (imageTypeCount == 0 || frontImageChangeRequest != null) {
+						if (imageTypeCount == 0 || frontImageUploadRequest != null) {
 							return true;
 						} else{
 							return false;
@@ -196,15 +196,15 @@
 							var productCountId = Products.findOne(this._id).productCountId;
 
 							insertImage(event, 'frontimage', productCountId);
-							Session.set('frontImageChangeRequest', null);
+							Session.set('frontImageUploadRequest', null);
 						},
 				// Request Image Change Event-----------------------------------------
-					'click .imagechanger__front': function(event, template) {
+					'click .removeimage__front': function(event, template) {
 						var productCountId = Products.findOne(this._id).productCountId;
 						var confirmRemoval = confirm("Delete this image & upload a new one?");
 
 						if (confirmRemoval) {
-							Session.set('frontImageChangeRequest', true);
+							Session.set('frontImageUploadRequest', true);
 							Meteor.call('removeFrontimage', productCountId);
 						};
 					}
@@ -212,11 +212,11 @@
 		// INFRONTIMAGE---------------------------------------------------------------
 			Template.product_form_edit.helpers({
 				// Request Image Change Helper----------------------------------------
-					inFrontImageChangeRequest: function() {
+					inFrontImageUploadRequest: function() {
 						var imageTypeCount = Images.find({imageType: "infrontimage"}).count();
-						var inFrontImageChangeRequest = Session.get('inFrontImageChangeRequest');
+						var inFrontImageUploadRequest = Session.get('inFrontImageUploadRequest');
 
-						if (imageTypeCount == 0 || inFrontImageChangeRequest != null) {
+						if (imageTypeCount == 0 || inFrontImageUploadRequest != null) {
 							return true;
 						} else{
 							return false;
@@ -229,15 +229,15 @@
 							var productCountId = Products.findOne(this._id).productCountId;
 
 							insertImage(event, 'infrontimage', productCountId);
-							Session.set('inFrontImageChangeRequest', null);
+							Session.set('inFrontImageUploadRequest', null);
 						},
 				// Request Image Change Event-----------------------------------------
-					'click .imagechanger__infront': function(event, template) {
+					'click .removeimage__infront': function(event, template) {
 						var productCountId = Products.findOne(this._id).productCountId;
 						var confirmRemoval = confirm("Delete this image & upload a new one?");
 
 						if (confirmRemoval) {
-							Session.set('inFrontImageChangeRequest', true);
+							Session.set('inFrontImageUploadRequest', true);
 							Meteor.call('removeInfrontimage', productCountId);
 						};
 					}
@@ -245,11 +245,11 @@
 		// INBACKIMAGE----------------------------------------------------------------
 			Template.product_form_edit.helpers({
 				// Request Image Change Helper----------------------------------------
-					inBackImageChangeRequest: function() {
+					inBackImageUploadRequest: function() {
 						var imageTypeCount = Images.find({imageType: "inbackimage"}).count();
-						var inBackImageChangeRequest = Session.get('inBackImageChangeRequest');
+						var inBackImageUploadRequest = Session.get('inBackImageUploadRequest');
 
-						if (imageTypeCount == 0 || inBackImageChangeRequest != null) {
+						if (imageTypeCount == 0 || inBackImageUploadRequest != null) {
 							return true;
 						} else{
 							return false;
@@ -262,15 +262,15 @@
 							var productCountId = Products.findOne(this._id).productCountId;
 
 							insertImage(event, 'inbackimage', productCountId);
-							Session.set('inBackImageChangeRequest', null);
+							Session.set('inBackImageUploadRequest', null);
 						},
 				// Request Image Change Event-----------------------------------------
-					'click .imagechanger__inback': function(event, template) {
+					'click .removeimage__inback': function(event, template) {
 						var productCountId = Products.findOne(this._id).productCountId;
 						var confirmRemoval = confirm("Delete this image & upload a new one?");
 
 						if (confirmRemoval) {
-							Session.set('inBackImageChangeRequest', true);
+							Session.set('inBackImageUploadRequest', true);
 							Meteor.call('removeInbackimage', productCountId);
 						};
 					}
