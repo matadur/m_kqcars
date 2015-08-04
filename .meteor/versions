@@ -81,6 +81,7 @@ mongo@1.1.0
 mongo-livedata@1.0.8
 mquandalle:stylus@1.1.1
 msavin:mongol@1.0.102
+msavin:sessioninspector@1.2.1
 nilsdannemann:pdfmake@1.0.35
 npm-bcrypt@0.7.8_2
 oauth@1.1.4

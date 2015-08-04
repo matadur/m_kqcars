@@ -12,6 +12,11 @@
 			Session.set('productCountId', productCountId);
 			this.next(); // For Iron:Router
 		}
+		function removeSessionAfter() {
+			Session.set('productCountId', null);
+		}
 	
 	// SETUP - EXECUTE ON ROUTE-------------------------------------------------------
 		Router.onRun(productCountId, {only: ['products_add']});
+		Router.onStop(removeSessionAfter, {only: ['products_add']});
+
