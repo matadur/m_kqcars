@@ -5,31 +5,10 @@
 	// IMAGES - REMOVE----------------------------------------------------------------
 		Meteor.methods({
 			// SIDEIMAGE
-			removeSideimage: function(productCountId) {
+			removeImage: function(productCountId, imageType) {
 				Images.remove({
 					productCountId: productCountId,
-					imageType: "sideimage"
-				});
-			},
-			// FRONTIMAGE
-			removeFrontimage: function(productCountId) {
-				Images.remove({
-					productCountId: productCountId,
-					imageType: "frontimage"
-				});
-			},
-			// INFRONTIMAGE
-			removeInfrontimage: function(productCountId) {
-				Images.remove({
-					productCountId: productCountId,
-					imageType: "infrontimage"
-				});
-			},
-			// INBACKIMAGE
-			removeInbackimage: function(productCountId) {
-				Images.remove({
-					productCountId: productCountId,
-					imageType: "inbackimage"
+					imageType: imageType
 				});
 			}
 		});

@@ -25,34 +25,10 @@
 
 		<!-- IMAGES -->
 		<h3 class="ui header">Images</h3>
-		<!-- SIDEIMAGE -->
-		{{#if sideImageUploadRequest}}
-			{{> product_formfield_image_side}}
-		{{else}}
-			{{> product_outputfield_image_side}}
-			<div class="removeimage__side"><i class="ion-close"></i></div>
-		{{/if}}
-		<!-- FRONTIMAGE -->
-		{{#if frontImageUploadRequest}}
-			{{> product_formfield_image_front}}
-		{{else}}
-			{{> product_outputfield_image_front}}
-			<div class="removeimage__front"><i class="ion-close"></i></div>
-		{{/if}}
-		<!-- INFRONTIMAGE -->
-		{{#if inFrontImageUploadRequest}}
-			{{> product_formfield_image_infront}}
-		{{else}}
-			{{> product_outputfield_image_infront}}
-			<div class="removeimage__infront"><i class="ion-close"></i></div>
-		{{/if}}
-		<!-- INBACKIMAGE -->
-		{{#if inBackImageUploadRequest}}
-			{{> product_formfield_image_inback}}
-		{{else}}
-			{{> product_outputfield_image_inback}}
-			<div class="removeimage__inback"><i class="ion-close"></i></div>
-		{{/if}}
+		{{> product_formfield_image_side}}
+		{{> product_formfield_image_front}}
+		{{> product_formfield_image_infront}}
+		{{> product_formfield_image_inback}}
 
 		<!-- CONTROLS -->
 		<div class="ui divider"></div>

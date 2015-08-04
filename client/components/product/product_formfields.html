@@ -1,33 +1,53 @@
 <!-- SIDEIMAGE -->
 	<template name="product_formfield_image_side">
-		<div class="field">
-			<label for="file-side">Side view</label>
-			<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
-		</div>
+		{{#if sideImageUploadRequest}}
+			<div class="field">
+				<label for="file-side">Side view</label>
+				<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
+			</div>
+		{{else}}
+			{{> product_outputfield_image_side}}
+			<div class="removeimage__side"><i class="ion-close"></i></div>
+		{{/if}}
 	</template>
 
 <!-- FRONTIMAGE -->
 	<template name="product_formfield_image_front">
-		<div class="field">
-			<label for="file-front">Front view</label>
-			<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
-		</div>
+		{{#if frontImageUploadRequest}}
+			<div class="field">
+				<label for="file-front">Front view</label>
+				<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
+			</div>
+		{{else}}
+			{{> product_outputfield_image_front}}
+			<div class="removeimage__front"><i class="ion-close"></i></div>
+		{{/if}}
 	</template>
 
 <!-- INFRONTIMAGE -->
 	<template name="product_formfield_image_infront">
-		<div class="field">
-			<label for="file-infront">Inside (front)</label>
-			<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
-		</div>
+		{{#if inFrontImageUploadRequest}}
+			<div class="field">
+				<label for="file-infront">InFront view</label>
+				<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
+			</div>
+		{{else}}
+			{{> product_outputfield_image_infront}}
+			<div class="removeimage__infront"><i class="ion-close"></i></div>
+		{{/if}}
 	</template>
 
 <!-- INBACKIMAGE -->
 	<template name="product_formfield_image_inback">
-		<div class="field">
-			<label for="file-inback">Inside (back)</label>
-			<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
-		</div>
+		{{#if inBackImageUploadRequest}}
+			<div class="field">
+				<label for="file-inback">InBack view</label>
+				<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
+			</div>
+		{{else}}
+			{{> product_outputfield_image_inback}}
+			<div class="removeimage__inback"><i class="ion-close"></i></div>
+		{{/if}}
 	</template>
 
 
