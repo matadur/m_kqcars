@@ -16,8 +16,8 @@ pagebakers:ionicons
 cfs:standard-packages
 cfs:gridfs
 cfs:filesystem
-accounts-google
 cfs:graphicsmagick
+accounts-google
 percolate:synced-cron
 aldeed:autoform
 aldeed:collection2
