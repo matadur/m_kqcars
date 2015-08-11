@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------------
 	
 	// FUNCTIONS----------------------------------------------------------------------
-		var findProductCountId = function(self) {
+		findProductCountId = function(self) {
 			var productCountId = Session.get('productCountId');
 
 			if (productCountId == null) {
@@ -11,9 +11,9 @@
 			};
 
 			return productCountId;
-		};
+		}
 
-		var uploadImage = function(event, imageType, productCountId) {
+		uploadImage = function(event, imageType, productCountId) {
 			FS.Utility.eachFile(event, function(file) {
 				var tmpdoc 				= new FS.File(file);
 				tmpdoc.productCountId 	= productCountId;
@@ -21,8 +21,7 @@
 				tmpdoc.createdAt		= new Date();
 				Images.insert(tmpdoc, function (err) {});
 			});
-		};
-
+		}
 
 	// LISTIMAGE----------------------------------------------------------------------
 		
