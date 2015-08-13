@@ -9,9 +9,6 @@
 				var favorites 		= Meteor.user().profile.favorites;
 				var favoritesCount 	= favorites.length;
 
-				console.log(favorites);
-				console.log(favoritesCount);
-
 				return favoritesCount;
 			} 
 		});
