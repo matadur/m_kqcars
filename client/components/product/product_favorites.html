@@ -1,9 +1,13 @@
 <template name="product_favorite">
 	{{#if currentUser}}
-		<div class="ui left floated basic buttons">
+		<div class="ui left floated buttons">
 			<!-- Favorite -->
-			<a class="ui icon button button--favorite" href="#">
-				<i class="empty heart icon"></i>
+			<a class="ui basic icon button button--favorite" href="#">
+				{{#if is_favorite}}
+					<i class="green heart icon"></i>
+				{{else}}
+					<i class="empty heart icon"></i>
+				{{/if}}
 			</a>
 		</div>
 	{{/if}}
