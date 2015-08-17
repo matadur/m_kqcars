@@ -1,15 +1,17 @@
 <template name="header_filter">
 	<div class="ui floating dropdown item" tabindex="0">
 		<input type="hidden" name="filter">
-		<div class="default text">Apply Filter</div>
+		<div class="default text">Everything</div>
 		<i class="dropdown icon"></i>
-		<div class="menu transition hidden" tabindex="-1">
+		<div class="menu transition hidden header_filter" tabindex="-1">
+			<!-- Filter: Type -->
 			<div class="item">Everything</div>
 			<div class="item">Highlights</div>
+			<!-- Filter: Price -->
 			<div class="divider"></div>
-			<div class="item">Vans</div>
-			<div class="item">Convs</div>
-			<div class="item">Small</div>
+			<div class="item" data-filter="4500">$4500 max</div>
+			<div class="item" data-filter="3000">$3000 max</div>
+			<div class="item" data-filter="2000">$2000 max</div>
 		</div>
 	</div>
 </template>
