@@ -8,7 +8,7 @@
 		});
 
 	// FILTER ------------------------------------------------------------------------
-		Template.header_filter.events({
+		Template.filter.events({
 			// Everything
 			'click .filter--none': function(event) {
 				Session.set('filter', {});
