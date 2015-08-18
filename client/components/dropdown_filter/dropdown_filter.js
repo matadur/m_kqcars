@@ -2,15 +2,20 @@
 // HEADER - FILTER
 //------------------------------------------------------------------------------------
 	
-	// CLEAR FILTER ON REFRESH -------------------------------------------------------
+	// SETUP - INITIALIZE DROPDOWN----------------------------------------------------
+		Template.dropdown_filter.onRendered(function () {
+			$('.ui.dropdown').dropdown();
+		});
+
+	// SETUP - CLEAR FILTER ON REFRESH -----------------------------------------------
 		Meteor.startup(function () {
 			Session.set('filter', {});
 		});
 
 	// FILTER ------------------------------------------------------------------------
-		Template.filter.events({
+		Template.dropdown_filter.events({
 			// Everything
-			'click .filter--none': function(event) {
+			'click .filter--everything': function(event) {
 				Session.set('filter', {});
 			},
 			// Price
