@@ -1,33 +1,26 @@
 <template name="product_controls">
-	<div class="ui right floated basic buttons">
-		{{#if currentUsersProduct}}
-			<!-- Options-Dropdown -->
-			<div class="ui floating icon dropdown button">
-				<i class="setting icon"></i>
-				<div class="ui menu transition hidden">
-					<!-- Remove -->
-					<a class="ui item remove">Delete</a>
-					<!-- Edit -->
-					<a class="ui item" href="/products_detail/{{this._id}}/{{this.model}}/edit">Edit</a>
-					<!-- Mark as sold -->
-					<a class="ui item mark_as_sold">
-						{{#if markedAsSold}}
-							Mark as "For Sale"
-						{{else}}
-							Mark as "Sold"
-						{{/if}}
-					</a>
-					<!-- Pdf & Highlight -->
-					<div class="divider"></div>
-					<a class="ui item button--pdf">PDF</a>
-					<a class="ui item">Highlight</a>
-				</div>
+	{{#if currentUsersProduct}}
+		<!-- Options-Dropdown -->
+		<div class="ui floating icon dropdown button">
+			<i class="setting icon"></i>
+			<div class="ui menu transition hidden">
+				<!-- Remove -->
+				<a class="ui item remove">Delete</a>
+				<!-- Edit -->
+				<a class="ui item" href="/products_detail/{{this._id}}/{{this.model}}/edit">Edit</a>
+				<!-- Mark as sold -->
+				<a class="ui item mark_as_sold">
+					{{#if markedAsSold}}
+						Mark as "For Sale"
+					{{else}}
+						Mark as "Sold"
+					{{/if}}
+				</a>
+				<!-- Pdf & Highlight -->
+				<div class="divider"></div>
+				<a class="ui item button--pdf">PDF</a>
+				<a class="ui item">Highlight</a>
 			</div>
-		{{/if}}
-		<!-- Read More -->
-		<a class="ui green animated button" href="/products_detail/{{this._id}}/{{this.model}}">
-			<div class="visible content">View</div>
-			<div class="hidden content"><i class="right arrow icon"></i></div>
-		</a>
-	</div>
+		</div>
+	{{/if}}
 </template>
