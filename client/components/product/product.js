@@ -5,7 +5,13 @@
 	// PRODUCTS - DISPLAY-------------------------------------------------------------
 		Template.products.helpers({
 			products: function(){
-				return Products.find({}, {sort: {createdAt: -1}});
+				var filter = Session.get('filter');
+
+				if (filter != null) {
+					return Products.find(filter, {sort: {createdAt: -1}});
+				} else {
+					return Products.find({}, {sort: {createdAt: -1}});
+				};
 			}
 		});
 		Template.sidebar_products.helpers({

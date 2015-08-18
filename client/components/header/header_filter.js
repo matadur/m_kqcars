@@ -4,11 +4,11 @@
 	
 	// FILTER - PRICE-----------------------------------------------------------------
 		Template.header_filter.events({
-			'click .header_filter .item': function(event) {
+			'click .filter--price': function(event) {
 				var filter = event.target.getAttribute('data-filter');
+				var filterNum = parseInt(filter);
 
-				// Filter: Price
-				Session.set('filter', 'price: {$gt: ' + filter + '}');
+				Session.set('filter', {price: {$lte: filterNum}});
 			}
 		});
 
