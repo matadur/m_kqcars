@@ -385,8 +385,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars",
-		"/C/Users/Nils Dannemann/Desktop/Sites/m_kqcars/client/components"
+		"/Users/nilsdannemann/Sites/m_kqcars"
 	],
 	"file_history":
 	[
@@ -521,7 +520,7 @@
 	],
 	"find":
 	{
-		"height": 48.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -704,6 +703,8 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -718,7 +719,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -759,7 +760,7 @@
 	"project": "m_kqcars.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1131,7 +1132,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Nils Dannemann\\Desktop\\Sites\\m_workstreams\\workstreams.sublime-project"
+				"~/Sites/m_workstreams/m_workstreams.sublime-project"
 			],
 			[
 				"ki",
