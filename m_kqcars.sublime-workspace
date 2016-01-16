@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"click",
+				"clickedProduct"
+			],
+			[
 				"re",
 				"respond-above	hfc_relay_respond_above"
 			],
@@ -251,22 +255,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "client/components/sidebar/sidebar_products.html",
-			"settings":
-			{
-				"buffer_size": 1010,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/sidebar/sidebar_account.html",
-			"settings":
-			{
-				"buffer_size": 468,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -467,12 +455,24 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/m_kqcars",
-		"/Users/nilsdannemann/Sites/m_kqcars/client",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar"
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/m_kqcars/lib/routes.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_pdf_instructions.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_highlight.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_highlight_instructions.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_pdf.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_products.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_outputfields.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_account.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/m_kqcars.sublime-project",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/config.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/styleguide/component_nav/component_nav.html",
@@ -587,24 +587,11 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/README.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/sidebar/_sidebar.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_config.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/teaser.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/teaser_double.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/styleguide/component_mask/_component_mask.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_config.yml",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/index.html",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/products.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/contact.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/slider.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/gallery.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/downloads.md"
+		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -619,6 +606,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pdf",
+			"this",
+			"hlighlight",
+			"session",
+			"sess",
+			"pdf",
+			"  ",
+			"ui rounded fluid image",
 			"\n/*",
 			"<pre",
 			"pre",
@@ -738,15 +733,7 @@
 			"fase",
 			"{% if include.style ",
 			"    ",
-			"amber",
-			"yellow",
-			"lime",
-			"deeppurple",
-			"purple",
-			"pink",
-			"red",
-			"spacegrey",
-			"grey"
+			"amber"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -764,73 +751,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "client/components/sidebar/sidebar_products.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1010,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/components/sidebar/sidebar_account.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 468,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								183,
-								183
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -886,6 +808,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rou",
+				"lib/routes.js"
+			],
+			[
+				"controls",
+				"client/components/product/product_controls.html"
+			],
 			[
 				"confi",
 				"_includes/config.scss"
@@ -1389,14 +1319,6 @@
 			[
 				"theme",
 				"_scss\\_theme.scss"
-			],
-			[
-				"butts",
-				"_scss\\components\\_button.scss"
-			],
-			[
-				"ty",
-				"_scss\\components\\_typography.scss"
 			]
 		],
 		"width": 0.0

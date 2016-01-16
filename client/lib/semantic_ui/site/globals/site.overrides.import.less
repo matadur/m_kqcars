@@ -9,20 +9,23 @@ body {
 	background-attachment: fixed;
 }
 
+/*-------------------
+       Menu
+--------------------*/
 .ui.fixed.menu + .ui.grid {
 	padding-top: 5.75rem !important;
 }
-
 .ui.menu,
 .ui.segment {
 	border: none !important;
 }
-
+/*-------------------
+       Cards
+--------------------*/
 .ui.cards > .card, .ui.card {
 	box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15) !important;
 	border: none !important;
 }
-
 .ui.labeled.input:not([class*="corner labeled"]):not([class*="right labeled"]) > .label {
 	min-width: 100px;
 	background-color: #F3F3F3;
@@ -30,4 +33,47 @@ body {
 	margin-right: -1px;
 	z-index: 1;
 }
+/*-------------------
+       Form - Image Upload
+--------------------*/
+.fileinput {
+	z-index: 2;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: transparent;
+	border: none;
+}
 
+.fileinput + label {
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	height: 95px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 10px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	background: url(/upload-image.svg) no-repeat 50% 70%;
+	background-size: 20%;
+}
+
+.removeimage {
+	margin-top: 10px;
+	
+	i {
+		padding: 5px 10px;
+		margin: 5px 5px 0 0;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 3px;
+	}
+}

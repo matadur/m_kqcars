@@ -66,7 +66,7 @@
 
 		// SIDEIMAGE - Formfield - Request new Upload
 		Template.product_formfield_image_side.events({
-			'click .removeimage__side': function(event, template) {
+			'click .removeimage--side': function(event, template) {
 				if (confirm("Delete this image & upload a new one?")) {
 					Session.set('sideImageUploadRequest', true);
 					Meteor.call('removeImage', findProductCountId(this._id), 'sideimage');
@@ -107,7 +107,7 @@
 
 		// FRONTIMAGE - Formfield - Request new Upload
 		Template.product_formfield_image_front.events({
-			'click .removeimage__front': function(event, template) {
+			'click .removeimage--front': function(event, template) {
 				if (confirm("Delete this image & upload a new one?")) {
 					Session.set('frontImageUploadRequest', true);
 					Meteor.call('removeImage', findProductCountId(this._id), 'frontimage');
@@ -148,7 +148,7 @@
 
 		// INFRONTIMAGE - Formfield - Request new Upload
 		Template.product_formfield_image_infront.events({
-			'click .removeimage__infront': function(event, template) {
+			'click .removeimage--infront': function(event, template) {
 				if (confirm("Delete this image & upload a new one?")) {
 					Session.set('inFrontImageUploadRequest', true);
 					Meteor.call('removeImage', findProductCountId(this._id), 'infrontimage');
@@ -189,7 +189,7 @@
 
 		// INBACKIMAGE - Formfield - Request new Upload
 		Template.product_formfield_image_inback.events({
-			'click .removeimage__inback': function(event, template) {
+			'click .removeimage--inback': function(event, template) {
 				if (confirm("Delete this image & upload a new one?")) {
 					Session.set('inBackImageUploadRequest', true);
 					Meteor.call('removeImage', findProductCountId(this._id), 'inbackimage');
