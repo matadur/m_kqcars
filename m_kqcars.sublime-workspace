@@ -255,6 +255,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/lib/semantic_ui/site/globals/site.overrides.import.less",
+			"settings":
+			{
+				"buffer_size": 2279,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/collections.js",
+			"settings":
+			{
+				"buffer_size": 2828,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -263,10 +279,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 73.0,
-		"last_filter": "liqui",
+		"height": 400.0,
+		"last_filter": "css",
 		"selected_items":
 		[
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
 			[
 				"liqui",
 				"Set Syntax: HTML (Liquid)"
@@ -426,13 +446,9 @@
 			[
 				"bem",
 				"Set Syntax: BEMHTML"
-			],
-			[
-				"css",
-				"Set Syntax: CSS3"
 			]
 		],
-		"width": 583.0
+		"width": 457.0
 	},
 	"console":
 	{
@@ -454,24 +470,32 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nilsdannemann/Sites/m_kqcars",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/pages"
+		"/Users/nilsdannemann/Sites/m_kqcars"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/semantic_ui.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_outputfields.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/public/icon-dropdown.svg",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/lib/routes.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_detail.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_pdf.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.overrides.import.less",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_images.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/local/build/programs/web.browser/app/client/components/product/template.product_formfields.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/public/upload-image.svg",
+		"/Users/nilsdannemann/Sites/m_kqcars/public/upload-image2.svg",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_pdf_instructions.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_highlight.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_highlight_instructions.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_pdf.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_products.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_outputfields.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_account.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/m_kqcars.sublime-project",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/config.scss",
@@ -577,21 +601,11 @@
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_components/teaser.html",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/_base.scss",
 		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/content/_content.scss",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_grid_column.sublime-snippet",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_above.sublime-snippet",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_between.sublime-snippet",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_below.sublime-snippet",
-		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_respond_at.sublime-snippet",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/about.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_pages/components/components.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/README.md",
-		"/C/Users/Gothmog/Desktop/Sites/j_hfc_relay/_includes/components_base/nav/nav.html"
+		"/C/Users/Gothmog/Dropbox/SUBLIME TEXT3/Data/Packages/User/hfc_relay_grid_column.sublime-snippet"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -606,6 +620,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"    ",
+			"until your car is sold o",
+			"label--tooltip",
+			"My Select ",
+			"allowed",
+			"important",
+			"    ",
+			"#",
+			"fill",
+			"this.render",
+			"ion-close",
+			"    ",
+			"delete",
+			"remove<",
+			"remove",
+			"    ",
+			"removeimage__",
+			"removeimage__side",
+			"emoveimage",
+			"removeimage__infront",
+			"fill",
+			"37404D",
+			"#000000",
+			"    ",
+			"   ",
+			"inputfile",
 			"pdf",
 			"this",
 			"hlighlight",
@@ -707,33 +747,7 @@
 			"deep",
 			"15",
 			"swiper-button-black",
-			".swiper-pagination",
-			"l>.swiper-pagination",
-			"10px",
-			"awes",
-			".swiper-pagination",
-			".swiper-container-horizontal>.swiper-pagination",
-			"  ",
-			"Slide ",
-			"Slide",
-			"slide",
-			"Slide",
-			"build",
-			"llet, s.params.paginationBulletMessage.rep",
-			"3.x.x",
-			"nav",
-			"x.x",
-			"{",
-			".",
-			"button-bg(",
-			"{",
-			"&",
-			"fase",
-			"% if include.",
-			"fase",
-			"{% if include.style ",
-			"    ",
-			"amber"
+			".swiper-pagination"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -751,8 +765,73 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/lib/semantic_ui/site/globals/site.overrides.import.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								604,
+								604
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 376.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/collections.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1207,
+								1207
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -808,6 +887,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"icon",
+				"public/icon-dropdown.svg"
+			],
+			[
+				"rout",
+				"lib/routes.js"
+			],
 			[
 				"rou",
 				"lib/routes.js"
@@ -1311,14 +1398,6 @@
 			[
 				"mna",
 				"_includes\\mnav.html"
-			],
-			[
-				"incbut",
-				"_includes\\button.html"
-			],
-			[
-				"theme",
-				"_scss\\_theme.scss"
 			]
 		],
 		"width": 0.0
