@@ -176,3 +176,16 @@
 			{{description}}
 		</div>
 	</template>
+
+
+
+
+<!-- WOF & REG INDICATOR -->
+	<template name="product_outputfield_wof_reg_indicator_label">
+		{{#if wofOrRegValid}}
+			<div class="ui green ribbon label">
+			{{#if wofValid}}<i class="ion-android-checkbox-outline"></i> WOF{{/if}} 
+			{{#if regValid}}<i class="ion-android-checkbox-outline"></i> REG{{/if}} 
+			</div>
+		{{/if}}
+	</template>
