@@ -2,12 +2,12 @@
 	<template name="product_formfield_image_side">
 		{{#if sideImageUploadRequest}}
 			<div class="field">
-				<label for="file-side">Side view</label>
 				<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
+				<label for="file-side">Side view</label>
 			</div>
 		{{else}}
 			{{> product_outputfield_image_side}}
-			<div class="removeimage__side"><i class="ion-close"></i></div>
+			<div class="removeimage removeimage--side"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
@@ -15,12 +15,12 @@
 	<template name="product_formfield_image_front">
 		{{#if frontImageUploadRequest}}
 			<div class="field">
-				<label for="file-front">Front view</label>
 				<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
+				<label for="file-front">Front view</label>
 			</div>
 		{{else}}
 			{{> product_outputfield_image_front}}
-			<div class="removeimage__front"><i class="ion-close"></i></div>
+			<div class="removeimage removeimage--front"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
@@ -28,12 +28,12 @@
 	<template name="product_formfield_image_infront">
 		{{#if inFrontImageUploadRequest}}
 			<div class="field">
-				<label for="file-infront">InFront view</label>
 				<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
+				<label for="file-infront">InFront view</label>
 			</div>
 		{{else}}
 			{{> product_outputfield_image_infront}}
-			<div class="removeimage__infront"><i class="ion-close"></i></div>
+			<div class="removeimage removeimage--infront"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
@@ -41,12 +41,12 @@
 	<template name="product_formfield_image_inback">
 		{{#if inBackImageUploadRequest}}
 			<div class="field">
-				<label for="file-inback">InBack view</label>
 				<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
+				<label for="file-inback">InBack view</label>
 			</div>
 		{{else}}
 			{{> product_outputfield_image_inback}}
-			<div class="removeimage__inback"><i class="ion-close"></i></div>
+			<div class="removeimage removeimage--inback"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
@@ -62,10 +62,10 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='model'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About the Model" data-content="Enter the Brand and the type of Car. For example Toyota Estima or Honda Odyssey.">
 					Model
 				</div>
-				{{> afFieldInput name='model' id='model'}}
+				{{> afFieldInput name='model' id='model' placeholder="Toyota Estima, Honda Odyssey..."}}
 			</div>
 		</div>
 	</template>
@@ -74,15 +74,15 @@
 	<template name="product_formfield_cartype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='cartype'}}
-			<span class="ui pointing below label">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Woops, you missed something! Please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='cartype'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About the Cartype" data-content="Please choose what type of Car you are selling. This helps people find and filter through all offers.">
 					Cartype
 				</div>
-				{{> afFieldInput name='cartype' id='cartype'}}
+				{{> afFieldInput name='cartype' id='cartype' options='allowed' firstOption="Select one..."}}
 			</div>
 		</div>
 	</template>
@@ -91,15 +91,15 @@
 	<template name="product_formfield_geartype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='geartype'}}
-			<span class="ui pointing below label">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Woops, you missed something! Please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='geartype'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About the Geartype" data-content="Pretty simple. Choose manual or automatic.">
 					Geartype
 				</div>
-				{{> afFieldInput name='geartype' id='geartype'}}
+				{{> afFieldInput name='geartype' id='geartype' options='allowed' firstOption="Select one..."}}
 			</div>
 		</div>
 	</template>
@@ -108,32 +108,15 @@
 	<template name="product_formfield_fueltype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='fueltype'}}
-			<span class="ui pointing below label">Something went wrong, please check!</span>
+			<span class="ui pointing below label">Woops, you missed something! Please check!</span>
 		{{/if}}
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='fueltype'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About the Fueltype" data-content="Pretty simple as well. Choose petrol, diesel or other.">
 					Fueltype
 				</div>
-				{{> afFieldInput name='fueltype' id='fueltype'}}
-			</div>
-		</div>
-	</template>
-
-<!-- BUILT -->
-	<template name="product_formfield_built">
-		<!-- Validation -->
-		{{#if afFieldIsInvalid name='built'}}
-			<span class="ui pointing below label">Something went wrong, please check!</span>
-		{{/if}}
-		<!-- Label & Input -->
-		<div class="field {{#if afFieldIsInvalid name='built'}} error{{/if}}">
-			<div class="ui labeled input">
-				<div class="ui label">
-					Build Date
-				</div>
-				{{> afFieldInput name='built' id='built'}}
+				{{> afFieldInput name='fueltype' id='fueltype' options='allowed' firstOption="Select one..."}}
 			</div>
 		</div>
 	</template>
@@ -147,10 +130,27 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='kilometers'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About the Kilometers" data-content="Yup! Just enter the number. Be honest to keep it fair for everyone.">
 					Kilometers
 				</div>
-				{{> afFieldInput name='kilometers' id='kilometers'}}
+				{{> afFieldInput name='kilometers' id='kilometers' placeholder="schemaLabel"}}
+			</div>
+		</div>
+	</template>
+
+<!-- BUILT -->
+	<template name="product_formfield_built">
+		<!-- Validation -->
+		{{#if afFieldIsInvalid name='built'}}
+			<span class="ui pointing below label">Something went wrong, please check!</span>
+		{{/if}}
+		<!-- Label & Input -->
+		<div class="field {{#if afFieldIsInvalid name='built'}} error{{/if}}">
+			<div class="ui labeled input">
+				<div class="ui label has-tooltip" data-title="About the Build Date" data-content="Please enter the year your car was built. Be honest. Keep it fair.">
+					Build Date
+				</div>
+				{{> afFieldInput name='built' id='built' placeholder="Year"}}
 			</div>
 		</div>
 	</template>
@@ -164,8 +164,8 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='wof'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
-					WOF
+				<div class="ui label has-tooltip" data-title="Warrant of Fitness (WOF)" data-content="Enter the expiry date of the last Warrant of Fitness. You find it on the sticker on your windshield.">
+					WOF till
 				</div>
 				{{> afFieldInput name='wof' id='wof'}}
 			</div>
@@ -181,8 +181,8 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='reg'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
-					REG
+				<div class="ui label has-tooltip" data-title="Vehicle Registration (REG)" data-content="Enter the expiry date of the last Vehicle Registration.">
+					REG till
 				</div>
 				{{> afFieldInput name='reg' id='reg'}}
 			</div>
@@ -198,10 +198,10 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='price'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About the Askingprice" data-content="How much would you like to have for your car. In New Zealand Dollars.">
 					Askingprice
 				</div>
-				{{> afFieldInput name='price' id='price'}}
+				{{> afFieldInput name='price' id='price' placeholder="in $NZD"}}
 			</div>
 		</div>
 	</template>
@@ -215,10 +215,10 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='description'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="Describe your Offer" data-content="Describe your Car and the Equipment that comes with it. If there is damage somewhere write it down as well. This keeps things fair. Thanks!">
 					Description
 				</div>
-				{{> afFieldInput name='description' id='description' rows=12}}
+				{{> afFieldInput name='description' id='description' rows=12 placeholder="Max: 1000 Characters"}}
 			</div>
 		</div>
 	</template>
@@ -232,10 +232,10 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='email'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About your Email" data-content="Your email will only be visible until you mark your car as sold or you remove your offer.">
 					Email
 				</div>
-				{{> afFieldInput name='email' id='email'}}
+				{{> afFieldInput name='email' id='email' placeholder="schemaLabel"}}
 			</div>
 		</div>
 	</template>
@@ -249,10 +249,10 @@
 		<!-- Label & Input -->
 		<div class="field {{#if afFieldIsInvalid name='number'}} error{{/if}}">
 			<div class="ui labeled input">
-				<div class="ui label">
+				<div class="ui label has-tooltip" data-title="About your Number" data-content="Your number will only be visible until you mark your car as sold or you remove your offer.">
 					Mobile
 				</div>
-				{{> afFieldInput name='number' id='number'}}
+				{{> afFieldInput name='number' id='number' placeholder="schemaLabel"}}
 			</div>
 		</div>
 	</template>

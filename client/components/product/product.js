@@ -69,3 +69,33 @@
 				}
 			}
 		});
+
+	// PRODUCTS - PDF-----------------------------------------------------------------
+		Template.product_controls.events({
+			'click .instructions--pdf': function() {
+				var clickedProduct = Products.findOne(this._id);
+				var clickedProductId = clickedProduct._id;
+
+				Session.set('clickedProductId', clickedProductId);
+			}
+		});
+		Template.products_pdf_instructions.events({
+			'click .button--clear-clicked-product': function() {
+				Session.set('clickedProductId', null);
+			}
+		});
+
+	// PRODUCTS - HIGHLIGHT-----------------------------------------------------------
+		Template.product_controls.events({
+			'click .instructions--highlight': function() {
+				var clickedProduct = Products.findOne(this._id);
+				var clickedProductId = clickedProduct._id;
+
+				Session.set('clickedProductId', clickedProductId);
+			}
+		});
+		Template.products_highlight_instructions.events({
+			'click .button--clear-clicked-product': function() {
+				Session.set('clickedProductId', null);
+			}
+		});

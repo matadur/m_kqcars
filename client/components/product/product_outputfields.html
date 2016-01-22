@@ -11,7 +11,7 @@
 	<template name="product_outputfield_image_side">
 		{{#each sideimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
-				<img class="ui rounded fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
 			</a>
 		{{/each}}
 	</template>
@@ -20,7 +20,7 @@
 	<template name="product_outputfield_image_front">
 		{{#each frontimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
-				<img class="ui rounded fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
 			</a>
 		{{/each}}
 	</template>
@@ -29,7 +29,7 @@
 	<template name="product_outputfield_image_infront">
 		{{#each infrontimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
-				<img class="ui rounded fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
 			</a>
 		{{/each}}
 	</template>
@@ -38,7 +38,7 @@
 	<template name="product_outputfield_image_inback">
 		{{#each inbackimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
-				<img class="ui rounded fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
+				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
 			</a>
 		{{/each}}
 	</template>
@@ -143,7 +143,7 @@
 			<i class="right triangle icon"></i>
 			<div class="content">
 				<div class="header">Askingprice</div>
-				<div class="description">{{price}}</div>
+				<div class="description">{{price}} $NZD</div>
 			</div>
 		</div>
 	</template>
@@ -175,4 +175,17 @@
 		<div class="item">
 			{{description}}
 		</div>
+	</template>
+
+
+
+
+<!-- WOF & REG INDICATOR -->
+	<template name="product_outputfield_wof_reg_indicator_label">
+		{{#if wofOrRegValid}}
+			<div class="ui green ribbon label">
+			{{#if wofValid}}<i class="ion-android-checkbox-outline"></i> WOF{{/if}} 
+			{{#if regValid}}<i class="ion-android-checkbox-outline"></i> REG{{/if}} 
+			</div>
+		{{/if}}
 	</template>
