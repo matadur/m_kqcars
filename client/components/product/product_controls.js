@@ -32,6 +32,17 @@
 
 		Template.product_controls.events({
 			'click .mark_as_sold': function() {
-				Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}})
+				var currentProduct 		= Products.findOne(this._id);
+				var currentProductModel 	= currentProduct.model;
+				
+				// Update Product
+				Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}});
+
+				// Alerts
+				if (currentProduct.markedAsSold == false) {
+					sAlert.success(currentProductModel + ' marked as "Sold"');
+				} else {
+					sAlert.success(currentProductModel + ' marked as "For Sale"');
+				};
 			}
 		});

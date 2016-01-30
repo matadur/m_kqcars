@@ -43,12 +43,21 @@
 			'click .button--favorite': function() {
 				var currentUser 		= Meteor.userId();
 				var currentProduct 	 	= this._id;
+				var currentProductModel 	= Products.findOne(this._id).model;
 				var currentFavorites 	= Meteor.users.findOne({_id: currentUser}).profile.favorites;
 
+				// Update User Favorites  - Add
 				Meteor.users.update({_id: currentUser}, {$addToSet: {'profile.favorites': currentProduct}});
-				
+				// Update User Favorites - Remove
 				if (currentFavorites.indexOf(currentProduct) != -1) {
 					Meteor.users.update({_id: currentUser}, {$pull: {'profile.favorites': currentProduct}});
+				};
+
+				// Alerts
+				if (currentFavorites.indexOf(currentProduct) == -1) {
+					sAlert.success(currentProductModel + ' added to favorites');
+				} else {
+					sAlert.success(currentProductModel + ' removed from favorites');
 				};
 			}
 		});
