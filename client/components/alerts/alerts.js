@@ -8,7 +8,7 @@
 				effect: 'genie',
 				position: 'bottom-right',
 				timeout: 4200,
-				html: false,
+				html: true,
 				onRouteClose: false,
 				stack: true,
 				offset: 0,
