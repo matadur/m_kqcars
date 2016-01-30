@@ -2,10 +2,16 @@
 	<!-- CONTENT -->
 	<section class="ui very padded segment">
 		<!-- HEAD -->
-			<h1>{{model}}</h1>
-			{{#if markedAsSold}}
-				<div class="ui top right attached label">sold</div>
-			{{/if}}
+			<h1>
+				{{model}}
+				<div class="ui right floated basic buttons">
+					{{> product_controls}}
+				</div>
+				<div class="ui right floated buttons">
+					{{> product_favorite}}
+				</div>
+			</h1>
+			{{#if markedAsSold}}<div class="ui top right attached label">sold</div>{{/if}}
 			<div class="ui divider"></div>
 		
 		<!-- DETAILS -->
@@ -77,13 +83,6 @@
 				<div class="column">
 					{{ > product_outputfield_image_inback}}
 				</div>
-			</div>
-			<div class="ui divider"></div>
-
-		<!-- CONTROLS -->
-			{{> product_favorite}}
-			<div class="ui right floated basic buttons">
-				{{> product_controls}}
 			</div>
 	</section>
 </template>
