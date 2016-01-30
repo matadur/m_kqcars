@@ -55,9 +55,9 @@
 
 				// Alerts
 				if (currentFavorites.indexOf(currentProduct) == -1) {
-					sAlert.success(currentProductModel + ' added to favorites');
+					sAlert.success(currentProductModel + ' added to Favorites');
 				} else {
-					sAlert.success(currentProductModel + ' removed from favorites');
+					sAlert.success(currentProductModel + ' removed from Favorites');
 				};
 			}
 		});

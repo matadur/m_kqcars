@@ -7,9 +7,9 @@
 			sAlert.config({
 				effect: 'genie',
 				position: 'bottom-right',
-				timeout: 3900,
+				timeout: 4200,
 				html: false,
-				onRouteClose: true,
+				onRouteClose: false,
 				stack: true,
 				offset: 0,
 				beep: false,

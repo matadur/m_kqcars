@@ -45,6 +45,7 @@
 			},
 			onSuccess: function() {
 				Router.go('/products_add_success');
+				sAlert.success('Awesome! Your product is now for sale!');
 			}
 		}
 		AutoForm.addHooks('product_form_add', addProductHooks);
@@ -53,6 +54,7 @@
 		var editProductHooks = {
 			onSuccess: function() {
 				Router.go('/products_edit_success');
+				sAlert.success('Great! All changes saved!');
 			}
 		}
 		AutoForm.addHooks('product_form_edit', editProductHooks);
@@ -66,6 +68,7 @@
 
 					Meteor.call('removeProduct', productCountId);
 					Router.go('/');
+					sAlert.success('Done! Your product was removed!');
 				}
 			}
 		});
