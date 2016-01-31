@@ -2,7 +2,7 @@
 // PRODUCT HIGHLIGHT
 //------------------------------------------------------------------------------------
 	
-	// PAYMENT FORM - CONNECT TO BRAINTREE METHOD-------------------------------------
+	// PAYMENT FORM - HIGHLIGHT-------------------------------------------------------
 		Template.products_highlight_instructions.onRendered(function() {
 			Meteor.call('getClientToken', function(error, clientToken) {
 				if (error) {
@@ -13,7 +13,8 @@
 						onPaymentMethodReceived: function (response) {
 							// When we submit the payment form,
 							// it'll create new customer first...
-							var nonce = response.nonce;
+							var nonceFromClient = response.nonce;
+							var clickedProductId = Session.get('clickedProductId');
 
 							Meteor.call('btCreateCustomer', function(error, success) {
 								if (error) {
@@ -21,11 +22,11 @@
 								} else {
 									// ... and when the customer is successfuly created,
 									// call method for creating a transaction (finally!)
-									Meteor.call('createTransaction', nonce, function(error, success) {
+									Meteor.call('createTransactionHighlight', nonceFromClient, clickedProductId, function(error, success) {
 										if (error) {
 											throw new Meteor.Error('transaction-creation-failed');
 										} else {
-											alert('Thank you for your payment! Reload page to access our premium items!');
+											sAlert.success('Great! Your Car is now a Highlight!');
 										}
 									});
 								}
@@ -39,10 +40,11 @@
 	// PAYMENT FORM HELPER------------------------------------------------------------
 		Template.products_highlight_instructions.helpers({
 			paidHighlight: function() {
-				var userId = Meteor.userId();
-				var paidHighlight = Roles.userIsInRole(userId, 'paidHighlight');
+				var clickedProductId = Session.get('clickedProductId');
+				var currentProduct 	 = Products.findOne({_id: clickedProductId});
 
-				if (paidHighlight == true) {
+
+				if (currentProduct.isHighlight == true) {
 					return true
 				} else {
 					return false

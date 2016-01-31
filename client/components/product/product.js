@@ -39,6 +39,7 @@
 					doc.productCountId 	= Session.get('productCountId');
 					doc.owner 			= Meteor.userId();
 					doc.markedAsSold 	= false;
+					doc.isHighlight 	= false;
 					doc.createdAt 		= new Date();
 					return doc;
 				}

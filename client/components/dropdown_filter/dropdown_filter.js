@@ -18,6 +18,10 @@
 			'click .filter--everything': function(event) {
 				Session.set('filter', {});
 			},
+			// Highlights
+			'click .filter--highlights': function(event) {
+				Session.set('filter', {isHighlight: {$not: false}}); //beacause $eq: not supported by minimongo
+			},
 			// Price
 			'click .filter--price': function(event) {
 				var filter = event.target.getAttribute('data-filter');

@@ -43,7 +43,7 @@
 			'click .button--favorite': function() {
 				var currentUser 		= Meteor.userId();
 				var currentProduct 	 	= this._id;
-				var currentProductModel 	= Products.findOne(this._id).model;
+				var currentProductModel = Products.findOne(this._id).model;
 				var currentFavorites 	= Meteor.users.findOne({_id: currentUser}).profile.favorites;
 
 				// Update User Favorites  - Add

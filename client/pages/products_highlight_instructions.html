@@ -2,7 +2,7 @@
 	<!-- CONTENT -->
 	<section class="ui very padded segment">
 		<!-- HEAD -->
-		<h1>Highlight your Product</h1>
+		<h1>Highlight your Car</h1>
 		<div class="ui divider"></div>
 
 		<!-- CONTENT -->
@@ -14,23 +14,26 @@
 		<h3>Pricing</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi necessitatibus harum, ipsum, temporibus quis cupiditate nobis ducimus at voluptates ipsam aut veniam alias. Natus aliquid impedit fugit dolorem necessitatibus vitae expedita vel magni totam provident. Ullam quaerat itaque aliquid praesentium, hic amet adipisci voluptatibus tempore illo, perferendis facere dolorum, soluta.</p>
 		
+		<h3>Highlight Car</h3>
 		{{#if paidHighlight}}
-			<h3>Thanks for Paying</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi necessitatibus harum, ipsum, temporibus quis cupiditate nobis ducimus at voluptates ipsam aut veniam alias.</p>
+			<p>This Car is already a Highlight. :-)</p>
+			<!-- CONTROLS -->
+			<div class="ui divider"></div>
+			<a href="/" class="ui basic button button--clear-clicked-product">Back</a>
 		{{else}}
-			<h3>Payment Form</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi necessitatibus harum, ipsum, temporibus quis cupiditate nobis ducimus at voluptates ipsam aut veniam alias.</p>
+			<p>Pay to make this Car a Highlight.</p>
 			<form role="form">
 				<div id="payment-form--highlight"></div>
-				<button type="submit" class="ui button green">Pay Now</button>
+				<!-- CONTROLS -->
+				<div class="ui divider"></div>
+				<a href="/" class="ui basic button button--clear-clicked-product">Back</a>
+				<button type="submit" class="ui right floated animated green button" tabindex="0">
+					<div class="visible content">Pay Now</div>
+					<div class="hidden content">
+						<i class="right arrow icon"></i>
+					</div>
+				</button>
 			</form>
 		{{/if}}
-
-		<!-- CONTROLS -->
-		<div class="ui divider"></div>
-		<div class="ui buttons">
-			<a href="/" class="ui button button--clear-clicked-product">Cancel</a>
-			<a href="#" class="ui positive button button--highlight">Okay, let's do it</a>
-		</div>
 	</section>
 </template>

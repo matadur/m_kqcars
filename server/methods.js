@@ -89,14 +89,14 @@
 				}
 			});
 		},
-		// CREATE TRANSACTION
-		createTransaction: function(nonceFromTheClient) {
+		// CREATE TRANSACTION - HIGHLIGHT
+		createTransactionHighlight: function(nonceFromClient, clickedProductId) {
 			var user = Meteor.user();
 
 			// Let's create transaction.
 			gateway.transaction.sale({
-				amount: '10.00',
-				paymentMethodNonce: nonceFromTheClient, // Generated nonce passed from client
+				amount: '5.00',
+				paymentMethodNonce: nonceFromClient, // Generated nonce passed from client
 				customer: {
 					id: user.customerId
 				},
@@ -108,8 +108,8 @@
 				if (err) { 
 					console.log(err);
 				} else {
-					// When payment's successful, add "paid" role to current user.
-					Roles.addUsersToRoles(user._id, 'paidHighlight', Roles.GLOBAL_GROUP)
+					// When payment's successful...
+					Products.update({_id: clickedProductId}, {$set: {isHighlight: true}});
 				}
 			});
 		}

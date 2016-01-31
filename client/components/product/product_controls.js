@@ -5,7 +5,7 @@
 	// PPRODUCT CONTROLS - VISIBILITY-------------------------------------------------
 		Template.product_controls.helpers({
 			currentUsersProduct: function(){
-				var currentUser = Meteor.userId();
+				var currentUser 		= Meteor.userId();
 				var currentProductOwner = this.owner;
 
 				if (currentUser == currentProductOwner) {
@@ -33,7 +33,7 @@
 		Template.product_controls.events({
 			'click .mark_as_sold': function() {
 				var currentProduct 		= Products.findOne(this._id);
-				var currentProductModel 	= currentProduct.model;
+				var currentProductModel = currentProduct.model;
 				
 				// Update Product
 				Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}});
