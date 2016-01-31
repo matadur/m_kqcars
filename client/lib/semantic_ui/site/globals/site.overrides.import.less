@@ -10,7 +10,7 @@ body {
 }
 
 /*-------------------
-       Menu
+	Menu
 --------------------*/
 .ui.fixed.menu + .ui.grid {
 	padding-top: 5.75rem !important;
@@ -19,15 +19,18 @@ body {
 .ui.segment {
 	border: none !important;
 }
+.ui.top.fixed.menu {
+    /*border-top: 3px solid #43C02D !important;*/
+}
 /*-------------------
-       Cards
+	Cards
 --------------------*/
 .ui.cards > .card, .ui.card {
 	box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15) !important;
 	border: none !important;
 }
 /*-------------------
-       Form
+	Form
 --------------------*/
 /*Label*/
 .ui.labeled.input:not([class*="corner labeled"]):not([class*="right labeled"]) > .label {
@@ -68,7 +71,7 @@ body {
 }
 
 /*-------------------
-       Form - Image Upload
+	Form - Image Upload
 --------------------*/
 .fileinput {
 	z-index: 2;
@@ -114,7 +117,7 @@ body {
 
 
 /*-------------------
-    	Alerts
+	Alerts
 --------------------*/
 .s-alert-box {
 
@@ -143,4 +146,16 @@ body {
     font-weight: normal;
     text-decoration: underline;
     opacity: 1;
+}
+
+
+/*-------------------
+	Progressbar & Spinner
+--------------------*/
+#iron-router-progress {
+	background-color: #43C02D;
+	box-shadow: none;
+}
+#iron-router-progress.spinner:before {
+    border-color: #43C02D;
 }
