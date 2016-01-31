@@ -1,8 +1,10 @@
 <template name="products">
 	<!-- CONTENT -->
 	<section class="ui three doubling stackable cards">
-		{{#each products}}
-			{{> product_card}}
-		{{/each}}
+		{{#transition in="fadeInUp:500" out="fadeOutUp"}}
+			{{#each products}}
+				{{> product_card}}
+			{{/each}}
+		{{/transition}}
 	</section>
 </template>
