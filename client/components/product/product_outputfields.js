@@ -22,7 +22,7 @@
 			}
 		});
 
-	// PRODUCT OUTPUTFIELDS - WOF & REG INDICATOR LABEL----------------------------------
+	// PRODUCT OUTPUTFIELDS - WOF & REG INDICATOR LABEL-------------------------------
 		Template.product_outputfield_wof_reg_indicator_label.helpers({
 			wofOrRegValid: function() {
 				var currentDate = new Date();
@@ -51,5 +51,17 @@
 				if (currentDate <= currentProductReg) {
 					return true;
 				};
+			}
+		});
+
+	// PRODUCT OUTPUTFIELDS - DESCRIPTION PARAGRAPH FIX-------------------------------
+		Template.product_outputfield_description.helpers({
+			description: function() {
+				var currentProduct = Products.findOne(this._id);
+				var currentProductDescription = currentProduct.description;
+
+				currentProductDescription = currentProductDescription.replace(/(?:\r\n|\r|\n)/g, '<br />');
+
+				return currentProductDescription;
 			}
 		});

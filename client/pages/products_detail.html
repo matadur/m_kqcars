@@ -51,7 +51,10 @@
 			<h3 class="ui header">Contact</h3>
 			<div class="ui divider"></div>
 			{{#if markedAsSold}}
-				Sorry, aber dieses Auto wurde als "schon verkauft" markiert.
+				<div class="ui circular label">
+					<i class="info circle icon"></i>info
+				</div>
+				&nbsp; Sorry, but the Owner has already sold this Car.
 			{{else}}
 				<div class="ui three column stackable divided grid">
 					<div class="column">
