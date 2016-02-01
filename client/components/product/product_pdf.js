@@ -55,7 +55,7 @@
 				image.src = url;
 			};
 			// IMAGES - get your url from your database (toUrl() from collectionFS) or from your public folder
-			var imageUrl = "http://localhost:3000/cfs/files/images/JJo2YQn3SqnDmj9Lo/The%20VRoom%20Light%20Front.png";
+			var imageUrl = "http://localhost:3000/products_detail/cY7tydLQbowtCaxhc/WOF=yes%20REG=no";
 			
 			// The docDefinition has to be in the callback so that the image is loaded completely and converted to a datauri
 			getDataUri(imageUrl, function(imageDataUri) {			
@@ -124,7 +124,7 @@
 						},
 						// CONTACT - ROTATED CONTACT
 						rotatedContent,
-						{image: getDataUri(imageDataUri), fit: [100,100]}
+						{image: imageDataUri, fit: [100,100]}
 					],
 
 					styles: {
