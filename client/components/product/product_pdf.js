@@ -22,10 +22,14 @@
 			var number 		= clickedProductObject.number.toString();
 			
 			// IMAGES - Get Product Image Urls
+			var logoimage		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
+			var backgroundimage = Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
 			var sideimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
 			var frontimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "frontimage"}]}).url();
 			var infrontimage	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "infrontimage"}]}).url();
 			var inbackimage 	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "inbackimage"}]}).url();
+
+			console.log(logoimage);
 
 			// IMAGES - Convert Image url to Data Uri
 			getDataUri = function (url, callback) {
@@ -41,18 +45,34 @@
 			};
 
 			// DATA URI WRAPPER (doc definition has to be in the callback so that image is loaded completely $ converted to datauri)
-			getDataUri(sideimage, function(imageDataUri) {
+			getDataUri(logoimage, function(logoimageDataUri) {
+			getDataUri(backgroundimage, function(backgroundimageDataUri) {
+			getDataUri(sideimage, function(sideimageDataUri) {
+			getDataUri(frontimage, function(frontimageDataUri) {
+			getDataUri(infrontimage, function(infrontimageDataUri) {
+			getDataUri(inbackimage, function(inbackimageDataUri) {
 				// PDF DOCUMENT DEFINITION
 				var docDefinition = { 
 					pageSize: 'A4',
-					pageMargins: [ 35, 125, 35, 90 ],
-					background: [{image: imageDataUri,	width: 595}],
+					pageMargins: [ 35, 125, 35, 140 ],
+					background: [{image: backgroundimageDataUri,	width: 595}],
 					
 					header: [
-				    	{image: imageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
+				    	{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
 				    ],
 				    footer: [
-						{image: imageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
+						// IMAGES
+						{ text: 'Images:', style: 'section', margin: [35, 0, 35, 10] },
+						// IMAGES - IMAGES
+						{
+							columns: [
+								{ width: '25%', image: sideimageDataUri, fit: [125,125] },
+								{ width: '25%', image: frontimageDataUri, fit: [125,125] },
+								{ width: '25%', image: infrontimageDataUri, fit: [125,125] },
+								{ width: '25%', image: inbackimageDataUri, fit: [125,125] }
+							],
+							margin: [35, 0, 35, 0]
+						}
 				    ],
 
 					content: [
@@ -112,18 +132,6 @@
 								{ width: '15%', text: 'Number:', style: ['listItem', 'listLabel'] },
 								{ width: '35%', text: number, style: ['listItem', 'listText'] }
 							]
-						},
-						// IMAGES
-						{ text: 'Images:', style: 'section' },
-						// IMAGES - IMAGES
-						{
-							columns: [
-								// Images
-								{ width: '25%', image: imageDataUri, fit: [125,125] },
-								{ width: '25%', image: imageDataUri, fit: [125,125] },
-								{ width: '25%', image: imageDataUri, fit: [125,125] },
-								{ width: '25%', image: imageDataUri, fit: [125,125] }
-							]
 						}
 					],
 
@@ -133,11 +141,17 @@
 						listItem:	{ fontSize: 10, margin: [0, 0, 0, 10] },
 						listLabel: 	{ bold: true },
 						listText: 	{ italic: true },
-						mainText: 	{ fontSize: 10, lineHeight: 1.5, margin: [0, 0, 0, 10] }
+						mainText: 	{ fontSize: 10, lineHeight: 1.5, margin: [0, 0, 0, 10] },
+						footerText:	{ fontSize: 10, lineHeight: 1.5, margin: [35, 0, 35, 0] }
 					}
 				};
 				// PDF GENERATION PROCESS
 				pdfMake.createPdf(docDefinition).open();
+			});
+			});
+			});
+			});
+			});
 			});
 		}
 	});
