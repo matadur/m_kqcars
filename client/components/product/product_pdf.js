@@ -55,15 +55,21 @@
 				image.src = url;
 			};
 			// IMAGES - get your url from your database (toUrl() from collectionFS) or from your public folder
-			var imageUrl = "http://localhost:3000/products_detail/cY7tydLQbowtCaxhc/WOF=yes%20REG=no";
+			// var imageUrl = "http://localhost:3000/logo.png";
+			var imageUrl = "http://localhost:3000/cfs/files/images/HNgtsYa4hAmZuANYn/The%20VRoom%20Front.png";
 			
 			// The docDefinition has to be in the callback so that the image is loaded completely and converted to a datauri
 			getDataUri(imageUrl, function(imageDataUri) {			
 				// PDF DOCUMENT DEFINITION
 				var docDefinition = { 
 					pageSize: 'A4',
-					pageMargins: [ 35, 40, 35, 40 ],
+					pageMargins: [ 35, 125, 35, 40 ],
+					background: [{image: imageDataUri,	width: 595}],
 					
+					header: [
+				    	{image: imageDataUri, fit: [125,125], margin: [0, 0, 0, 0]}
+				    ],
+
 					content: [
 						// MODEL
 						{ text: model, style: 'headline' },
@@ -122,9 +128,20 @@
 								{ width: '35%', text: number, style: ['listItem', 'listText'] }
 							]
 						},
+						// IMAGES
+						{ text: 'Images:', style: 'section' },
+						// IMAGES - IMAGES
+						{
+							columns: [
+								// Images
+								{ width: '25%', image: imageDataUri, fit: [125,125] },
+								{ width: '25%', image: imageDataUri, fit: [125,125] },
+								{ width: '25%', image: imageDataUri, fit: [125,125] },
+								{ width: '25%', image: imageDataUri, fit: [125,125] }
+							]
+						},
 						// CONTACT - ROTATED CONTACT
-						rotatedContent,
-						{image: imageDataUri, fit: [100,100]}
+						rotatedContent
 					],
 
 					styles: {
@@ -133,7 +150,7 @@
 						listItem:	{ fontSize: 10, margin: [0, 0, 0, 10] },
 						listLabel: 	{ bold: true },
 						listText: 	{ italic: true },
-						mainText: 	{ fontSize: 10, margin: [0, 0, 0, 10] }
+						mainText: 	{ fontSize: 10, lineHeight: 1.5, margin: [0, 0, 0, 10] }
 					}
 				};
 				// PDF GENERATION PROCESS
