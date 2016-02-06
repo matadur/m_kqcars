@@ -1,13 +1,13 @@
 <template name="layout_account">
 	{{> header}}
 	<section class="ui stackable grid container">
-		<!-- MAIN -->
-		<section class="twelve wide column">
-			{{> yield}}
-		</section>
 		<!-- SIDEBAR -->
 		<aside class="four wide column">
 			{{> sidebar_account}}
 		</aside>
+		<!-- MAIN -->
+		<section class="twelve wide column">
+			{{> yield}}
+		</section>
 	</section>
 </template>
