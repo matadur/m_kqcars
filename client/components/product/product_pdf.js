@@ -6,6 +6,7 @@
 		'click .button--pdf': function() {
 			var clickedProductId = Session.get('clickedProductId');
 			var clickedProductObject = Products.findOne(clickedProductId);
+			var clickedProductCountId = Products.findOne(clickedProductId).productCountId;
 
 			var model 		= clickedProductObject.model.toString();
 			var cartype 	= clickedProductObject.cartype.toString();
@@ -42,7 +43,14 @@
 				[{image: writeRotatedText(email, number), fit:[7,53], alignment: 'left'}]
 			];
 
-			// IMAGES - DEFINE FUNCTION: CONVERT IMAGEURL
+			
+			// IMAGES - Get Product Image Urls
+			var sideimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
+			var frontimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "frontimage"}]}).url();
+			var infrontimage	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "infrontimage"}]}).url();
+			var inbackimage 	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "inbackimage"}]}).url();
+
+			// IMAGES - Convert Image url to Data Uri
 			getDataUri = function (url, callback) {
 				var image = new Image();
 				image.onload = function () {
@@ -54,12 +62,9 @@
 				};
 				image.src = url;
 			};
-			// IMAGES - get your url from your database (toUrl() from collectionFS) or from your public folder
-			// var imageUrl = "http://localhost:3000/logo.png";
-			var imageUrl = "http://localhost:3000/cfs/files/images/HNgtsYa4hAmZuANYn/The%20VRoom%20Front.png";
-			
-			// The docDefinition has to be in the callback so that the image is loaded completely and converted to a datauri
-			getDataUri(imageUrl, function(imageDataUri) {			
+
+			// DATA URI WRAPPER (doc definition has to be in the callback so that image is loaded completely $ converted to datauri)
+			getDataUri(sideimage, function(imageDataUri) {
 				// PDF DOCUMENT DEFINITION
 				var docDefinition = { 
 					pageSize: 'A4',
