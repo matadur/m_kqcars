@@ -20,29 +20,6 @@
 			var description = clickedProductObject.description.toString();
 			var email 		= clickedProductObject.email.toString();
 			var number 		= clickedProductObject.number.toString();
-
-			// ROTATED TEXT - DEFINE FUNCTION: ROTATE TEXT
-			writeRotatedText = function(text, text2) {
-				var ctx, canvas = document.createElement('canvas');
-				// I am using predefined dimensions so either make this part of the arguments or change at will 
-				canvas.width = 36;
-				canvas.height = 270;
-				ctx = canvas.getContext('2d');
-				ctx.font = '45px Arial';
-				ctx.save();
-				ctx.translate(36,270);
-				ctx.rotate(-0.5*Math.PI);
-				ctx.fillStyle = '#000';
-				ctx.fillText(text , 0, 0);
-				ctx.fillText(text2 , 0, 0);
-				ctx.restore();
-				return canvas.toDataURL();
-			};
-			// ROTATED TEXT - set the fitted width/height to a fraction for mitigating pixelation on print/zoom
-			var rotatedContent = [
-				[{image: writeRotatedText(email, number), fit:[7,53], alignment: 'left'}]
-			];
-
 			
 			// IMAGES - Get Product Image Urls
 			var sideimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
@@ -68,11 +45,14 @@
 				// PDF DOCUMENT DEFINITION
 				var docDefinition = { 
 					pageSize: 'A4',
-					pageMargins: [ 35, 125, 35, 40 ],
+					pageMargins: [ 35, 125, 35, 90 ],
 					background: [{image: imageDataUri,	width: 595}],
 					
 					header: [
-				    	{image: imageDataUri, fit: [125,125], margin: [0, 0, 0, 0]}
+				    	{image: imageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
+				    ],
+				    footer: [
+						{image: imageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
 				    ],
 
 					content: [
@@ -144,9 +124,7 @@
 								{ width: '25%', image: imageDataUri, fit: [125,125] },
 								{ width: '25%', image: imageDataUri, fit: [125,125] }
 							]
-						},
-						// CONTACT - ROTATED CONTACT
-						rotatedContent
+						}
 					],
 
 					styles: {
