@@ -22,14 +22,15 @@
 			var number 		= clickedProductObject.number.toString();
 			
 			// IMAGES - Get Product Image Urls
-			var logoimage		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
-			var backgroundimage = Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
+			var logoimage		= "http://localhost:3000/logo.png";
+			var backgroundimage = "http://localhost:3000/pdf-bg.png";
 			var sideimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
 			var frontimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "frontimage"}]}).url();
 			var infrontimage	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "infrontimage"}]}).url();
 			var inbackimage 	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "inbackimage"}]}).url();
 
 			console.log(logoimage);
+			console.log(backgroundimage);
 
 			// IMAGES - Convert Image url to Data Uri
 			getDataUri = function (url, callback) {
@@ -55,12 +56,12 @@
 				var docDefinition = { 
 					pageSize: 'A4',
 					pageMargins: [ 35, 125, 35, 140 ],
-					background: [{image: backgroundimageDataUri,	width: 595}],
+					background: [{image: backgroundimageDataUri, width: 595}],
 					
-					header: [
-				    	{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
-				    ],
-				    footer: [
+					// header: [
+					// 	{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
+					// ],
+					footer: [
 						// IMAGES
 						{ text: 'Images:', style: 'section', margin: [35, 0, 35, 10] },
 						// IMAGES - IMAGES
@@ -73,7 +74,7 @@
 							],
 							margin: [35, 0, 35, 0]
 						}
-				    ],
+					],
 
 					content: [
 						// MODEL
