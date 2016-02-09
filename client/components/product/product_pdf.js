@@ -22,8 +22,8 @@
 			var number 		= clickedProductObject.number.toString();
 			
 			// IMAGES - Get Product Image Urls
-			var logoimage		= "http://localhost:3000/logo.png";
-			var backgroundimage = "http://localhost:3000/pdf-bg.png";
+			var logoimage		= '/logo.png';
+			var backgroundimage	= '/pdf-bg.png';
 			var sideimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "sideimage"}]}).url();
 			var frontimage 		= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "frontimage"}]}).url();
 			var infrontimage	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "infrontimage"}]}).url();
@@ -58,9 +58,9 @@
 					pageMargins: [ 35, 125, 35, 140 ],
 					background: [{image: backgroundimageDataUri, width: 595}],
 					
-					// header: [
-					// 	{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
-					// ],
+					header: [
+						{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
+					],
 					footer: [
 						// IMAGES
 						{ text: 'Images:', style: 'section', margin: [35, 0, 35, 10] },

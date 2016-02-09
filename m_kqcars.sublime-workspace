@@ -259,7 +259,7 @@
 			"file": "client/lib/semantic_ui/site/globals/site.overrides.import.less",
 			"settings":
 			{
-				"buffer_size": 2279,
+				"buffer_size": 2953,
 				"line_ending": "Unix"
 			}
 		},
@@ -267,7 +267,15 @@
 			"file": "lib/collections.js",
 			"settings":
 			{
-				"buffer_size": 2828,
+				"buffer_size": 2873,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/components/product/product_pdf.js",
+			"settings":
+			{
+				"buffer_size": 6181,
 				"line_ending": "Unix"
 			}
 		}
@@ -470,7 +478,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nilsdannemann/Sites/m_kqcars"
+		"/Users/nilsdannemann/Sites/m_kqcars",
+		"/Users/nilsdannemann/Sites/m_kqcars/public"
 	],
 	"file_history":
 	[
@@ -765,7 +774,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -774,15 +783,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2279,
+						"buffer_size": 2953,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								604,
-								604
+								0,
+								0
 							]
 						],
 						"settings":
@@ -797,7 +806,7 @@
 						"translation.y": 376.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -806,15 +815,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2828,
+						"buffer_size": 2873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1207,
-								1207
+								0,
+								0
 							]
 						],
 						"settings":
@@ -829,8 +838,46 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/components/product/product_pdf.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2206,
+								2206
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 805.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"file": "public/pdf-bg.png",
+					"semi_transient": true,
+					"stack_index": 1,
+					"type": "image"
 				}
 			]
 		}
@@ -887,6 +934,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"pdf",
+				"client/components/product/product_pdf.js"
+			],
 			[
 				"icon",
 				"public/icon-dropdown.svg"
@@ -1394,10 +1445,6 @@
 			[
 				"stys",
 				"_scss\\includes\\styleguide\\_component.scss"
-			],
-			[
-				"mna",
-				"_includes\\mnav.html"
 			]
 		],
 		"width": 0.0
