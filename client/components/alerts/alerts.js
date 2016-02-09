@@ -22,5 +22,5 @@
 			var currentUser = Meteor.user();
 			var currentUserName = currentUser.profile.name;
 
-			sAlert.success('Hi ' + currentUserName + '! Nice to see you!');
+			sAlert.success('Hi ' + currentUserName + '!');
 		});

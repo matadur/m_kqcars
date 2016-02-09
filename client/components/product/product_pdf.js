@@ -55,27 +55,13 @@
 				// PDF DOCUMENT DEFINITION
 				var docDefinition = { 
 					pageSize: 'A4',
-					pageMargins: [ 35, 125, 35, 140 ],
+					pageMargins: [ 35, 125, 35, 290 ],
 					background: [{image: backgroundimageDataUri, width: 595}],
 					
-					header: [
-						{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
-					],
-					footer: [
-						// IMAGES
-						{ text: 'Images:', style: 'section', margin: [35, 0, 35, 10] },
-						// IMAGES - IMAGES
-						{
-							columns: [
-								{ width: '25%', image: sideimageDataUri, fit: [125,125] },
-								{ width: '25%', image: frontimageDataUri, fit: [125,125] },
-								{ width: '25%', image: infrontimageDataUri, fit: [125,125] },
-								{ width: '25%', image: inbackimageDataUri, fit: [125,125] }
-							],
-							margin: [35, 0, 35, 0]
-						}
-					],
-
+					// header: [
+					// 	{image: logoimageDataUri, fit: [125,125], margin: [35, 0, 35, 0]}
+					// ],
+					
 					content: [
 						// MODEL
 						{ text: model, style: 'headline' },
@@ -113,16 +99,22 @@
 						{ text: 'About the Car:', style: 'section' },
 						// ABOUT - DESCRIPTION
 						{ text: description, style: 'mainText' },
-						// ABOUT - PRICE
+					],
+
+					footer: [
+						// PRICE
+						{ text: 'Price:', style: 'section', margin: [35, 0, 35, 10] },
+						// PRICE - PRICE
 						{
 							columns: [
 								// Askingprice
 								{ width: '15%', text: 'Askingprice:', style: ['listItem', 'listLabel'] },
-								{ width: '35%', text: '$' + price + ' NZD', style: ['listItem', 'listText'] }
-							]
+								{ width: '35%', text: '$' + price + ' NZD (or near offer)', style: ['listItem', 'listText'] }
+							],
+							margin: [35, 0, 35, 25]
 						},
 						// CONTACT
-						{ text: 'Contact:', style: 'section' },
+						{ text: 'Contact:', style: 'section', margin: [35, 0, 35, 10] },
 						// CONTACT - EMAIL & NUMBER
 						{
 							columns: [
@@ -132,7 +124,20 @@
 								// Number
 								{ width: '15%', text: 'Number:', style: ['listItem', 'listLabel'] },
 								{ width: '35%', text: number, style: ['listItem', 'listText'] }
-							]
+							],
+							margin: [35, 0, 35, 25]
+						},
+						// IMAGES
+						{ text: 'Images:', style: 'section', margin: [35, 0, 35, 10] },
+						// IMAGES - IMAGES
+						{
+							columns: [
+								{ width: '25%', image: sideimageDataUri, fit: [125,125] },
+								{ width: '25%', image: frontimageDataUri, fit: [125,125] },
+								{ width: '25%', image: infrontimageDataUri, fit: [125,125] },
+								{ width: '25%', image: inbackimageDataUri, fit: [125,125] }
+							],
+							margin: [35, 0, 35, 0]
 						}
 					],
 
