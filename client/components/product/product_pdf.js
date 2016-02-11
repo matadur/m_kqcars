@@ -29,9 +29,6 @@
 			var infrontimage	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "infrontimage"}]}).url();
 			var inbackimage 	= Images.findOne({$and: [{productCountId: clickedProductCountId}, {imageType: "inbackimage"}]}).url();
 
-			console.log(logoimage);
-			console.log(backgroundimage);
-
 			// IMAGES - Convert Image url to Data Uri
 			getDataUri = function (url, callback) {
 				var image = new Image();
