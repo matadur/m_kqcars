@@ -38,7 +38,7 @@
 				var currentUser 		= Meteor.user();
 				var currentFavorites 	= currentUser.profile.favorites;
 
-				return Products.find({_id: {$in: currentFavorites}}, {sort: {createdAt: -1}});
+				return Products.find({productCountId: {$in: currentFavorites}}, {sort: {createdAt: -1}});
 			}
 		});
 	
