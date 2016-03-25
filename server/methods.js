@@ -21,8 +21,12 @@
 	// PRODUCTS - REMOVE--------------------------------------------------------------
 		Meteor.methods({
 			removeProduct: function(productCountId){
+				// Remove Product
 				Products.remove({productCountId: productCountId});
+				// Remove accociated Images
 				Images.remove({productCountId: productCountId});
+				// Remove Product from every users Favorites
+				Meteor.users.update({}, {$pull: {'profile.favorites': productCountId}}, {multi: true});
 			}
 		});
 

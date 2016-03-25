@@ -21,9 +21,10 @@
 			is_favorite: function(){
 				var currentUser 		= Meteor.user();
 				var currentFavorites 	= currentUser.profile.favorites;
-				var currentProduct 		= this._id;
+				var currentProduct 		= Products.findOne(this._id);
+				var productCountId		= currentProduct.productCountId;
 
-				if (currentFavorites.indexOf(currentProduct) != -1) {
+				if (currentFavorites.indexOf(productCountId) != -1) {
 					return true;
 				} else {
 					return false;
@@ -45,19 +46,20 @@
 		Template.product_favorite.events({
 			'click .button--favorite': function() {
 				var currentUser 		= Meteor.userId();
-				var currentProduct 	 	= this._id;
-				var currentProductModel = Products.findOne(this._id).model;
+				var currentProduct 	 	= Products.findOne(this._id);
+				var productCountId		= currentProduct.productCountId;
+				var currentProductModel = currentProduct.model;
 				var currentFavorites 	= Meteor.users.findOne({_id: currentUser}).profile.favorites;
 
 				// Update User Favorites  - Add
-				Meteor.users.update({_id: currentUser}, {$addToSet: {'profile.favorites': currentProduct}});
+				Meteor.users.update({_id: currentUser}, {$addToSet: {'profile.favorites': productCountId}});
 				// Update User Favorites - Remove
-				if (currentFavorites.indexOf(currentProduct) != -1) {
-					Meteor.users.update({_id: currentUser}, {$pull: {'profile.favorites': currentProduct}});
+				if (currentFavorites.indexOf(productCountId) != -1) {
+					Meteor.users.update({_id: currentUser}, {$pull: {'profile.favorites': productCountId}});
 				};
 
 				// Alerts
-				if (currentFavorites.indexOf(currentProduct) == -1) {
+				if (currentFavorites.indexOf(productCountId) == -1) {
 					sAlert.success(currentProductModel + ' added to <a href="/favorite_products">Favorites</a>');
 				} else {
 					sAlert.success(currentProductModel + ' removed from <a href="/favorite_products">Favorites</a>');
