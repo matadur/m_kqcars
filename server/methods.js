@@ -4,7 +4,7 @@
 	
 	// IMAGES - REMOVE----------------------------------------------------------------
 		Meteor.methods({
-			// SIDEIMAGE
+			// FOR: SINGLE IMAGE REMOVAL
 			removeImage: function(productCountId, imageType) {
 				Images.remove({
 					productCountId: productCountId,

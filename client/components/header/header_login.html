@@ -1,6 +1,6 @@
 <template name="header_login">
 	{{#if currentUser}}
-		<a class="item" href="/account_logout">Logout</a>
+		{{> dropdown_account}}
 	{{else}}
 		<a class="item" href="/account_login">Login</a>
 	{{/if}}
