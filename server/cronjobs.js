@@ -2,6 +2,7 @@
 SyncedCron.add({
 	name: 'Remove old Products & Images (60 Days)',
 	schedule: function(parser) {
+		// return parser.text('every 5 seconds');
 		return parser.text('every 24 hours');
 	},
 	job: function() {
@@ -16,9 +17,16 @@ SyncedCron.add({
 		targetDate.setMinutes(0);
 		targetDate.setSeconds(0);
 
-		// Remove matching Documents
+		// Remove matching Products & Images
+		var matchingProducts = Products.find({createdAt: {$lt: targetDate}}).fetch();
+		var productCountIdArray = matchingProducts.map(function(product) {return product.productCountId;});
+
+		// Remove matching Products
 		Products.remove({createdAt: {$lt: targetDate}});
+		// Remove matching Images
 		Images.remove({createdAt: {$lt: targetDate}});
+		// Remove matching Products from user Favorites
+		Meteor.users.update({}, {$pullAll: {'profile.favorites': productCountIdArray}}, {multi: true});
 	}
 });
 
