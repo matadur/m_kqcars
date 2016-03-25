@@ -7,9 +7,12 @@
 			product_favorite_count: function() {
 				var currentUser 			= Meteor.user();
 				var currentFavorites 		= currentUser.profile.favorites;
-				var currentFavoritesCount 	= currentFavorites.length;
 
-				return currentFavoritesCount;
+				if (currentFavorites === null || typeof currentFavorites === 'undefined') {
+					return "0";
+				} else {
+					return currentFavorites.length;
+				};
 			} 
 		});
 
