@@ -13,13 +13,7 @@
 					<i class="delete icon"></i>Remove
 				</a>
 				<!-- Mark as sold -->
-				<a class="ui item mark_as_sold">
-					{{#if markedAsSold}}
-						<i class="retweet icon"></i>Mark as "For Sale"
-					{{else}}
-						<i class="retweet icon"></i>Mark as "Sold"
-					{{/if}}
-				</a>
+				{{> product_availability_link}}
 				<!-- Pdf & Highlight -->
 				<div class="divider"></div>
 				<a href="/products_pdf_instructions" class="ui item instructions--pdf">

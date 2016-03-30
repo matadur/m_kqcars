@@ -5,39 +5,11 @@
 	// PPRODUCT CONTROLS - VISIBILITY-------------------------------------------------
 		Template.product_controls.helpers({
 			currentUsersProduct: function(){
-				var currentUser 		= Meteor.userId();
-				var currentProductOwner = this.owner;
+				var currentUser = Meteor.userId();
 
-				if (currentUser == currentProductOwner) {
-					return true;
-				} else {
-					return false;
-				};
-			}
-		});
-
-	// PPRODUCT CONTROLS - MARK AS SOLD-----------------------------------------------
-		Template.product_controls.helpers({
-			markedAsSold: function() {
-				if (this.markedAsSold) {
+				if (currentUser == this.owner) {
 					return true;
 				};
-			}
-		});
-		
-		Template.product_controls.events({
-			'click .mark_as_sold': function() {
-				var currentProduct 		= Products.findOne(this._id);
-				var currentProductModel = currentProduct.model;
-				
-				// Update Product
-				Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}});
-
-				// Alerts
-				if (currentProduct.markedAsSold == false) {
-					sAlert.success(currentProductModel + ' marked as "Sold"');
-				} else {
-					sAlert.success(currentProductModel + ' marked as "For Sale"');
-				};
+				return false;
 			}
 		});
