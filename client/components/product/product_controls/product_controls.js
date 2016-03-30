@@ -17,19 +17,14 @@
 		});
 
 	// PPRODUCT CONTROLS - MARK AS SOLD-----------------------------------------------
-		var markedAsSoldHelper = {
+		Template.product_controls.helpers({
 			markedAsSold: function() {
-				var markedAsSold = this.markedAsSold;
-
-				if (markedAsSold == true) {
+				if (this.markedAsSold) {
 					return true;
-				} else {
-					return false;
 				};
 			}
-		};
-		Template.product_controls.helpers(markedAsSoldHelper);
-
+		});
+		
 		Template.product_controls.events({
 			'click .mark_as_sold': function() {
 				var currentProduct 		= Products.findOne(this._id);
