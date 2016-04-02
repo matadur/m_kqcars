@@ -26,7 +26,10 @@
 				</div>
 				<div class="ui right floated basic buttons">
 					{{> product_controls}}
-					{{> product_readmore}}
+					<a class="ui animated button" href="/products_detail/{{this._id}}/{{this.model}}">
+						<div class="visible content">View</div>
+						<div class="hidden content"><i class="right arrow icon"></i></div>
+					</a>
 				</div>
 			</div>
 		</article>
