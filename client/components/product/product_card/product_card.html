@@ -4,7 +4,14 @@
 			<!-- CONTENT -->
 			<div class="content">
 				{{> product_availability_label}}
-				<strong>{{model}}</strong>
+				<strong>
+					{{#if isHighlight}}
+						<div class="ui basic label">
+							TOP!
+						</div>
+					{{/if}}
+					{{model}}
+				</strong>
 			</div>
 			<!-- IMAGE -->
 			<div class="ui fluid image">
