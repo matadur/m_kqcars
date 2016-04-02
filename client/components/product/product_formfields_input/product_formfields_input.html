@@ -1,51 +1,51 @@
 <!-- SIDEIMAGE -->
-	<template name="product_formfield_image_side">
+	<template name="product_formfield_input_image_side">
 		{{#if sideImageUploadRequest}}
 			<div class="field">
 				<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
 				<label for="file-side">Side view</label>
 			</div>
 		{{else}}
-			{{> product_outputfield_image_side}}
+			{{> product_formfield_output_image_side}}
 			<div class="removeimage removeimage--side"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
 <!-- FRONTIMAGE -->
-	<template name="product_formfield_image_front">
+	<template name="product_formfield_input_image_front">
 		{{#if frontImageUploadRequest}}
 			<div class="field">
 				<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
 				<label for="file-front">Front view</label>
 			</div>
 		{{else}}
-			{{> product_outputfield_image_front}}
+			{{> product_formfield_output_image_front}}
 			<div class="removeimage removeimage--front"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
 <!-- INFRONTIMAGE -->
-	<template name="product_formfield_image_infront">
+	<template name="product_formfield_input_image_infront">
 		{{#if inFrontImageUploadRequest}}
 			<div class="field">
 				<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
 				<label for="file-infront">InFront view</label>
 			</div>
 		{{else}}
-			{{> product_outputfield_image_infront}}
+			{{> product_formfield_output_image_infront}}
 			<div class="removeimage removeimage--infront"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
 
 <!-- INBACKIMAGE -->
-	<template name="product_formfield_image_inback">
+	<template name="product_formfield_input_image_inback">
 		{{#if inBackImageUploadRequest}}
 			<div class="field">
 				<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
 				<label for="file-inback">InBack view</label>
 			</div>
 		{{else}}
-			{{> product_outputfield_image_inback}}
+			{{> product_formfield_output_image_inback}}
 			<div class="removeimage removeimage--inback"><i class="ion-android-close"></i>delete</div>
 		{{/if}}
 	</template>
@@ -54,7 +54,7 @@
 
 
 <!-- MODEL -->
-	<template name="product_formfield_model">
+	<template name="product_formfield_input_model">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='model'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -71,7 +71,7 @@
 	</template>
 
 <!-- CARTYPE -->
-	<template name="product_formfield_cartype">
+	<template name="product_formfield_input_cartype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='cartype'}}
 			<span class="ui pointing below label">Woops, you missed something! Please check!</span>
@@ -88,7 +88,7 @@
 	</template>
 
 <!-- GEARTYPE -->
-	<template name="product_formfield_geartype">
+	<template name="product_formfield_input_geartype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='geartype'}}
 			<span class="ui pointing below label">Woops, you missed something! Please check!</span>
@@ -105,7 +105,7 @@
 	</template>
 
 <!-- FUELTYPE -->
-	<template name="product_formfield_fueltype">
+	<template name="product_formfield_input_fueltype">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='fueltype'}}
 			<span class="ui pointing below label">Woops, you missed something! Please check!</span>
@@ -122,7 +122,7 @@
 	</template>
 
 <!-- KILOMETERS -->
-	<template name="product_formfield_kilometers">
+	<template name="product_formfield_input_kilometers">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='kilometers'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -139,7 +139,7 @@
 	</template>
 
 <!-- BUILT -->
-	<template name="product_formfield_built">
+	<template name="product_formfield_input_built">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='built'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -156,7 +156,7 @@
 	</template>
 
 <!-- WOF -->
-	<template name="product_formfield_wof">
+	<template name="product_formfield_input_wof">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='wof'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -173,7 +173,7 @@
 	</template>
 
 <!-- REG -->
-	<template name="product_formfield_reg">
+	<template name="product_formfield_input_reg">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='reg'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -190,7 +190,7 @@
 	</template>
 
 <!-- PRICE -->
-	<template name="product_formfield_price">
+	<template name="product_formfield_input_price">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='price'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -207,7 +207,7 @@
 	</template>
 
 <!-- DESCRIPTION -->
-	<template name="product_formfield_description">
+	<template name="product_formfield_input_description">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='description'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -224,7 +224,7 @@
 	</template>
 
 <!-- EMAIL -->
-	<template name="product_formfield_email">
+	<template name="product_formfield_input_email">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='email'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>
@@ -241,7 +241,7 @@
 	</template>
 
 <!-- NUMBER -->
-	<template name="product_formfield_number">
+	<template name="product_formfield_input_number">
 		<!-- Validation -->
 		{{#if afFieldIsInvalid name='number'}}
 			<span class="ui pointing below label">Something went wrong, please check!</span>

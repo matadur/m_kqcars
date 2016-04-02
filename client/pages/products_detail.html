@@ -18,22 +18,22 @@
 			<div class="ui three column stackable divided grid">
 				<div class="column">
 					<div class="ui very relaxed divided list">
-						{{ > product_outputfield_geartype}}
-						{{ > product_outputfield_fueltype}}
+						{{ > product_formfield_output_geartype}}
+						{{ > product_formfield_output_fueltype}}
 					</div>
 				</div>
 				
 				<div class="column">
 					<div class="ui very relaxed divided list">
-						{{ > product_outputfield_built}}
-						{{ > product_outputfield_kilometers}}
+						{{ > product_formfield_output_built}}
+						{{ > product_formfield_output_kilometers}}
 					</div>
 				</div>
 				
 				<div class="column">
 					<div class="ui very relaxed divided list">
-						{{ > product_outputfield_wof}}
-						{{ > product_outputfield_reg}}
+						{{ > product_formfield_output_wof}}
+						{{ > product_formfield_output_reg}}
 					</div>
 				</div>
 			</div>
@@ -41,7 +41,7 @@
 
 		<!-- DESCRIPTION -->
 			<h3 class="ui header">About the Car</h3>
-			{{ > product_outputfield_description}}
+			{{ > product_formfield_output_description}}
 
 		<!-- PRICE -->
 			<h3 class="ui header">Askingprice</h3>
@@ -50,7 +50,7 @@
 		<!-- CONTACT -->
 			<h3 class="ui header">Contact</h3>
 			<div class="ui divider"></div>
-			{{#if markedAsSold}}
+			{{#if isSold}}
 				<div class="ui circular label">
 					<i class="info circle icon"></i>info
 				</div>
@@ -59,12 +59,12 @@
 				<div class="ui three column stackable divided grid">
 					<div class="column">
 						<div class="ui very relaxed divided list">
-							{{ > product_outputfield_email}}
+							{{ > product_formfield_output_email}}
 						</div>
 					</div>
 					<div class="column">
 						<div class="ui very relaxed divided list">
-							{{ > product_outputfield_number}}
+							{{ > product_formfield_output_number}}
 						</div>
 					</div>
 				</div>
@@ -75,16 +75,16 @@
 			<h3 class="ui header">Images</h3>
 			<div class="ui four column stackable grid">
 				<div class="column">
-					{{ > product_outputfield_image_side}}
+					{{ > product_formfield_output_image_side}}
 				</div>
 				<div class="column">
-					{{ > product_outputfield_image_front}}
+					{{ > product_formfield_output_image_front}}
 				</div>
 				<div class="column">
-					{{ > product_outputfield_image_infront}}
+					{{ > product_formfield_output_image_infront}}
 				</div>
 				<div class="column">
-					{{ > product_outputfield_image_inback}}
+					{{ > product_formfield_output_image_inback}}
 				</div>
 			</div>
 	</section>

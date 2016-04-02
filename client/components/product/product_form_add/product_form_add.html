@@ -2,34 +2,34 @@
 	{{#autoForm collection="Products" id="product_form_add" class="ui form" type="insert"}}
 		<!-- DETAILS -->
 		<h3 class="ui header">Details</h3>
-		{{> product_formfield_model}}
-		{{> product_formfield_cartype}}
-		{{> product_formfield_geartype}}
-		{{> product_formfield_fueltype}}
+		{{> product_formfield_input_model}}
+		{{> product_formfield_input_cartype}}
+		{{> product_formfield_input_geartype}}
+		{{> product_formfield_input_fueltype}}
 
 		<h3 class="ui header">Condition</h3>
-		{{> product_formfield_kilometers}}
-		{{> product_formfield_built}}
-		{{> product_formfield_wof}}
-		{{> product_formfield_reg}}
+		{{> product_formfield_input_kilometers}}
+		{{> product_formfield_input_built}}
+		{{> product_formfield_input_wof}}
+		{{> product_formfield_input_reg}}
 
 		<h3 class="ui header">Price and Description</h3>
-		{{> product_formfield_price}}
-		{{> product_formfield_description}}
+		{{> product_formfield_input_price}}
+		{{> product_formfield_input_description}}
 		
 		<!-- KONTAKT -->
 		<h3 class="ui header">Contact</h3>
-		{{> product_formfield_email}}
-		{{> product_formfield_number}}
+		{{> product_formfield_input_email}}
+		{{> product_formfield_input_number}}
 		
 		<!-- IMAGES -->
 		<h3 class="ui header">Images</h3>
 		<div class="ui grid">
 			<div class="doubling four column row">
-				<div class="four wide column">{{> product_formfield_image_side}}</div>
-				<div class="four wide column">{{> product_formfield_image_front}}</div>
-				<div class="four wide column">{{> product_formfield_image_infront}}</div>
-				<div class="four wide column">{{> product_formfield_image_inback}}</div>
+				<div class="four wide column">{{> product_formfield_input_image_side}}</div>
+				<div class="four wide column">{{> product_formfield_input_image_front}}</div>
+				<div class="four wide column">{{> product_formfield_input_image_infront}}</div>
+				<div class="four wide column">{{> product_formfield_input_image_inback}}</div>
 			</div>
 		</div>
 

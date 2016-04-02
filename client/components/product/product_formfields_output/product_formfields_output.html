@@ -1,5 +1,5 @@
 <!-- LISTIMAGE -->
-	<template name="product_outputfield_image_list">
+	<template name="product_formfield_output_image_list">
 		<a href="/products_detail/{{this._id}}/{{this.model}}">
 			{{#each sideimages}}
 				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -8,7 +8,7 @@
 	</template>
 
 <!-- SIDEIMAGE -->
-	<template name="product_outputfield_image_side">
+	<template name="product_formfield_output_image_side">
 		{{#each sideimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
 				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -17,7 +17,7 @@
 	</template>
 
 <!-- FRONTIMAGE -->
-	<template name="product_outputfield_image_front">
+	<template name="product_formfield_output_image_front">
 		{{#each frontimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
 				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -26,7 +26,7 @@
 	</template>
 
 <!-- INFRONTIMAGE -->
-	<template name="product_outputfield_image_infront">
+	<template name="product_formfield_output_image_infront">
 		{{#each infrontimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
 				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -35,7 +35,7 @@
 	</template>
 
 <!-- INBACKIMAGE -->
-	<template name="product_outputfield_image_inback">
+	<template name="product_formfield_output_image_inback">
 		{{#each inbackimages}}
 			<a href="{{this.url store='images'}}" target="_blank">
 				<img class="ui rounded bordered fluid image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
@@ -47,7 +47,7 @@
 
 
 <!-- MODEL -->
-	<template name="product_outputfield_model">
+	<template name="product_formfield_output_model">
 		<div class="content">
 			<div class="item">
 				<div class="header">Modell:</div>
@@ -57,7 +57,7 @@
 	</template>
 
 <!-- CARTYPE -->
-	<template name="product_outputfield_cartype">
+	<template name="product_formfield_output_cartype">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -68,7 +68,7 @@
 	</template>
 
 <!-- GEARTYPE -->
-	<template name="product_outputfield_geartype">
+	<template name="product_formfield_output_geartype">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -79,7 +79,7 @@
 	</template>
 
 <!-- FUELTYPE -->
-	<template name="product_outputfield_fueltype">
+	<template name="product_formfield_output_fueltype">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -90,7 +90,7 @@
 	</template>
 
 <!-- BUILT -->
-	<template name="product_outputfield_built">
+	<template name="product_formfield_output_built">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -101,7 +101,7 @@
 	</template>
 
 <!-- KILOMETERS -->
-	<template name="product_outputfield_kilometers">
+	<template name="product_formfield_output_kilometers">
 		<div class="item">
 			<i class="right triangle icon"></i>
 	 		<div class="content">
@@ -112,7 +112,7 @@
 	</template>
 
 <!-- WOF -->
-	<template name="product_outputfield_wof">
+	<template name="product_formfield_output_wof">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -123,7 +123,7 @@
 	</template>
 
 <!-- REG -->
-	<template name="product_outputfield_reg">
+	<template name="product_formfield_output_reg">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -134,7 +134,7 @@
 	</template>
 
 <!-- PRICE -->
-	<template name="product_outputfield_price">
+	<template name="product_formfield_output_price">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -145,7 +145,7 @@
 	</template>
 
 <!-- EMAIL -->
-	<template name="product_outputfield_email">
+	<template name="product_formfield_output_email">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -156,7 +156,7 @@
 	</template>
 
 <!-- NUMBER -->
-	<template name="product_outputfield_number">
+	<template name="product_formfield_output_number">
 		<div class="item">
 			<i class="right triangle icon"></i>
 			<div class="content">
@@ -167,7 +167,7 @@
 	</template>
 
 <!-- DESCRIPTION -->
-	<template name="product_outputfield_description">
+	<template name="product_formfield_output_description">
 		<div class="item">{{{description}}}</div> <!-- Note: triple curly-braces because paragraph fix --> 
 	</template>
 
@@ -175,7 +175,7 @@
 
 
 <!-- WOF & REG INDICATOR -->
-	<template name="product_outputfield_wof_reg_indicator_label">
+	<template name="product_formfield_output_wof_reg_indicator_label">
 		{{#if wofOrRegValid}}
 			<div class="ui green ribbon label">
 			{{#if wofValid}}<i class="ion-android-checkbox-outline"></i> WOF{{/if}} 

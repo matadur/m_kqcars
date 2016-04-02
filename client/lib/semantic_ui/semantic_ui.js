@@ -6,7 +6,7 @@
 		$('.ui.dropdown').dropdown();
 	});
 
-	Template.product_formfield_wof.onRendered(function () {
+	Template.product_formfield_input_wof.onRendered(function () {
 		$('.has-tooltip').popup({
 			hoverable: true,
 			position : 'bottom left',

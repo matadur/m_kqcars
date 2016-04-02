@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------------
 	
 	// PRODUCT OUTPUTFIELDS - WOF (more friendly date)--------------------------------
-		Template.product_outputfield_wof.helpers({
+		Template.product_formfield_output_wof.helpers({
 			wof: function() {
 				var currentProduct = Products.findOne(this._id);
 				var modifiedDate = currentProduct && moment(currentProduct.wof).format('LL');
@@ -13,7 +13,7 @@
 		});
 
 	// PRODUCT OUTPUTFIELDS - REG (more friendly date)--------------------------------
-		Template.product_outputfield_reg.helpers({
+		Template.product_formfield_output_reg.helpers({
 			reg: function() {
 				var currentProduct = Products.findOne(this._id);
 				var modifiedDate = currentProduct && moment(currentProduct.reg).format('LL');
@@ -23,7 +23,7 @@
 		});
 
 	// PRODUCT OUTPUTFIELDS - WOF & REG INDICATOR LABEL-------------------------------
-		Template.product_outputfield_wof_reg_indicator_label.helpers({
+		Template.product_formfield_output_wof_reg_indicator_label.helpers({
 			wofOrRegValid: function() {
 				var currentDate = new Date();
 				var currentProduct = Products.findOne(this._id);
@@ -55,7 +55,7 @@
 		});
 
 	// PRODUCT OUTPUTFIELDS - DESCRIPTION PARAGRAPH FIX-------------------------------
-		Template.product_outputfield_description.helpers({
+		Template.product_formfield_output_description.helpers({
 			description: function() {
 				var currentProduct = Products.findOne(this._id);
 				var currentProductDescription = currentProduct.description;

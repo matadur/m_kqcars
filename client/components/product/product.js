@@ -83,7 +83,7 @@
 				Session.set('clickedProductId', clickedProductId);
 			}
 		});
-		Template.products_pdf_instructions.events({
+		Template.products_pdf.events({
 			'click .button--clear-clicked-product': function() {
 				Session.set('clickedProductId', null);
 			}
@@ -98,7 +98,7 @@
 				Session.set('clickedProductId', clickedProductId);
 			}
 		});
-		Template.products_highlight_instructions.events({
+		Template.products_highlight.events({
 			'click .button--clear-clicked-product': function() {
 				Session.set('clickedProductId', null);
 			}
