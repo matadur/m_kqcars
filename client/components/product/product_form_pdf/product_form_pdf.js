@@ -2,7 +2,7 @@
 // PRODUCT PDF
 //------------------------------------------------------------------------------------
 
-	Template.products_pdf_instructions.events({
+	Template.product_form_pdf.events({
 		'click .button--pdf': function() {
 			var clickedProductId = Session.get('clickedProductId');
 			var clickedProductObject = Products.findOne(clickedProductId);
