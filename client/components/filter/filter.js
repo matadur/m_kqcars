@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------------
 	
 	// SETUP - INITIALIZE DROPDOWN----------------------------------------------------
-		Template.dropdown_filter.onRendered(function () {
+		Template.filter.onRendered(function () {
 			$('.ui.dropdown').dropdown();
 		});
 
@@ -13,7 +13,7 @@
 		});
 
 	// FILTER ------------------------------------------------------------------------
-		Template.dropdown_filter.events({
+		Template.filter.events({
 			// Everything
 			'click .filter--everything': function(event) {
 				Session.set('filter', {});

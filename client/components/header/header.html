@@ -4,11 +4,15 @@
 			<!-- Logo -->
 			{{> logo}}
 			<!-- Filter -->
-			{{> dropdown_filter}}
+			{{> filter}}
 			<!-- Right Menu -->
 			<div class="right menu">
 				<!-- Login -->
-				{{> header_login}}
+				{{#if currentUser}}
+					<a class="item" href="/account_logout">Logout</a>
+				{{else}}
+					<a class="item" href="/account_login">Login</a>
+				{{/if}}
 			</div>
 		</div>
 	</div>
