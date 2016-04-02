@@ -34,6 +34,8 @@ service-configuration
 meteor-base
 mobile-experience
 mongo
+es5-shim
+ecmascript
 blaze-html-templates
 session
 jquery
