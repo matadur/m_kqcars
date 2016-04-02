@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------------
 	
 	// PAYMENT FORM - HIGHLIGHT-------------------------------------------------------
-		Template.products_highlight_instructions.onRendered(function() {
+		Template.product_form_highlight.onRendered(function() {
 			Meteor.call('getClientToken', function(error, clientToken) {
 				if (error) {
 					console.log(error);
@@ -26,6 +26,7 @@
 										if (error) {
 											throw new Meteor.Error('transaction-creation-failed');
 										} else {
+											Router.go('/');
 											sAlert.success('Great! Your Car is now a Highlight!');
 										}
 									});
@@ -38,24 +39,16 @@
 		});
 
 	// PAYMENT FORM HELPER------------------------------------------------------------
-		Template.products_highlight_instructions.helpers({
-			paidHighlight: function() {
+		Template.product_form_highlight.helpers({
+			isHighlight: function() {
 				var clickedProductId = Session.get('clickedProductId');
 				var currentProduct 	 = Products.findOne({_id: clickedProductId});
-
 
 				if (currentProduct.isHighlight == true) {
 					return true
 				} else {
 					return false
 				};
-			}
-		});
-
-	// HIGHLIGHT BUTTON--------------------------------------------------------------- (Needed?)
-		Template.products_highlight_instructions.events({
-			'click .button--highlight': function() {
-				console.log("In progress");
 			}
 		});
 

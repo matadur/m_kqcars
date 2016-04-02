@@ -1,0 +1,22 @@
+<template name="product_form_highlight">
+	{{#if isHighlight}}
+		<p>This Car is already a Highlight. :-)</p>
+		<!-- CONTROLS -->
+		<div class="ui divider"></div>
+		<a href="/" class="ui basic button button--clear-clicked-product">Back</a>
+	{{else}}
+		<p>Pay to make this Car a Highlight.</p>
+		<form role="form">
+			<div id="payment-form--highlight"></div>
+			<!-- CONTROLS -->
+			<div class="ui divider"></div>
+			<a href="/" class="ui basic button button--clear-clicked-product">Back</a>
+			<button type="submit" class="ui right floated animated green button" tabindex="0">
+				<div class="visible content">Pay Now</div>
+				<div class="hidden content">
+					<i class="right arrow icon"></i>
+				</div>
+			</button>
+		</form>
+	{{/if}}
+</template>
