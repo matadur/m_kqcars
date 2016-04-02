@@ -38,7 +38,7 @@
 				insert: function(doc) {
 					doc.productCountId 	= Session.get('productCountId');
 					doc.owner 			= Meteor.userId();
-					doc.markedAsSold 	= false;
+					doc.isSold 			= false;
 					doc.isHighlight 	= false;
 					doc.createdAt 		= new Date();
 					return doc;

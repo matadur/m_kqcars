@@ -8,10 +8,10 @@
 				var currentProduct 		= Products.findOne(this._id);
 				
 				// Update Product
-				Products.update(this._id, {$set: {markedAsSold: !this.markedAsSold}});
+				Products.update(this._id, {$set: {isSold: !this.isSold}});
 				
 				// User Notification
-				if (currentProduct.markedAsSold) {
+				if (currentProduct.isSold) {
 					sAlert.success(currentProduct.model + ' marked as "For Sale"');
 				} else {
 					sAlert.success(currentProduct.model + ' marked as "Sold"');
