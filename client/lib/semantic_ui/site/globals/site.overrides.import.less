@@ -3,10 +3,10 @@
 *******************************/
 body {
 	background: @blue;
-	background-image: url(bg-body.png);
-	background-repeat: repeat-x;
-	background-position: center -10px;
-	background-attachment: fixed;
+	// background-image: url(bg-body.png);
+	// background-repeat: repeat-x;
+	// background-position: center -10px;
+	// background-attachment: fixed;
 }
 
 /*-------------------
@@ -159,4 +159,62 @@ body {
 }
 #iron-router-progress.spinner:before {
     border-color: #43C02D;
+}
+
+
+/*-------------------
+	Hero
+--------------------*/
+
+.hero-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 665px;
+	z-index: 0;
+	margin-bottom: -150px;
+	background: radial-gradient(ellipse at 35% 30%, #c3e8f9 0%, #84d3f6 40%);
+	background-attachment: fixed;
+
+	.hero-layer {
+		width: 100%;
+		height: 500px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-position: bottom center;
+		background-repeat: repeat-x;
+		background-size: 960px 253px;
+	}
+	.hero-layer-0 {
+		top: 0;
+		z-index: 5;
+		background: url('/hero_layer6.png') no-repeat top 40px center;
+		background-size: 940px 300px;
+	}
+	.hero-layer-1 {
+		top: -100px;
+		z-index: 5;
+		background-image: url('hero_layer5.png');
+	}
+	.hero-layer-2 {
+		top: -50px;
+		z-index: 10;
+		background-image: url('hero_layer4.png');
+	}
+	.hero-layer-3 {
+		top: -10px;
+		z-index: 15;
+		background-image: url('hero_layer3.png');
+	}
+	.hero-layer-4 {
+		top: 65px;
+		z-index: 20;
+		background-image: url('hero_layer2.png');
+	}
+	.hero-layer-5 {
+		top: 170px;
+		z-index: 25;
+		background-image: url('hero_layer1.png');
+	}
 }

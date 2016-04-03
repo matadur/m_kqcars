@@ -263,39 +263,31 @@
 			"file": "client/lib/semantic_ui/site/globals/site.overrides.import.less",
 			"settings":
 			{
-				"buffer_size": 2953,
+				"buffer_size": 4126,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/components/account/account_form_login.js",
+			"file": "client/layouts/layout_products.html",
 			"settings":
 			{
-				"buffer_size": 1123,
+				"buffer_size": 327,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/components/account/account_form_login.html",
+			"file": "client/components/hero/hero.html",
 			"settings":
 			{
-				"buffer_size": 758,
+				"buffer_size": 671,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/components/account/account_login.html",
+			"file": "client/components/hero/hero.js",
 			"settings":
 			{
-				"buffer_size": 224,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/config.js",
-			"settings":
-			{
-				"buffer_size": 538,
+				"buffer_size": 2410,
 				"line_ending": "Unix"
 			}
 		}
@@ -308,9 +300,21 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "css",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
 			[
 				"css",
 				"Set Syntax: CSS"
@@ -348,16 +352,8 @@
 				"Set Syntax: Markdown"
 			],
 			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
 				"ins",
 				"Package Control: Install Package"
-			],
-			[
-				"java",
-				"Set Syntax: JavaScript"
 			],
 			[
 				"rmeopa",
@@ -499,45 +495,83 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/m_kqcars",
+		"/Users/nilsdannemann/Sites/m_kqcars/.meteor",
+		"/Users/nilsdannemann/Sites/m_kqcars/client",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/hero",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/site",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/themes/default",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages",
-		"/Users/nilsdannemann/Sites/m_kqcars/lib",
-		"/Users/nilsdannemann/Sites/m_kqcars/server"
+		"/Users/nilsdannemann/Sites/m_kqcars/public"
 	],
 	"file_history":
 	[
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_signup.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_login.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_signup.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_images.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_card/product_card.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/functions.js",
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_output/product_formfields_output.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_detail.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/packages",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_config.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/versions",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_input/product_formfields_input.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_input/product_formfields_input.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_output/product_formfields_output.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add/product_form_add.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit/product_form_edit.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/semantic_ui.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_view_details.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_highlight/product_form_highlight.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_highlight/product_form_highlight.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_highlight.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/lib/routes.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_pdf/product_form_pdf.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_pdf.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls/product_controls.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_pdf/product_form_pdf.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/filter/filter.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/filter/filter.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/header/header.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_login/account_form_login.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/account_login.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/account_signup.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/header/header_login.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/dropdown_account/dropdown_account.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_availability_link/product_availability_link.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_availability_label/product_availability_label.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_availability_link/product_availability_link.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/.custom.semantic.json",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/theme.import.less",
+		"/Users/nilsdannemann/Sites/m_kqcars/lib/collections.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_availability_label/product_availability_label.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.overrides.import.less",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_login.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_login.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_login.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/server/config.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_signup.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_signup.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_pdf.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/dropdown_account/dropdown_account.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_products.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/header/header.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/header/header_login.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/dropdown_account/dropdown_account.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts/layout_products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/my_products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/server/cronjobs.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_favorites.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/server/methods.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/server/security.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/lib/collections.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/semantic_ui.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_outputfields.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/public/icon-dropdown.svg",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/lib/routes.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_detail.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.overrides.import.less",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_images.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/local/build/programs/web.browser/app/client/components/product/template.product_formfields.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/public/upload-image.svg",
 		"/Users/nilsdannemann/Sites/m_kqcars/public/upload-image2.svg",
@@ -601,40 +635,7 @@
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_between.sublime-snippet",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_below.sublime-snippet",
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_at.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_below.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_at.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_above.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/grid/grid.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/_nav.scss",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_arrow.sublime-snippet",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/nav.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/assets/js/swiper.js",
-		"/Users/nilsdannemann/Sites/Swiper/playground/index.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/slider/slider_init.js",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/buttongroup.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/button.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/buttongroup.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_single.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/breadcrumb/breadcrumb.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_double.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_components/breadcrumb.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/nav/nav.html",
-		"/Users/nilsdannemann/Downloads/font-awesome-4.4.0/css/font-awesome.css",
-		"/Users/nilsdannemann/Downloads/Linearicons-Free-v1.0.0/Web Font/demo.html",
-		"/Users/nilsdannemann/Downloads/Linearicons-Free-v1.0.0/Web Font/style.css",
-		"/Users/nilsdannemann/Downloads/Linearicons.eot",
-		"/Users/nilsdannemann/Downloads/Linearicons.ttf",
-		"/Users/nilsdannemann/Downloads/Linearicons.woff",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/css/style.scss",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_teaser.sublime-snippet",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/icecream.md",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_pages/contact.md",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/header/_header.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/j_hfc_relay.sublime-project"
+		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_below.sublime-snippet"
 	],
 	"find":
 	{
@@ -642,9 +643,20 @@
 	},
 	"find_in_files":
 	{
-		"height": 104.0,
+		"height": 121.0,
 		"where_history":
 		[
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n*/.meteor/*",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-*/.meteor/*",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-.meteor/**/*",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-.meteor/**",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-.meteor/*",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-*/.meteor/*",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-*/meteor/*",
+			"-*/node_modules/*\n-*/node_modules/*\n-*/node_modules/*\n-*/.meteor/*",
+			"",
+			"-*/.meteor/*",
 			""
 		]
 	},
@@ -653,6 +665,38 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"  ",
+			"cont",
+			"parallax",
+			"Parallax",
+			".layer-",
+			"parallax",
+			"../img/",
+			"uploadImage",
+			"findProductCountId",
+			"ecmascript",
+			"es5-shim",
+			"meteor-base",
+			"icon\"></i>",
+			"MAIN - ",
+			"show_dialog",
+			"MAIN",
+			"products_highlight_instructions",
+			"findProductCountId",
+			"uploadImage",
+			"products_pdf_instructions",
+			"product_outputfield",
+			"product_formfield",
+			"product_outputfield",
+			"products_pdf_instructions",
+			"df_instructions",
+			"ghlight_instructions",
+			"router.go",
+			"products_highlight_instructions",
+			"dropdown_filter",
+			"colle",
+			"isAvailable",
+			"markedAsSold",
 			"    ",
 			"  ",
 			"<a hre",
@@ -748,39 +792,7 @@
 			"nav.",
 			"nav",
 			"slider",
-			"grid",
-			"gutt",
-			"position",
-			"px width\n	@else {",
-			"else",
-			"if",
-			"@if",
-			"-($size)",
-			"$whitespace",
-			"  ",
-			"10px",
-			"+5",
-			"+2",
-			"li",
-			"+4",
-			"li",
-			"name",
-			"###Basic Examples",
-			" {...} ",
-			"left",
-			"down",
-			"up",
-			"    ",
-			"        ",
-			"       ",
-			"      ",
-			"     ",
-			"    ",
-			"paginat",
-			"{{index",
-			"index",
-			"//",
-			"nav"
+			"grid"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -788,6 +800,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"product_formfield_output",
+			"product_formfield_input"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -798,7 +812,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -807,15 +821,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2953,
+						"buffer_size": 4126,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								253,
-								253
+								3237,
+								3237
 							]
 						],
 						"settings":
@@ -823,63 +837,31 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/components/account/account_form_login.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								449,
-								449
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3748.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/components/account/account_form_login.html",
+					"buffer": 1,
+					"file": "client/layouts/layout_products.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 758,
+						"buffer_size": 327,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								336,
-								336
+								127,
+								127
 							]
 						],
 						"settings":
@@ -887,7 +869,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -898,28 +880,49 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/components/account/account_login.html",
+					"buffer": 2,
+					"file": "client/components/hero/hero.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 224,
+						"buffer_size": 671,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								97,
+								105
+							],
+							[
+								192,
+								200
+							],
+							[
+								286,
+								294
+							],
+							[
+								380,
+								388
+							],
+							[
+								474,
+								482
+							],
+							[
+								568,
+								576
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"open_with_edit": true,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -929,20 +932,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "server/config.js",
+					"buffer": 3,
+					"file": "client/components/hero/hero.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 538,
+						"buffer_size": 2410,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								538,
-								247
+								2396,
+								2396
 							]
 						],
 						"settings":
@@ -951,11 +954,12 @@
 							"open_with_edit": true,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 544.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1017,6 +1021,18 @@
 		"selected_items":
 		[
 			[
+				"packa",
+				".meteor/packages"
+			],
+			[
+				"rout",
+				"lib/routes.js"
+			],
+			[
+				"coll",
+				"lib/collections.js"
+			],
+			[
 				"pdf",
 				"client/components/product/product_pdf.js"
 			],
@@ -1035,10 +1051,6 @@
 			[
 				"icon",
 				"public/icon-dropdown.svg"
-			],
-			[
-				"rout",
-				"lib/routes.js"
 			],
 			[
 				"rou",
@@ -1519,14 +1531,6 @@
 			[
 				"ma",
 				"_includes\\layout\\mnav.html"
-			],
-			[
-				"incltea",
-				"_includes\\teaser.html"
-			],
-			[
-				"high",
-				"_scss\\includes\\styleguide\\_highlight.scss"
 			]
 		],
 		"width": 0.0
@@ -1539,7 +1543,7 @@
 		[
 			[
 				"",
-				"~/Sites/r_kqnotes/r_kqnotes.sublime-project"
+				"~/Sites/j_hfc_relay/j_hfc_relay.sublime-project"
 			],
 			[
 				"kiw",
