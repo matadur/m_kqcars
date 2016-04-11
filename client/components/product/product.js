@@ -10,11 +10,6 @@
 				return Products.find(filter, {sort: {createdAt: -1}});
 			}
 		});
-		Template.sidebar_products.helpers({
-			products_count: function(){
-				return Products.find().count();
-			}
-		});
 	
 	// PRODUCTS - DISPLAY - MY PRODUCTS-----------------------------------------------
 		Template.page_products_user.helpers({
@@ -22,13 +17,6 @@
 				var owner = Meteor.userId();
 
 				return Products.find({owner: owner}, {sort: {createdAt: -1}});
-			}
-		});
-		Template.sidebar_products.helpers({
-			products_user_count: function(){
-				var owner = Meteor.userId();
-
-				return Products.find({owner: owner}).count();
 			}
 		});
 

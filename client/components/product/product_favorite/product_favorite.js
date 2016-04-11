@@ -2,20 +2,6 @@
 // PRODUCT FAVORITES
 //------------------------------------------------------------------------------------
 
-	// PRODUCT FAVORITES - DISPLAY COUNT----------------------------------------------
-		Template.sidebar_products.helpers({
-			products_favorite_count: function() {
-				var currentUser 			= Meteor.user();
-				var currentFavorites 		= currentUser.profile.favorites;
-
-				if (currentFavorites === null || typeof currentFavorites === 'undefined') {
-					return '0';
-				} else {
-					return currentFavorites.length;
-				};
-			} 
-		});
-
 	// PRODUCT FAVORITES - HEART ICON-------------------------------------------------
 		Template.product_favorite.helpers({
 			is_favorite: function(){
