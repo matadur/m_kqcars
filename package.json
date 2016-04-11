@@ -1,0 +1,23 @@
+{
+  "name": "m_kqcars",
+  "version": "1.0.0",
+  "description": "KiwiQuest Cars App",
+  "main": "index.js",
+  "dependencies": {
+    "meteor-node-stubs": "^0.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NilsDannemann/m_kqcars.git"
+  },
+  "author": "Nils Dannemann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NilsDannemann/m_kqcars/issues"
+  },
+  "homepage": "https://github.com/NilsDannemann/m_kqcars#readme"
+}
