@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------------
   
 	// PRODUCTS - DISPLAY-------------------------------------------------------------
-		Template.products.helpers({
+		Template.page_products.helpers({
 			products: function(){
 				var filter = Session.get('filter');
 

@@ -9,7 +9,7 @@
 
 	// PRODUCTS - HOME----------------------------------------------------------------
 		Router.route('/', function () {
-			this.render('products');
+			this.render('page_products');
 			this.layout('layout_products');
 		});
 
