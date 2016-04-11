@@ -79,7 +79,7 @@
 
 	// PRODUCTS - HIGHLIGHT-----------------------------------------------------------
 		Router.route('/products_highlight', function () {
-			this.render('products_highlight');
+			this.render('page_products_highlight');
 			this.layout('layout_products');
 		});
 

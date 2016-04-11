@@ -98,7 +98,7 @@
 				Session.set('clickedProductId', clickedProductId);
 			}
 		});
-		Template.products_highlight.events({
+		Template.page_products_highlight.events({
 			'click .button--clear-clicked-product': function() {
 				Session.set('clickedProductId', null);
 			}
