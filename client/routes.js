@@ -85,7 +85,7 @@
 
 	// PRODUCTS - PDF-----------------------------------------------------------------
 		Router.route('/products_pdf', function () {
-			this.render('products_pdf');
+			this.render('page_products_pdf');
 			this.layout('layout_products');
 		});
 

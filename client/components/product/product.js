@@ -83,7 +83,7 @@
 				Session.set('clickedProductId', clickedProductId);
 			}
 		});
-		Template.products_pdf.events({
+		Template.page_products_pdf.events({
 			'click .button--clear-clicked-product': function() {
 				Session.set('clickedProductId', null);
 			}
