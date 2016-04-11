@@ -38,7 +38,7 @@
 				return Meteor.subscribe('images');
 			},
 			action: function () {
-				this.render('products_edit', {
+				this.render('page_products_edit', {
 					data: function () {
 						return Products.findOne({_id: this.params._id});
 					}
@@ -49,7 +49,7 @@
 
 		// PRODUCTS - EDIT - SUCCESS---------------------------------------------------
 			Router.route('/products_edit_success', function () {
-				this.render('products_edit_success');
+				this.render('page_products_edit_success');
 				this.layout('layout_products');
 			});
 
