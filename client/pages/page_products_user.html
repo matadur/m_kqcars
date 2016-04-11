@@ -1,8 +1,8 @@
-<template name="my_products">
+<template name="page_products_user">
 	<!-- CONTENT -->
 	<section class="ui three doubling stackable cards">
 		{{#transition in="fadeInUp:500" out="fadeOutUp"}}
-			{{#each my_products}}
+			{{#each products_user}}
 				{{> product_card}}
 			{{/each}}
 		{{/transition}}

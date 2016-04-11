@@ -4,7 +4,7 @@
 
 	// PRODUCT FAVORITES - DISPLAY COUNT----------------------------------------------
 		Template.sidebar_products.helpers({
-			product_favorite_count: function() {
+			products_favorite_count: function() {
 				var currentUser 			= Meteor.user();
 				var currentFavorites 		= currentUser.profile.favorites;
 
@@ -33,8 +33,8 @@
 		});
 
 	// PRODUCT FAVORITES - DISPLAY PRODUCTS-------------------------------------------
-		Template.favorite_products.helpers({
-			favorite_products: function(){
+		Template.page_products_favorites.helpers({
+			products_favorites: function(){
 				var currentUser 		= Meteor.user();
 				var currentFavorites 	= currentUser.profile.favorites;
 
@@ -60,9 +60,9 @@
 
 				// Alerts
 				if (currentFavorites.indexOf(productCountId) == -1) {
-					sAlert.success(currentProductModel + ' added to <a href="/favorite_products">Favorites</a>');
+					sAlert.success(currentProductModel + ' added to <a href="/products_favorites">Favorites</a>');
 				} else {
-					sAlert.success(currentProductModel + ' removed from <a href="/favorite_products">Favorites</a>');
+					sAlert.success(currentProductModel + ' removed from <a href="/products_favorites">Favorites</a>');
 				};
 			}
 		});

@@ -1,8 +1,8 @@
-<template name="favorite_products">
+<template name="page_products_favorites">
 	<!-- CONTENT -->
 	<div class="ui three stackable cards">
 		{{#transition in="fadeInUp:500" out="fadeOutUp"}}
-			{{#each favorite_products}}
+			{{#each products_favorites}}
 				{{> product_card}}
 			{{/each}}
 		{{/transition}}

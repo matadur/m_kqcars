@@ -94,8 +94,8 @@
 //------------------------------------------------------------------------------------
 
 	// MY PRODUCTS - VIEW-------------------------------------------------------------
-		Router.route('/my_products', function () {
-			this.render('my_products');
+		Router.route('/products_user', function () {
+			this.render('page_products_user');
 			this.layout('layout_products');
 		});
 
@@ -105,8 +105,8 @@
 //------------------------------------------------------------------------------------
 
 	// FAVORITE PRODUCTS - VIEW-------------------------------------------------------
-		Router.route('/favorite_products', function () {
-			this.render('favorite_products');
+		Router.route('/products_favorites', function () {
+			this.render('page_products_favorites');
 			this.layout('layout_products');
 		});
 
@@ -117,13 +117,13 @@
 
 	// ACCOUNTS - SIGNUP---------------------------------------------------------------
 		Router.route('/account_signup', function () {
-			this.render('account_signup');
+			this.render('page_account_signup');
 			this.layout('layout_account');
 		});
 
 	// ACCOUNTS - LOGIN----------------------------------------------------------------
 		Router.route('/account_login', function () {
-			this.render('account_login');
+			this.render('page_account_login');
 			this.layout('layout_account');
 		});
 
