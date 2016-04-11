@@ -55,25 +55,25 @@
 
 	// PRODUCTS - ADD-----------------------------------------------------------------
 		Router.route('/products_add', function () {
-			this.render('products_add');
+			this.render('page_products_add');
 			this.layout('layout_products');
 		});
 
 		// PRODUCTS - ADD - RULES-----------------------------------------------------
 			Router.route('/products_add_rules', function () {
-				this.render('products_add_rules');
+				this.render('page_products_add_rules');
 				this.layout('layout_products');
 			});
 
 		// PRODUCTS - ADD - SUCCESS---------------------------------------------------
 			Router.route('/products_add_success', function () {
-				this.render('products_add_success');
+				this.render('page_products_add_success');
 				this.layout('layout_products');
 			});
 
 		// PRODUCTS - ADD - ERROR-----------------------------------------------------
 			Router.route('/products_add_error', function () {
-				this.render('products_add_error');
+				this.render('page_products_add_error');
 				this.layout('layout_products');
 			});
 
