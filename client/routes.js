@@ -21,7 +21,7 @@
 				return Meteor.subscribe('images');
 			},
 			action: function () {
-				this.render('products_detail', {
+				this.render('page_products_detail', {
 					data: function () {
 						return Products.findOne({_id: this.params._id});
 					}
