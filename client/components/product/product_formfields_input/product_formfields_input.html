@@ -1,58 +1,3 @@
-<!-- SIDEIMAGE -->
-	<template name="product_formfield_input_image_side">
-		{{#if sideImageUploadRequest}}
-			<div class="field">
-				<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
-				<label for="file-side">Side view</label>
-			</div>
-		{{else}}
-			{{> product_formfield_output_image_side}}
-			<div class="removeimage removeimage--side"><i class="ion-android-close"></i>delete</div>
-		{{/if}}
-	</template>
-
-<!-- FRONTIMAGE -->
-	<template name="product_formfield_input_image_front">
-		{{#if frontImageUploadRequest}}
-			<div class="field">
-				<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
-				<label for="file-front">Front view</label>
-			</div>
-		{{else}}
-			{{> product_formfield_output_image_front}}
-			<div class="removeimage removeimage--front"><i class="ion-android-close"></i>delete</div>
-		{{/if}}
-	</template>
-
-<!-- INFRONTIMAGE -->
-	<template name="product_formfield_input_image_infront">
-		{{#if inFrontImageUploadRequest}}
-			<div class="field">
-				<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
-				<label for="file-infront">InFront view</label>
-			</div>
-		{{else}}
-			{{> product_formfield_output_image_infront}}
-			<div class="removeimage removeimage--infront"><i class="ion-android-close"></i>delete</div>
-		{{/if}}
-	</template>
-
-<!-- INBACKIMAGE -->
-	<template name="product_formfield_input_image_inback">
-		{{#if inBackImageUploadRequest}}
-			<div class="field">
-				<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
-				<label for="file-inback">InBack view</label>
-			</div>
-		{{else}}
-			{{> product_formfield_output_image_inback}}
-			<div class="removeimage removeimage--inback"><i class="ion-android-close"></i>delete</div>
-		{{/if}}
-	</template>
-
-
-
-
 <!-- MODEL -->
 	<template name="product_formfield_input_model">
 		<!-- Validation -->
@@ -255,4 +200,56 @@
 				{{> afFieldInput name='number' id='number' placeholder="schemaLabel"}}
 			</div>
 		</div>
+	</template>
+
+<!-- SIDEIMAGE -->
+	<template name="product_formfield_input_image_side">
+		{{#if sideImageUploadRequest}}
+			<div class="field">
+				<input class="fileinput fileinput--side" type="file" name="file" id="file-side" accept="image/*"> 
+				<label for="file-side">Side view</label>
+			</div>
+		{{else}}
+			{{> product_formfield_output_image_side}}
+			<div class="removeimage removeimage--side"><i class="ion-android-close"></i>delete</div>
+		{{/if}}
+	</template>
+
+<!-- FRONTIMAGE -->
+	<template name="product_formfield_input_image_front">
+		{{#if frontImageUploadRequest}}
+			<div class="field">
+				<input class="fileinput fileinput--front" type="file" name="file" id="file-front" accept="image/*"> 
+				<label for="file-front">Front view</label>
+			</div>
+		{{else}}
+			{{> product_formfield_output_image_front}}
+			<div class="removeimage removeimage--front"><i class="ion-android-close"></i>delete</div>
+		{{/if}}
+	</template>
+
+<!-- INFRONTIMAGE -->
+	<template name="product_formfield_input_image_infront">
+		{{#if inFrontImageUploadRequest}}
+			<div class="field">
+				<input class="fileinput fileinput--infront" type="file" name="file" id="file-infront" accept="image/*"> 
+				<label for="file-infront">InFront view</label>
+			</div>
+		{{else}}
+			{{> product_formfield_output_image_infront}}
+			<div class="removeimage removeimage--infront"><i class="ion-android-close"></i>delete</div>
+		{{/if}}
+	</template>
+
+<!-- INBACKIMAGE -->
+	<template name="product_formfield_input_image_inback">
+		{{#if inBackImageUploadRequest}}
+			<div class="field">
+				<input class="fileinput fileinput--inback" type="file" name="file" id="file-inback" accept="image/*"> 
+				<label for="file-inback">InBack view</label>
+			</div>
+		{{else}}
+			{{> product_formfield_output_image_inback}}
+			<div class="removeimage removeimage--inback"><i class="ion-android-close"></i>delete</div>
+		{{/if}}
 	</template>

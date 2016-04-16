@@ -129,7 +129,7 @@
 
 	// ACCOUNTS - LOGOUT---------------------------------------------------------------
 		Router.route('/account_logout', function () {
-			this.render('products');
+			this.render('page_products');
 			this.layout('layout_products');
 
 			Meteor.logout(function(err){
