@@ -6,7 +6,6 @@
 		Template.product_availability_link.events({
 			'click .mark_as_sold': function() {
 				var currentProduct 		= Products.findOne(this._id);
-				
 				// Update Product
 				Products.update(this._id, {$set: {isSold: !this.isSold}});
 				

@@ -1,6 +1,6 @@
 <!-- LISTIMAGE -->
 	<template name="product_formfield_output_image_list">
-		<a href="/products_detail/{{this._id}}/{{this.model}}">
+		<a href="/products_detail/{{this._id}}">
 			{{#each sideimages}}
 				<img class="ui image" src="{{this.url store='thumbs' uploading='/loader-uploading.gif' storing='/loader-storing.gif'}}" alt="thumbnail">
 			{{/each}}

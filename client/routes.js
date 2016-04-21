@@ -1,102 +1,127 @@
 //------------------------------------------------------------------------------------
 // PRODUCTS
 //------------------------------------------------------------------------------------
+	
+	import * as functions from '/lib/functions.js';
 
-	// ROUTER CONFIG------------------------------------------------------------------
-		Router.configure({
-			progressSpinner: false
-		});
-
-	// PRODUCTS - HOME----------------------------------------------------------------
-		Router.route('/', function () {
-			this.render('page_products');
-			this.layout('layout_products');
+	// PRODUCTS - HOME---------------------------------------------------------------!-
+		FlowRouter.route('/', {
+			action: function() {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products',
+				});
+			}
 		});
 
 	// PRODUCTS - DETAIL--------------------------------------------------------------
-		Router.route('/products_detail/:_id/:model', {
-			loadingTemplate: 'layout_loading',
-
-			waitOn: function() {
-				return Meteor.subscribe('images');
-			},
-			action: function () {
-				this.render('page_products_detail', {
-					data: function () {
-						return Products.findOne({_id: this.params._id});
-					}
+		FlowRouter.route('/products_detail/:_id', {
+			action: function(params) {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_detail',
 				});
-				this.layout('layout_products');
 			}
 		});
 
 	// PRODUCTS - EDIT----------------------------------------------------------------
-		Router.route('/products_detail/:_id/:model/edit', {
-			loadingTemplate: 'layout_loading',
-
-			waitOn: function() {
-				return Meteor.subscribe('images');
-			},
-			action: function () {
-				this.render('page_products_edit', {
-					data: function () {
-						return Products.findOne({_id: this.params._id});
-					}
+		FlowRouter.route('/products_detail/:_id/edit', {
+			action: function(params) {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_edit',
 				});
-				this.layout('layout_products');
 			}
 		});
 
-		// PRODUCTS - EDIT - SUCCESS---------------------------------------------------
-			Router.route('/products_edit_success', function () {
-				this.render('page_products_edit_success');
-				this.layout('layout_products');
+		// PRODUCTS - EDIT - SUCCESS--------------------------------------------------!-
+			FlowRouter.route('/products_edit_success', {
+				action: function() {
+					BlazeLayout.render('layout_products', {
+						sidebar: 'sidebar_products',
+						page: 'page_products_edit_success',
+					});
+				}
 			});
 
-	// PRODUCTS - ADD-----------------------------------------------------------------
-		Router.route('/products_add', function () {
-			this.render('page_products_add');
-			this.layout('layout_products');
+	// PRODUCTS - ADD----------------------------------------------------------------!-
+		FlowRouter.route('/products_add', {
+			triggersEnter: function() {
+				functions.generateProductCountIdSession();
+			},
+			action: function() {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_add',
+				});
+			},
+			triggersExit: function() {
+				functions.removeProductCountIdSession();
+			}
 		});
 
-		// PRODUCTS - ADD - RULES-----------------------------------------------------
-			Router.route('/products_add_rules', function () {
-				this.render('page_products_add_rules');
-				this.layout('layout_products');
+		// PRODUCTS - ADD - RULES----------------------------------------------------!-
+			FlowRouter.route('/products_add_rules', {
+				action: function() {
+					BlazeLayout.render('layout_products', {
+						sidebar: 'sidebar_products',
+						page: 'page_products_add_rules',
+					});
+				}
 			});
 
-		// PRODUCTS - ADD - SUCCESS---------------------------------------------------
-			Router.route('/products_add_success', function () {
-				this.render('page_products_add_success');
-				this.layout('layout_products');
+		// PRODUCTS - ADD - SUCCESS--------------------------------------------------!-
+			FlowRouter.route('/products_add_success', {
+				action: function() {
+					BlazeLayout.render('layout_products', {
+						sidebar: 'sidebar_products',
+						page: 'page_products_add_success',
+					});
+				}
 			});
 
-		// PRODUCTS - ADD - ERROR-----------------------------------------------------
-			Router.route('/products_add_error', function () {
-				this.render('page_products_add_error');
-				this.layout('layout_products');
+		// PRODUCTS - ADD - ERROR----------------------------------------------------!-
+			FlowRouter.route('/products_add_error', {
+				action: function() {
+					BlazeLayout.render('products_add_error', {
+						sidebar: 'sidebar_products',
+						page: 'page_products_add_error',
+					});
+				}
 			});
 
-	// PRODUCTS - HIGHLIGHT-----------------------------------------------------------
-		Router.route('/products_highlight', function () {
-			this.render('page_products_highlight');
-			this.layout('layout_products');
+	// PRODUCTS - HIGHLIGHT----------------------------------------------------------!-
+		FlowRouter.route('/products_highlight', {
+			action: function() {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_highlight',
+				});
+			}
 		});
 
-	// PRODUCTS - PDF-----------------------------------------------------------------
-		Router.route('/products_pdf', function () {
-			this.render('page_products_pdf');
-			this.layout('layout_products');
+	// PRODUCTS - PDF----------------------------------------------------------------!-
+		FlowRouter.route('/products_pdf', {
+			action: function() {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_pdf',
+				});
+			}
 		});
 
 //------------------------------------------------------------------------------------
 // MY PRODUCTS
 //------------------------------------------------------------------------------------
 
-	// MY PRODUCTS - VIEW-------------------------------------------------------------
-		Router.route('/products_user', function () {
-			this.render('page_products_user');
-			this.layout('layout_products');
+	// MY PRODUCTS - VIEW------------------------------------------------------------!-
+		FlowRouter.route('/products_user', {
+			action: function() {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_user',
+				});
+			}
 		});
 
 
@@ -104,10 +129,14 @@
 // FAVORITE PRODUCTS
 //------------------------------------------------------------------------------------
 
-	// FAVORITE PRODUCTS - VIEW-------------------------------------------------------
-		Router.route('/products_favorites', function () {
-			this.render('page_products_favorites');
-			this.layout('layout_products');
+	// FAVORITE PRODUCTS - VIEW------------------------------------------------------!-
+		FlowRouter.route('/products_favorites', {
+			action: function() {
+				BlazeLayout.render('layout_products', {
+					sidebar: 'sidebar_products',
+					page: 'page_products_favorites',
+				});
+			}
 		});
 
 
@@ -115,28 +144,39 @@
 // ACCOUNTS
 //------------------------------------------------------------------------------------
 
-	// ACCOUNTS - SIGNUP---------------------------------------------------------------
-		Router.route('/account_signup', function () {
-			this.render('page_account_signup');
-			this.layout('layout_account');
+	// ACCOUNTS - SIGNUP--------------------------------------------------------------!-
+		FlowRouter.route('/account_signup', {
+			action: function() {
+				BlazeLayout.render('layout_account', {
+					sidebar: 'sidebar_account',
+					page: 'page_account_signup',
+				});
+			}
 		});
 
-	// ACCOUNTS - LOGIN----------------------------------------------------------------
-		Router.route('/account_login', function () {
-			this.render('page_account_login');
-			this.layout('layout_account');
+	// ACCOUNTS - LOGIN---------------------------------------------------------------!-
+		FlowRouter.route('/account_login', {
+			action: function() {
+				BlazeLayout.render('layout_account', {
+					sidebar: 'sidebar_account',
+					page: 'page_account_login',
+				});
+			}
 		});
 
-	// ACCOUNTS - LOGOUT---------------------------------------------------------------
-		Router.route('/account_logout', function () {
-			this.render('products');
-			this.layout('layout_products');
-
-			Meteor.logout(function(err){
-				if (!err) {
-					sAlert.success('Logout complete! See ya later!');
-				}
-			});
+	// ACCOUNTS - LOGOUT--------------------------------------------------------------!-
+		FlowRouter.route('/account_logout', {
+			action: function() {
+				BlazeLayout.render('layout_account', {
+					sidebar: 'sidebar_products',
+					page: 'page_products',
+				});
+				Meteor.logout(function(err){
+					if (!err) {
+						sAlert.success('Logout complete! See ya later!');
+					}
+				});
+			}
 		});
 
 

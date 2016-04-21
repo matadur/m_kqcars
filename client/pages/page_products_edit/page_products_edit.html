@@ -1,4 +1,5 @@
 <template name="page_products_edit">
+	{{#with currentProductData}}
 	<!-- CONTENT -->
 	<section class="ui very padded segment">
 		<!-- HEAD -->
@@ -8,4 +9,5 @@
 		<!-- FORM -->
 		{{> product_form_edit}}
 	</section>
+	{{/with}}
 </template>

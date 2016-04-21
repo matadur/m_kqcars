@@ -33,7 +33,7 @@
 				}
 			},
 			onSuccess: function() {
-				Router.go('/products_add_success');
+				FlowRouter.go('/products_add_success');
 				sAlert.success('Awesome! Your product is now for sale!');
 			}
 		}
@@ -42,7 +42,7 @@
 	// PRODUCTS - EDIT----------------------------------------------------------------
 		var editProductHooks = {
 			onSuccess: function() {
-				Router.go('/products_edit_success');
+				FlowRouter.go('/products_edit_success');
 				sAlert.success('Great! All changes saved!');
 			}
 		}
@@ -56,7 +56,7 @@
 					var productCountId = clickedProduct.productCountId;
 
 					Meteor.call('removeProduct', productCountId);
-					Router.go('/');
+					FlowRouter.go('/');
 					sAlert.success('Done! Your product was removed!');
 				}
 			}

@@ -26,7 +26,7 @@
 										if (error) {
 											throw new Meteor.Error('transaction-creation-failed');
 										} else {
-											Router.go('/');
+											FlowRouter.go('/');
 											sAlert.success('Great! Your Car is now a Highlight!');
 										}
 									});

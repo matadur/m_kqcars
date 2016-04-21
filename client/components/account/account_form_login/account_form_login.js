@@ -6,7 +6,7 @@ Template.account_form_login.events({
 		'click .account_login_facebook':function(event){
 			Meteor.loginWithFacebook(function(err){
 				if(!err) {
-					Router.go('/');
+					FlowRouter.go('/');
 				}
 			});
 			event.preventDefault();
@@ -16,7 +16,7 @@ Template.account_form_login.events({
 		'click .account_login_google':function(event){
 			Meteor.loginWithGoogle(function(err){
 				if(!err) {
-					Router.go('/');
+					FlowRouter.go('/');
 				}
 			});
 			event.preventDefault();
@@ -29,7 +29,7 @@ Template.account_form_login.events({
 			
 			Meteor.loginWithPassword(email,password,function(err){
 				if(!err) {
-					Router.go('/');
+					FlowRouter.go('/');
 				}
 			});
 			event.preventDefault();

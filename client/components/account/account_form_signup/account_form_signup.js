@@ -17,7 +17,7 @@ Template.account_form_signup.events({
 		
 		Accounts.createUser(user,function(err){
 			if(!err) {
-				Router.go('/');
+				FlowRouter.go('/');
 			}
 		});
 

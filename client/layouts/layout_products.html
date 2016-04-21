@@ -4,11 +4,11 @@
 	<section class="ui stackable grid container">
 		<!-- SIDEBAR -->
 		<aside class="four wide column">
-			{{> sidebar_products}}
+			{{> Template.dynamic template=sidebar}}
 		</aside>
 		<!-- MAIN -->
 		<section class="twelve wide column">
-			{{> yield}}
+			{{> Template.dynamic template=page}}
 		</section>
 	</section>
 </template>
