@@ -5,8 +5,8 @@ ServiceConfiguration.configurations.remove({
 ServiceConfiguration.configurations.insert({
 	service: 'facebook',
 	loginStyle: 'popup',
-	appId: '465403390289619',
-	secret: 'ab06e970506723cf471e0f0e27f6d428'
+	appId: '859458887512881',
+	secret: '8bb3a31063f67f36145e162dc5107eb2'
 });
 
 // Google
@@ -16,6 +16,6 @@ ServiceConfiguration.configurations.remove({
 ServiceConfiguration.configurations.insert({
 	service: 'google',
 	loginStyle: 'popup',
-	clientId: '355899122439-33goe0m8es59u0fnvu15v3k3vmo5oird.apps.googleusercontent.com',
-	secret: 'HpUtrKjN7K1TCpWmXhT6w4iE'
+	clientId: '231690667578-a07pu6769en2sc2v4usbf6s263b1pnnb.apps.googleusercontent.com',
+	secret: 'EQq4EvYf6uoqEfUb20JCaKXZ'
 });

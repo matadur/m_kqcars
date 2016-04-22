@@ -20,6 +20,7 @@ ejson
 insecure
 spacebars
 check
+email
 standard-minifier-css
 standard-minifier-js
 accounts-password
