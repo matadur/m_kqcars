@@ -3,7 +3,7 @@ import fs from 'fs';
 import Future from 'fibers/future';
 
 Meteor.methods({
-	'method_generate_pdf_basic': function() {
+	'method_generate_pdf_basic': function(err, res) {
 		var fut = new Future();
 		var fileName = "pdf_basic.pdf";
 
@@ -17,11 +17,11 @@ Meteor.methods({
 				return "<!DOCTYPE html>";
 			}
 		});
-		
+
 		SSR.compileTemplate('page_pdf_basic', Assets.getText('page_pdf_basic.html'));
 
 		// Get Data
-		var products = Products.find({});
+		var products = Products.findOne({_id: 'fhAZ65XeEyrbaqbLP'});
 		var data = {
 			products: products
 		}
