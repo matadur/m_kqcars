@@ -86,6 +86,7 @@ logging@1.0.11
 mdg:validation-error@0.5.1
 meteor@1.1.13
 meteor-base@1.0.3
+meteorhacks:ssr@2.2.0
 meteortoys:allthings@2.3.1
 meteortoys:authenticate@2.1.0
 meteortoys:autopub@2.1.0
@@ -114,7 +115,6 @@ mongo-id@1.0.3
 mongo-livedata@1.0.11
 msavin:jetsetter@1.5.2
 msavin:mongol@1.6.2
-nilsdannemann:pdfmake@0.1.20
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.42
 oauth@1.1.9

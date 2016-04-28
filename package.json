@@ -4,7 +4,10 @@
   "description": "KiwiQuest Cars App",
   "main": "index.js",
   "dependencies": {
-    "meteor-node-stubs": "^0.2.3"
+    "fibers": "^1.0.10",
+    "meteor-node-stubs": "^0.2.3",
+    "phantomjs": "^2.1.7",
+    "webshot": "^0.18.0"
   },
   "devDependencies": {},
   "scripts": {
