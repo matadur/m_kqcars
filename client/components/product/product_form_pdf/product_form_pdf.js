@@ -8,7 +8,7 @@
 			var clickedProductId = Session.get('clickedProductId');
 			console.log(clickedProductId);
 
-			Meteor.call('method_generate_pdf_basic', function() {
+			Meteor.call('method_generate_pdf_basic', clickedProductId, function(err, res) {
 				if (err) {
 					console.error(err);
 				} else if (res) {

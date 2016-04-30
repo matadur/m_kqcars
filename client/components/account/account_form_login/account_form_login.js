@@ -4,7 +4,7 @@
 Template.account_form_login.events({
 	// LOGIN - FACEBOOK---------------------------------------------------------------
 		'click .account_login_facebook':function(event){
-			Meteor.loginWithFacebook({requestPermissions: [ 'email' ]}, function(err){
+			Meteor.loginWithFacebook({requestPermissions: [ 'public_profile', 'email' ]}, function(err){
 				if(!err) {
 					FlowRouter.go('/');
 				}
@@ -14,7 +14,7 @@ Template.account_form_login.events({
 	
 	// LOGIN - GOOGLE-----------------------------------------------------------------
 		'click .account_login_google':function(event){
-			Meteor.loginWithGoogle({requestPermissions: [ 'email' ]}, function(err){
+			Meteor.loginWithGoogle({requestPermissions: [ 'profile', 'email' ]}, function(err){
 				if(!err) {
 					FlowRouter.go('/');
 				}

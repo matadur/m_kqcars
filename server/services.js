@@ -19,3 +19,22 @@ ServiceConfiguration.configurations.insert({
 	clientId: '231690667578-a07pu6769en2sc2v4usbf6s263b1pnnb.apps.googleusercontent.com',
 	secret: 'EQq4EvYf6uoqEfUb20JCaKXZ'
 });
+
+
+Accounts.onCreateUser(function(options,user) {
+  const facebook = user.services.facebook ? user.services.facebook : false;
+  const google = user.services.google ? user.services.google : false;
+
+  if (options.profile) {
+    if (facebook) {
+       options.profile.email = facebook.email
+       options.profile.picture = "http://graph.facebook.com/" + facebook.id + "/picture/?type=large";
+    } else if (google) {
+      options.profile.email = google.email
+      options.profile.picture = google.picture
+    }
+  }
+  
+  user.profile = options.profile;
+  return user;
+})
