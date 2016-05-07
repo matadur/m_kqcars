@@ -3,7 +3,11 @@
 		<!-- TITLE -->
 		<h3>
 			{{#if currentUser}}
-				Hi {{currentUser.profile.name}}
+				<!-- Avatar -->
+				{{#if currentUser.profile.picture}}
+					<img class="ui avatar image" src="{{currentUser.profile.picture}}">
+				{{/if}}
+				{{currentUser.profile.name}}
 			{{else}}
 				About
 			{{/if}}
@@ -12,7 +16,7 @@
 
 		<!-- CONTENT -->
 		{{#if currentUser}}
-			Nice that you're here. :-)<br>
+			Hi, nice that you're here. :-)<br>
 		{{else}}
 			<p>About-Text</p>
 			<p>HowTo-Text</p>
