@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"sid",
+				"sideImage"
+			],
+			[
+				"side",
+				"sideImageUploadRequest"
+			],
+			[
+				"if",
+				"if	if"
+			],
+			[
 				"cons",
 				"console.log()"
 			],
@@ -259,86 +271,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "client/lib/semantic_ui/site/globals/site.overrides.import.less",
-			"settings":
-			{
-				"buffer_size": 4141,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/layouts/layout_products.html",
-			"settings":
-			{
-				"buffer_size": 347,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/layouts/layout_loading.html",
-			"settings":
-			{
-				"buffer_size": 475,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/layouts/layout_account.html",
-			"settings":
-			{
-				"buffer_size": 345,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/logo/logo.html",
-			"settings":
-			{
-				"buffer_size": 118,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/hero/hero.html",
-			"settings":
-			{
-				"buffer_size": 637,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/product/product_favorite/product_favorite.js",
-			"settings":
-			{
-				"buffer_size": 2151,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/product/product.js",
-			"settings":
-			{
-				"buffer_size": 3046,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/product/product_favorite/product_favorite.html",
-			"settings":
-			{
-				"buffer_size": 284,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/hero/hero.js",
-			"settings":
-			{
-				"buffer_size": 2410,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -547,18 +479,37 @@
 	"expanded_folders":
 	[
 		"/Users/nilsdannemann/Sites/m_kqcars",
+		"/Users/nilsdannemann/Sites/m_kqcars/.meteor",
 		"/Users/nilsdannemann/Sites/m_kqcars/client",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_card",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_favorite",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/lib",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages",
-		"/Users/nilsdannemann/Sites/m_kqcars/public"
+		"/Users/nilsdannemann/Sites/m_kqcars/private",
+		"/Users/nilsdannemann/Sites/m_kqcars/server"
 	],
 	"file_history":
 	[
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_input/product_formfields_input.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add/product_form_add.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit/product_form_edit.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_pdf/product_form_pdf.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/server/method_generate_pdf_basic.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/private/page_pdf_basic.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_products.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/private/pdf_basic.css",
+		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/packages",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_login/account_form_login.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/server/services.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/server/auth/auth.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/server/auth/auth_facebook.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.overrides.import.less",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts/layout_products.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts/layout_loading.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts/layout_account.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/logo/logo.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/hero/hero.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_favorite/product_favorite.html",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/hero/hero.js",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_favorite/product_favorite.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/public/logo.svg",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_images.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_card/product_card.html",
@@ -566,15 +517,11 @@
 		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_output/product_formfields_output.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_detail.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/packages",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_config.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/.meteor/versions",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_input/product_formfields_input.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_input/product_formfields_input.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_output/product_formfields_output.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_add/product_form_add.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_edit/product_form_edit.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/semantic_ui.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_view_details.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_highlight/product_form_highlight.js",
@@ -584,7 +531,6 @@
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_pdf/product_form_pdf.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products_pdf.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_controls/product_controls.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_form_pdf/product_form_pdf.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/filter/filter.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/filter/filter.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/header/header.html",
@@ -600,7 +546,6 @@
 		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/theme.import.less",
 		"/Users/nilsdannemann/Sites/m_kqcars/lib/collections.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_availability_label/product_availability_label.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/lib/semantic_ui/site/globals/site.overrides.import.less",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_login.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_form_login.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_login.html",
@@ -609,8 +554,6 @@
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/account/account_signup.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_pdf.js",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components/dropdown_account/dropdown_account.js",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/components/sidebar/sidebar_products.html",
-		"/Users/nilsdannemann/Sites/m_kqcars/client/layouts/layout_products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages/my_products.html",
 		"/Users/nilsdannemann/Sites/m_kqcars/server/cronjobs.js",
@@ -672,21 +615,7 @@
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_layouts/noslider.html",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/_base.scss",
 		"/Users/nilsdannemann/Sites/j_hfc_relay/index.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/button/button.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/README.md",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/teaser_triple.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/navigation/_navigation.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/navigation/navigation.html",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components_base/navigation/navigation.js",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_above.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_quantity_between.sublime-snippet",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_double.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_single.scss",
-		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser_triple.scss",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_between.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_below.sublime-snippet",
-		"/Users/nilsdannemann/Library/Application Support/Sublime Text 3/Packages/User/hfc_relay_respond_at.sublime-snippet"
+		"/Users/nilsdannemann/Sites/j_hfc_relay/_includes/components/teaser/_teaser.scss"
 	],
 	"find":
 	{
@@ -716,6 +645,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"&&",
+			"inFrontImageUploadRequest",
+			"sideImage",
+			"null",
+			"{{",
+			"div",
+			"check",
 			"inser",
 			"model",
 			"  ",
@@ -836,14 +772,7 @@
 			"content",
 			"lude ",
 			"at-",
-			"number",
-			"sidebar",
-			"content",
-			"slider",
-			"nav",
-			"include",
-			"nav.",
-			"nav"
+			"number"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -863,330 +792,8 @@
 	"groups":
 	[
 		{
-			"selected": 6,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "client/lib/semantic_ui/site/globals/site.overrides.import.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								199,
-								195
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/layouts/layout_products.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 347,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/layouts/layout_loading.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 475,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/layouts/layout_account.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 345,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/components/logo/logo.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 118,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								83,
-								83
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/components/hero/hero.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 637,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								637,
-								637
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"open_with_edit": true,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/components/product/product_favorite/product_favorite.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1314,
-								1314
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 253.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "client/components/product/product.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3046,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								840,
-								846
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 80.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "client/components/product/product_favorite/product_favorite.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 284,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								182,
-								182
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "client/components/hero/hero.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2410,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2396,
-								2396
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"open_with_edit": true,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 544.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				}
 			]
 		}
 	],

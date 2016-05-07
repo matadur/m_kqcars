@@ -142,3 +142,32 @@
 				};
 			}
 		});
+
+	// PRODUCT FORMFIELDS SUBMIT - IMAGE VALIDATUION----------------------------------
+		
+		// FORM: ADD
+		Template.product_form_add.helpers({
+			imagesNotUploaded: function() {
+				let a = Session.get('sideImageUploadRequest');
+				let b = Session.get('frontImageUploadRequest');
+				let c = Session.get('inFrontImageUploadRequest');
+				let d = Session.get('inBackImageUploadRequest');
+
+				if (a !== null || b !== null ||	c !== null || d !== null) {
+					return true;
+				};
+			}
+		});
+		// FORM: EDIT
+		Template.product_form_edit.helpers({
+			imagesNotUploaded: function() {
+				let a = Session.get('sideImageUploadRequest');
+				let b = Session.get('frontImageUploadRequest');
+				let c = Session.get('inFrontImageUploadRequest');
+				let d = Session.get('inBackImageUploadRequest');
+
+				if (a !== null || b !== null ||	c !== null || d !== null) {
+					return true;
+				};
+			}
+		});

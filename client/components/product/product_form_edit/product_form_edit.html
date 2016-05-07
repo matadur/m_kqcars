@@ -36,6 +36,13 @@
 		<!-- CONTROLS -->
 		<div class="ui divider"></div>
 		<a href="/" class="ui basic button">Cancel</a>
-		<button class="ui right floated positive button" type="submit">Save</button>
+		{{#if imagesNotUploaded}}
+			<span class="ui right pointing green label">
+		      Upload all Images first
+		    </span>
+		    <button class="ui right floated positive button" type="submit" disabled>Save</button>
+		{{else}}
+			<button class="ui right floated positive button" type="submit">Save</button>
+		{{/if}}
 	{{/autoForm}}
 </template>
