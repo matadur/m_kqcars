@@ -271,6 +271,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/components/product/product_card/product_card.html",
+			"settings":
+			{
+				"buffer_size": 1148,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/components/product/product_formfields_output/product_formfields_output.html",
+			"settings":
+			{
+				"buffer_size": 5215,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/components/product/product_formfields_output/product_formfields_output.js",
+			"settings":
+			{
+				"buffer_size": 3763,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -482,6 +506,9 @@
 		"/Users/nilsdannemann/Sites/m_kqcars/.meteor",
 		"/Users/nilsdannemann/Sites/m_kqcars/client",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/components",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_card",
+		"/Users/nilsdannemann/Sites/m_kqcars/client/components/product/product_formfields_output",
 		"/Users/nilsdannemann/Sites/m_kqcars/client/pages",
 		"/Users/nilsdannemann/Sites/m_kqcars/private",
 		"/Users/nilsdannemann/Sites/m_kqcars/server"
@@ -645,6 +672,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"date",
 			"&&",
 			"inFrontImageUploadRequest",
 			"sideImage",
@@ -771,8 +799,7 @@
 			"navigation",
 			"content",
 			"lude ",
-			"at-",
-			"number"
+			"at-"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -792,8 +819,105 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/components/product/product_card/product_card.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/components/product/product_formfields_output/product_formfields_output.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1862,
+								1622
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 839.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/components/product/product_formfields_output/product_formfields_output.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								579,
+								339
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

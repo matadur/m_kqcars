@@ -7,6 +7,10 @@
 --------------------*/
 body {
 	background: @blue;
+	background: url('bg-body.png') repeat-x top 40px center;
+	background-size: 960px 575px;
+	background-attachment: fixed;
+	background-color: @blue;
 }
 
 /*-------------------
@@ -30,6 +34,9 @@ body {
 /*-------------------
 	Cards
 --------------------*/
+.card__title {
+	background: #eee !important;
+}
 .ui.cards > .card, .ui.card {
 	box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15) !important;
 	border: none !important;
