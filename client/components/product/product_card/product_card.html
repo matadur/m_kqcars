@@ -5,7 +5,9 @@
 			<div class="content card__title">
 				{{> product_availability_label}}
 				<strong>
-					{{#if isHighlight}}<div class="ui basic label">TOP!</div>{{/if}}
+					{{#if isHighlight}}
+						{{> product_highlight_label}}
+					{{/if}}
 					{{model}}
 				</strong>
 			</div>
@@ -17,9 +19,9 @@
 			<!-- CONTENT -->
 			<div class="content">
 				<div class="ui divided relaxed list">
-					{{ > product_formfield_output_built}}
-					{{ > product_formfield_output_kilometers}}
-					{{ > product_formfield_output_price}}
+					{{> product_formfield_output_built}}
+					{{> product_formfield_output_kilometers}}
+					{{> product_formfield_output_price}}
 				</div>
 			</div>
 			<!-- CONTROLS -->

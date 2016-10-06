@@ -13,3 +13,8 @@
 				return false;
 			}
 		});
+
+	// PPRODUCT CONTROLS - DROPDOWN---------------------------------------------------
+		Template.product_controls.onRendered(function () {
+			$('.ui.dropdown').dropdown();
+		});

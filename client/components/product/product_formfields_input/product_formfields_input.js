@@ -171,3 +171,17 @@
 				};
 			}
 		});
+
+//------------------------------------------------------------------------------------
+// PRODUCT FORMFIELDS INPUT - POPUPS
+//------------------------------------------------------------------------------------
+	Template.product_formfield_input_model.onRendered(function () {
+		$('.has-tooltip').popup({
+			hoverable: true,
+			position : 'bottom left',
+			delay: {
+				show: 190,
+				hide: 0
+			}
+		});
+	});
