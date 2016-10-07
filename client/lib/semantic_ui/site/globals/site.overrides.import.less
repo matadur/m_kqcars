@@ -61,7 +61,18 @@ body {
 .ui.cards > .card.is-highlight {
 	box-shadow: 0px 5px 12px 0 rgba(34, 36, 38, 0.3) !important;
 }
+
+//Note: Refresh not working properly with keyframe animations. Solution: rename animation on every save
+@keyframes highlightbounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
 .label.label--highlight {
+	animation-name: highlightbounce;
+    animation-duration: 1300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 	top: -1px !important;
 	position: relative !important;
 	left: -3px !important;
@@ -76,7 +87,6 @@ body {
 	color: #49be39 !important;
 	padding: 6px 4px !important;
 	line-height: 0.75 !important;
-	// pointer-events: none !important;
 }
 
 /*-------------------
